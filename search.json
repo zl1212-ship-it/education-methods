@@ -1,0 +1,317 @@
+[
+  {
+    "objectID": "posts/measurement-invariance/index.html",
+    "href": "posts/measurement-invariance/index.html",
+    "title": "Before you compare two groups’ survey scores, check this",
+    "section": "",
+    "text": "Here’s a sentence that should make you flinch: “Group A scored higher on the belonging scale, so Group A feels more like they belong.”\nI have a soft spot for this trap, mostly because I’ve walked into it myself. It sounds airtight. Five items, two groups, one mean is higher, write it up. But there’s a premise buried in there that nobody says out loud, and the whole conclusion is sitting on top of it.\nThe premise is that the scale means the same thing to both groups."
+  },
+  {
+    "objectID": "posts/measurement-invariance/index.html#the-lens-thing",
+    "href": "posts/measurement-invariance/index.html#the-lens-thing",
+    "title": "Before you compare two groups’ survey scores, check this",
+    "section": "The lens thing",
+    "text": "The lens thing\nI think of a scale as a lens you look at a construct through. Comparing two groups’ scores assumes they’re looking through the same lens. If the lenses are ground differently, then comparing what each group “sees” tells you about the lenses, not the thing you were trying to look at. The technical name for “same lens” is measurement invariance, and it is not a given. It’s a thing you check."
+  },
+  {
+    "objectID": "posts/measurement-invariance/index.html#how-much-youre-allowed-to-say",
+    "href": "posts/measurement-invariance/index.html#how-much-youre-allowed-to-say",
+    "title": "Before you compare two groups’ survey scores, check this",
+    "section": "How much you’re allowed to say",
+    "text": "How much you’re allowed to say\nInvariance comes in levels, and each one buys you a different comparison. Roughly: if the same items load on the same factor in both groups (configural), you’ve got the basic shape. If the loadings are equal too (metric), you can start comparing relationships across groups. And only if the intercepts are also equal (scalar) are you actually allowed to compare means.\nThat last one is the level your group comparison quietly assumed it had. You test for it with a multi-group CFA. And when a single item behaves differently across groups, that’s DIF, differential item functioning, which is a fancy way of saying the lens has a chip in it right there."
+  },
+  {
+    "objectID": "posts/measurement-invariance/index.html#watch-it-happen",
+    "href": "posts/measurement-invariance/index.html#watch-it-happen",
+    "title": "Before you compare two groups’ survey scores, check this",
+    "section": "Watch it happen",
+    "text": "Watch it happen\nTwo groups, a 5-item engagement scale, and here’s the thing: I built them to have identical true engagement. Same distribution, no real difference. Then I made one item (item 5) read systematically lower for group B at the same level of engagement. Textbook DIF. Then I just… compared the groups, the way anyone would, with a standardized mean difference:\nlibrary(baselinr)\nhedges_g(theta, group)        # the true latent difference\nhedges_g(scale_full, group)   # observed, all 5 items\nhedges_g(scale_inv, group)    # observed, dropping the one DIF item\n\n\n\nWhat’s compared\nHedges’ g\n\n\n\n\nTrue latent engagement\n−0.03 (there is no real difference)\n\n\nObserved 5-item scale\n−0.25\n\n\nScale without the DIF item\n−0.02\n\n\n\n\n\n\nPer-item group difference: items 1–4 are flat, item 5 carries the whole gap.\n\n\nThe groups are equal. I promise, I made them that way. And the full scale still reports g = −0.25, which most people would write up as “Group B is less engaged.” The figure shows the crime scene: items 1 through 4 are flat, and item 5 is doing all of the work, off by −1.22 on its own. Pull that one item and the difference evaporates to −0.02.\nNothing about engagement happened here. The ruler happened."
+  },
+  {
+    "objectID": "posts/measurement-invariance/index.html#what-to-do",
+    "href": "posts/measurement-invariance/index.html#what-to-do",
+    "title": "Before you compare two groups’ survey scores, check this",
+    "section": "What to do",
+    "text": "What to do\nTest invariance before you compare means, every time you’re comparing a latent thing across groups. If it fails, don’t throw the whole comparison out, go find the items that broke (the DIF ones). And then report partial invariance honestly, anchored on the items that held. It’s less clean than a single triumphant p-value. It’s also the difference between a finding about students and a finding about your questionnaire.\n\nMeasurement is the thing I get genuinely nerdy about. I build baselinr and I’m building a cohort course on credible evaluation and measurement in education. subscribe via RSS if you want in."
+  },
+  {
+    "objectID": "posts/01-baseline-table/index.html",
+    "href": "posts/01-baseline-table/index.html",
+    "title": "Your baseline table is doing more work than your p-value",
+    "section": "",
+    "text": "For a long time the baseline table was the part of a report I did last, fast, and a little resentfully. Throat-clearing before the real analysis, was how I thought about it. Get it out of the way, get to the effect.\nI had it exactly backwards about which part was the real analysis.\nBy the time you’re estimating a program effect, you’ve already placed the bet that matters: that the two groups were comparable to begin with. If they weren’t, you’re not measuring the program. You’re measuring the head start. No model downstream fixes that, and reviewers, funders, and the What Works Clearinghouse all know exactly where to look."
+  },
+  {
+    "objectID": "posts/01-baseline-table/index.html#the-question-its-actually-answering",
+    "href": "posts/01-baseline-table/index.html#the-question-its-actually-answering",
+    "title": "Your baseline table is doing more work than your p-value",
+    "section": "The question it’s actually answering",
+    "text": "The question it’s actually answering\nPlain version: before the program started, were these groups similar enough that I can pin later differences on the program instead of on who was in each group?\nNotice what that is not. It is not “is the baseline difference statistically significant?” That’s the reflex, run a t-test on the pretest, see p &gt; .05, declare the groups fine, move on. But significance is the wrong tool here, for a reason that has nothing to do with the program. With a big sample, a trivial difference turns “significant.” With a small one, a real gap sails through as “not significant.” A p-value is mostly telling you about your sample size. Equivalence is a question about size of the gap. Different question."
+  },
+  {
+    "objectID": "posts/01-baseline-table/index.html#what-the-wwc-asks-for-instead",
+    "href": "posts/01-baseline-table/index.html#what-the-wwc-asks-for-instead",
+    "title": "Your baseline table is doing more work than your p-value",
+    "section": "What the WWC asks for instead",
+    "text": "What the WWC asks for instead\nFor each covariate you report a standardized mean difference (Hedges’ g, which is Cohen’s d with a small-sample correction), and you read it against two numbers:\n\n\n\n\n\n\n\n\nHedges’ g (absolute value)\nCategory\nWhat it commits you to\n\n\n\n\n≤ 0.05\nSatisfied\nNothing. The groups are equivalent here.\n\n\n0.05–0.25\nSatisfied with adjustment\nFine only if you adjust for this covariate in the impact model.\n\n\n&gt; 0.25\nNot satisfied\nThis one can’t establish equivalence, and adjustment won’t save it.\n\n\n\nThe whole framework is those two numbers, 0.05 and 0.25, applied honestly. The arithmetic isn’t the hard part. Remembering what each category obligates you to do later is."
+  },
+  {
+    "objectID": "posts/01-baseline-table/index.html#doing-it-without-a-spreadsheet",
+    "href": "posts/01-baseline-table/index.html#doing-it-without-a-spreadsheet",
+    "title": "Your baseline table is doing more work than your p-value",
+    "section": "Doing it without a spreadsheet",
+    "text": "Doing it without a spreadsheet\nHere it is on a simulated tutoring evaluation, 400 students, data I bundled into baselinr just for this. One call, whole table:\nlibrary(baselinr)\ndata(tutoring)\n\nbaseline_equivalence(\n  tutoring, treatment = \"treat\",\n  covariates = c(\"pretest\", \"attendance\", \"age\", \"female\", \"frpl\", \"ell\")\n)\n\n\n\n\n\n\n\n\n\n\n\nCovariate\nType\nMean (T)\nMean (C)\nEffect size\nWWC category\n\n\n\n\npretest\ncontinuous\n52.15\n50.10\n0.196\nsatisfied_with_adjustment\n\n\nattendance\ncontinuous\n0.927\n0.918\n0.186\nsatisfied_with_adjustment\n\n\nage\ncontinuous\n10.04\n10.03\n0.020\nsatisfied\n\n\nfemale\nbinary\n0.530\n0.525\n0.012\nsatisfied\n\n\nfrpl\nbinary\n0.555\n0.445\n0.268\nnot_satisfied\n\n\nell\nbinary\n0.250\n0.150\n0.385\nnot_satisfied\n\n\n\nContinuous covariates get Hedges’ g; the binary ones get the Cox index, handled for you. And honestly the plot is where it clicks:\nlove_plot(baseline_equivalence(tutoring, \"treat\",\n          covariates = c(\"pretest\", \"attendance\", \"age\", \"female\", \"frpl\", \"ell\")))\n\n\n\nLove plot of the six covariates against the WWC thresholds.\n\n\nAge and sex are equivalent, nothing to do. Pretest and attendance sit in the middle band, so you can proceed but you owe the model an adjustment. And then poverty status and language status blow past 0.25, which means the groups differ on two things adjustment can’t fix. That last pair is something you’d want to know before you ever report an effect, not after a reviewer finds it."
+  },
+  {
+    "objectID": "posts/01-baseline-table/index.html#the-part-that-quietly-leaks-credibility",
+    "href": "posts/01-baseline-table/index.html#the-part-that-quietly-leaks-credibility",
+    "title": "Your baseline table is doing more work than your p-value",
+    "section": "The part that quietly leaks credibility",
+    "text": "The part that quietly leaks credibility\n“Satisfied with adjustment” is not a passing grade. It’s a promise. It says: these groups are close enough, as long as I actually control for this covariate in the impact model. And it is genuinely common to see a baseline table that files a covariate under “satisfied with adjustment” and then an impact model that never adjusts for it. The table says one thing, the model does another, and a careful reader catches it instantly. If a covariate lands in the middle band, it has to show up in the model. Every time.\nTreat the baseline table like the load-bearing wall it is, not the trim you tack on at the end. Get it right and everything downstream has something solid to stand on. Get it wrong and your fanciest model is just measuring the head start.\n\nI build baselinr, a small R package that produces these tables, and a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
+  },
+  {
+    "objectID": "posts/controls-collider/index.html",
+    "href": "posts/controls-collider/index.html",
+    "title": "More controls ≠ less bias: the variables you should never put in your model",
+    "section": "",
+    "text": "Okay so. A reviewer once told me to control for a variable. I added it, the coefficient changed, and I took the change as proof the variable mattered.\nIt is not proof the variable mattered. It took me way longer than I’d like to admit to get that.\nAdding a control and watching the number jump feels productive. It feels careful. But a number moving only tells you a number moved. It doesn’t tell you whether you got closer to the truth or further from it. That depends on what the variable actually is, and “just throw in more controls” quietly lumps together three things that behave nothing alike."
+  },
+  {
+    "objectID": "posts/controls-collider/index.html#three-reasons-a-variable-is-in-your-model",
+    "href": "posts/controls-collider/index.html#three-reasons-a-variable-is-in-your-model",
+    "title": "More controls ≠ less bias: the variables you should never put in your model",
+    "section": "Three reasons a variable is in your model",
+    "text": "Three reasons a variable is in your model\nOne: it’s a confounder. Something that causes both who got treated and the outcome. Pretest scores, if the higher-scoring kids were also more likely to get the program. You want these in the model. Leaving them out is the thing everyone’s (rightly) scared of.\nTwo: it’s a mediator. Something the treatment causes, which then moves the outcome. It’s part of how the program works. Control for it and you’re literally subtracting off a piece of the effect you came to measure.\nThree: it’s a collider. The weird one. It’s a shared consequence of two things, and it sits there harmlessly until you condition on it, at which point it invents a correlation that was never real.\n“Control for everything you can” treats all three the same. Two of them make your answer worse."
+  },
+  {
+    "objectID": "posts/controls-collider/index.html#just-draw-the-arrows",
+    "href": "posts/controls-collider/index.html#just-draw-the-arrows",
+    "title": "More controls ≠ less bias: the variables you should never put in your model",
+    "section": "Just draw the arrows",
+    "text": "Just draw the arrows\nThis is less philosophical than it sounds. Sketch what causes what (a DAG, if we’re being formal). Then the rule is basically mechanical: block the paths that sneak in through the treatment, and leave alone anything the treatment causes or anything two variables jointly cause.\nA reviewer saying “control for X” is making a guess about where X lives on that picture. It’s not a command. Go look at where it actually sits."
+  },
+  {
+    "objectID": "posts/controls-collider/index.html#the-one-that-got-me",
+    "href": "posts/controls-collider/index.html#the-one-that-got-me",
+    "title": "More controls ≠ less bias: the variables you should never put in your model",
+    "section": "The one that got me",
+    "text": "The one that got me\nSay you’re evaluating a tutoring program and your outcome is test scores. Being responsible, you decide to control for student motivation. Reasonable, except you measured motivation after the program ran. Which means the program probably moved it. So now motivation is downstream of the treatment, and controlling for it shaves off exactly the part of the effect that went “kids got more into it, then did better.” You conclude tutoring barely did anything.\nIt did something. You just deleted the evidence. And it felt like diligence the whole time, because, again, the coefficient moved."
+  },
+  {
+    "objectID": "posts/controls-collider/index.html#watch-it-happen",
+    "href": "posts/controls-collider/index.html#watch-it-happen",
+    "title": "More controls ≠ less bias: the variables you should never put in your model",
+    "section": "Watch it happen",
+    "text": "Watch it happen\nI simulated this so it’s not just me asserting things. True total effect of the program: 8.5. There’s a trait C that drives both treatment and the outcome (a real confounder), and M is motivation measured after the program (a mediator).\n# Estimand: total effect of `treat` on `Y` (simulated; true value = 8.5)\ncoef(lm(Y ~ treat))[\"treat\"]          # naive\ncoef(lm(Y ~ treat + C))[\"treat\"]      # adjust for the confounder\ncoef(lm(Y ~ treat + C + M))[\"treat\"]  # also adjust for the post-treatment mediator\n\n\n\nModel\nEstimate\n\n\n\n\nNaive (Y ~ treat)\n11.46\n\n\n+ confounder (Y ~ treat + C)\n8.61\n\n\n+ mediator too (Y ~ treat + C + M)\n3.99\n\n\n\n\n\n\nThree estimates of the program effect; only adjusting for the confounder recovers the truth.\n\n\nThe naive number is too big because treated kids started ahead. Adjust for the confounder and it snaps to 8.61, basically the truth. Then you add the after-the-fact mediator and it falls to 3.99, because you just controlled away the thing the program works through. The model with the most controls is the most wrong. That’s the whole point."
+  },
+  {
+    "objectID": "posts/controls-collider/index.html#what-i-actually-do-now",
+    "href": "posts/controls-collider/index.html#what-i-actually-do-now",
+    "title": "More controls ≠ less bias: the variables you should never put in your model",
+    "section": "What I actually do now",
+    "text": "What I actually do now\n\nSketch the DAG before I touch the model. A bad drawing on a receipt counts.\nOnly control for things measured before treatment.\nIf a variable was measured after the treatment, I treat it as off-limits until the picture tells me otherwise.\nFor every control, I make myself say which of the three it is. If I can’t, it doesn’t go in.\n\nI’m not anti-control. I’m anti “more controls = more rigor,” because that one’s just false, and it’s the kind of false that looks like care.\n\nI’m building baselinr, a small R package for WWC-aligned baseline equivalence, and a cohort course on running education evaluations you can actually trust. subscribe via RSS if that’s your thing."
+  },
+  {
+    "objectID": "posts/text-classifier-error/index.html",
+    "href": "posts/text-classifier-error/index.html",
+    "title": "Your text classifier is 85% accurate. That error doesn’t vanish when you run the regression.",
+    "section": "",
+    "text": "There’s a very specific high that hits when a classifier you’ve been wrestling with for days finally clears 85% on the held-out set. It works. You run it over all fifty thousand comments, attach the predicted labels to your dataset, and move on to the analysis you actually cared about.\nThat’s the exact moment I want to grab your arm.\nBecause the 15% it got wrong doesn’t politely stay inside the classifier. It rides along into the regression, and it changes your answer. “Accuracy” is hiding how much."
+  },
+  {
+    "objectID": "posts/text-classifier-error/index.html#a-predicted-label-is-a-guess-youre-treating-as-a-fact",
+    "href": "posts/text-classifier-error/index.html#a-predicted-label-is-a-guess-youre-treating-as-a-fact",
+    "title": "Your text classifier is 85% accurate. That error doesn’t vanish when you run the regression.",
+    "section": "A predicted label is a guess you’re treating as a fact",
+    "text": "A predicted label is a guess you’re treating as a fact\nThat’s the whole problem in one sentence. You didn’t observe “this feedback is specific.” You estimated it, with a model that’s right most of the time and wrong some of the time. The minute you drop those predictions into a regression as if they were the real thing, you’ve imported the model’s mistakes without telling the regression they’re there.\nAnd the phrase “ground truth” makes it so much worse, because it’s not ground truth. It’s the classifier’s training target. In your actual analysis those labels are a noisy stand-in, and calling them truth is how the error sneaks past you."
+  },
+  {
+    "objectID": "posts/text-classifier-error/index.html#what-the-error-does-depends-on-what-kind-it-is",
+    "href": "posts/text-classifier-error/index.html#what-the-error-does-depends-on-what-kind-it-is",
+    "title": "Your text classifier is 85% accurate. That error doesn’t vanish when you run the regression.",
+    "section": "What the error does depends on what kind it is",
+    "text": "What the error does depends on what kind it is\nIf the mistakes are just random (the classifier is equally clumsy everywhere), and the noisy variable is a predictor, the effect gets attenuated. Pulled toward zero. This is the part people get wrong in conversation, by the way. “It’s just noise, it averages out.” A regression coefficient on a mismeasured predictor does not average out. It shrinks.\nDifferential error is the one that actually scares me. If the classifier is worse for some cases than others, in a way that’s tied to your outcome or your groups, the bias picks up a direction. You’re not just underestimating anymore. You can end up pointing the wrong way.\nYour setup is the textbook case: you predict “feedback specificity” from teacher comments, then relate it to student progress. Now suppose the model reads feedback from teachers of multilingual learners a little worse. That error is now braided into exactly the comparison you care about, and it doesn’t wash out. It bends the conclusion."
+  },
+  {
+    "objectID": "posts/text-classifier-error/index.html#watch-it-happen",
+    "href": "posts/text-classifier-error/index.html#watch-it-happen",
+    "title": "Your text classifier is 85% accurate. That error doesn’t vanish when you run the regression.",
+    "section": "Watch it happen",
+    "text": "Watch it happen\nSix thousand simulated comments. The true effect of the text feature on the outcome is 1.0. I feed two classifiers’ predicted labels into the same regression and treat them as truth:\n# True effect of Z on Y is 1.0 (simulated).\ncoef(lm(Y ~ Z))[\"Z\"]         # if we had the true labels\ncoef(lm(Y ~ Zhat_nd))        # 85% accurate, error unrelated to anything\ncoef(lm(Y ~ Zhat_d))         # 85% accurate overall, but worse for one group\n\n\n\nLabels used\nEstimated effect\n\n\n\n\nTrue labels\n1.00\n\n\nPredicted — non-differential error\n0.68\n\n\nPredicted — differential error\n0.72\n\n\n\n\n\n\nBoth classifiers are 85% accurate, yet the estimated effect is attenuated and the bias differs.\n\n\nSit with two things here. First: clean, random, 85%-accurate error drags a true effect of 1.0 down to 0.68. A third of your signal, gone, purely from treating guesses as data. Second, and this is the one that gets me: both classifiers report the same 85%. But the “differential” one is 93% accurate for one group and 78% for the other. The headline number cannot tell you which world you’re in. Only breaking accuracy out by subgroup can."
+  },
+  {
+    "objectID": "posts/text-classifier-error/index.html#what-to-actually-do",
+    "href": "posts/text-classifier-error/index.html#what-to-actually-do",
+    "title": "Your text classifier is 85% accurate. That error doesn’t vanish when you run the regression.",
+    "section": "What to actually do",
+    "text": "What to actually do\nKeep a human-labeled gold set, and not just for tuning. You need it to measure the error so you can correct for it later. Report classifier performance broken out by the groups you’ll compare, because “85% overall” is precisely where differential error hides. And then either propagate that uncertainty into the analysis or use an estimator built for predicted labels (there’s a small but real literature on inference with machine-predicted variables now). Whatever you do, stop quietly swapping predictions in for observations and calling it done.\nMeasure your measurement. Report it by group. Let the error into the model the same way it’s already, invisibly, in your data.\n\nThis exact corner, where text models meet measurement error, is what I work on. I build baselinr and I’m putting together a cohort course on credible evaluation and measurement in education. subscribe via RSS if you want to follow along."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Methods notes for people who run or review education evaluations and care whether the conclusions hold up — baseline equivalence, measurement, effect sizes, and honest communication of uncertainty.\nWritten by Yuxia Liang, M.Ed. in Educational Leadership & Policy (University of Washington). Author of the open-source baselinr R package for WWC-aligned baseline equivalence."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Education Methods",
+    "section": "",
+    "text": "Effect sizes for education: what WWC actually wants\n\n\nCohen’s d, Hedges’ g, and the small-sample correction. Which standardized difference to report, and why getting it lazy quietly changes your conclusion.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\n\n\nYour text classifier is 85% accurate. That error doesn’t vanish when you run the regression.\n\n\nTreating predicted labels as ground truth quietly biases everything downstream. With differential error it gets worse, and the accuracy number hides all of it.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nMeasurement before models: the check most evaluations skip\n\n\nA noisy outcome quietly shrinks the effect you can detect. Reliability and validity aren’t box-checking; they decide whether a real program looks like it worked.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nMore controls ≠ less bias: the variables you should never put in your model\n\n\nAdding a control and watching the coefficient move feels like being careful. Sometimes you just fed your model a fresh bias.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nWhat a ‘teacher effectiveness’ score actually measures (and what it doesn’t)\n\n\nValue-added scores are noisier and more assumption-laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nYour baseline table is doing more work than your p-value\n\n\nBaseline equivalence carries the credibility of a whole impact evaluation, and most of us assemble it last, in a hurry. Here’s how the field actually wants it reported.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nStudents aren’t independent: the clustering mistake that makes everything look significant\n\n\nTreat clustered students as independent and your standard errors shrink, your p-values glow, and your significant result is a mirage. The fix is routine.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\n\n\nBefore you compare two groups’ survey scores, check this\n\n\nComparing latent-construct means across groups assumes the scale means the same thing to both. When it doesn’t, the difference is the instrument, not the construct.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/02-effect-sizes-wwc/index.html",
+    "href": "posts/02-effect-sizes-wwc/index.html",
+    "title": "Effect sizes for education: what WWC actually wants",
+    "section": "",
+    "text": "“We found a significant effect.” I have a mild allergic reaction to that sentence and I’ve accepted it’s permanent.\nIt’s not that it’s wrong. It’s that it tells you almost nothing. Significant says we detected something. It says nothing about how big, which is the only thing a school board or a funder or the What Works Clearinghouse actually wants to know. That’s what an effect size is for, and in education that means a standardized mean difference, with a couple of small decisions baked in that quietly move the number."
+  },
+  {
+    "objectID": "posts/02-effect-sizes-wwc/index.html#the-thing-itself",
+    "href": "posts/02-effect-sizes-wwc/index.html#the-thing-itself",
+    "title": "Effect sizes for education: what WWC actually wants",
+    "section": "The thing itself",
+    "text": "The thing itself\nStrip it down: take the gap between the two group means, divide by a standard deviation. Now the effect is in standard-deviation units, so a reading program and a math program can sit on the same ruler. Two studies with the same raw point gain can land at very different standardized effects, because the spread of scores differs. Which is the point. It’s also where the choices start to matter."
+  },
+  {
+    "objectID": "posts/02-effect-sizes-wwc/index.html#cohens-d-vs.-hedges-g",
+    "href": "posts/02-effect-sizes-wwc/index.html#cohens-d-vs.-hedges-g",
+    "title": "Effect sizes for education: what WWC actually wants",
+    "section": "Cohen’s d vs. Hedges’ g",
+    "text": "Cohen’s d vs. Hedges’ g\nCohen’s d puts the pooled within-group SD in that denominator. Fine, except it has a known flaw: in small samples it’s biased upward. It overstates. And education studies are small constantly, a few classrooms, a handful of schools, so this is not a hypothetical.\nHedges’ g is just Cohen’s d times a small-sample correction. When the sample is big, the correction is basically 1 and the two agree. When it’s small, the correction pulls the estimate back toward the truth. WWC reports g for exactly this reason, and once you see the size of the bias you stop arguing about it.\nHere’s the bias, simulated. True standardized effect is 0.5. I draw a pile of small studies and average each estimator:\n\n\n\nPer-group n\nCohen’s d\nHedges’ g\n\n\n\n\n3\n0.618\n0.495\n\n\n5\n0.572\n0.517\n\n\n10\n0.519\n0.497\n\n\n100\n0.501\n0.499\n\n\n\n\n\n\nCohen’s d sits above the true 0.5 at small samples; Hedges’ g tracks it.\n\n\nThree per group and uncorrected d averages 0.618, a 24% overstatement of an effect that is really 0.5. Hedges’ g sits at 0.495. By a hundred per group they shake hands. Small education studies live on the left edge of that plot, which is precisely where skipping the correction costs you."
+  },
+  {
+    "objectID": "posts/02-effect-sizes-wwc/index.html#the-little-decisions-people-get-wrong",
+    "href": "posts/02-effect-sizes-wwc/index.html#the-little-decisions-people-get-wrong",
+    "title": "Effect sizes for education: what WWC actually wants",
+    "section": "The little decisions people get wrong",
+    "text": "The little decisions people get wrong\nWhich SD goes in the denominator. Pooled (both groups) is the usual choice and what the WWC convention assumes. Control-group-only is sometimes defensible, but if you pick it without saying so, your effect size isn’t comparable to anyone else’s. State your denominator.\nTreating a small-sample d as if it were unbiased. If n is small and you skipped the correction, your number is inflated. Use g.\nAnd comparing effect sizes across studies that standardized differently. A 0.30 on a narrow, homogeneous sample is not the same animal as a 0.30 on a broad one. Effect sizes are only comparable when the rulers are."
+  },
+  {
+    "objectID": "posts/02-effect-sizes-wwc/index.html#reporting-it-like-you-mean-it",
+    "href": "posts/02-effect-sizes-wwc/index.html#reporting-it-like-you-mean-it",
+    "title": "Effect sizes for education: what WWC actually wants",
+    "section": "Reporting it like you mean it",
+    "text": "Reporting it like you mean it\nGive the effect size with an interval, not a lonely point estimate; “g = 0.8” with no uncertainty begs to be over-trusted. Tie the number to a decision, because “significant” and “meaningful” are different words. And say your choices out loud so the number can be checked.\nA standardized mean difference is a tiny calculation carrying a big claim. Get the denominator and the correction right, attach honest uncertainty, translate it into something a human can act on. Skip those and “significant” becomes a word that hides more than it tells.\n\nI build baselinr, a small R package for WWC-aligned baseline equivalence and effect sizes, and a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html",
+    "href": "posts/03-measurement-before-models/index.html",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "",
+    "text": "The saddest sentence in program evaluation is “the program didn’t work,” when what actually happened was “we measured it with a broken ruler.” Those two get mixed up constantly, and the second one wears the first one’s clothes.\nHere’s the part that stings: teams will spend months on the design, the randomization, the comparison group, the matching, and then about ten minutes on the thing they actually measure. And then they’re surprised by a null result."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html#what-a-noisy-outcome-quietly-does",
+    "href": "posts/03-measurement-before-models/index.html#what-a-noisy-outcome-quietly-does",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "What a noisy outcome quietly does",
+    "text": "What a noisy outcome quietly does\nRandom measurement error in your outcome doesn’t just scatter the points around a bit. It inflates the variance of the outcome, which widens your standard errors, which costs you power. And because the standard deviation in your effect-size denominator just got bigger, the standardized effect you can report shrinks. You can run a flawless design on a bad measure and find nothing, not because the program failed, but because your ruler was made of rubber.\nSo before the model, check the ruler."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html#reliability-what-one-number-hides",
+    "href": "posts/03-measurement-before-models/index.html#reliability-what-one-number-hides",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "Reliability: what one number hides",
+    "text": "Reliability: what one number hides\nReliability usually shows up as a single coefficient, Cronbach’s alpha most of the time, and gets a nod on the way to the regression. But that one number is hiding things. Alpha climbs with the number of items, not only their quality, so a long mediocre scale can post a comfortable one. It leans on the items being roughly interchangeable, and when they aren’t it can mislead in either direction (which is why a lot of measurement people reach for McDonald’s omega instead). And a high alpha is not proof your items measure one thing.\nA “respectable” reliability can also just be too low for your claim. Detecting a small effect on a moderately unreliable outcome can demand far more sample than you have. The reliability you need is a function of the effect you’re chasing, not a fixed bar you clear once and forget."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html#validity-briefly",
+    "href": "posts/03-measurement-before-models/index.html#validity-briefly",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "Validity, briefly",
+    "text": "Validity, briefly\nReliability is consistency. Validity is aboutness. A bathroom scale that reads three pounds heavy every single time is perfectly reliable and perfectly wrong. For an outcome, the evidence worth showing is whether the items cover the construct, whether the data back the dimensions you claim, and whether the measure relates to things it should and not to things it shouldn’t. You don’t need all of it for every study. You do need to stop claiming more than your evidence supports."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html#a-check-you-can-actually-run",
+    "href": "posts/03-measurement-before-models/index.html#a-check-you-can-actually-run",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "A check you can actually run",
+    "text": "A check you can actually run\nBefore you trust an outcome, look at it. On your own data, not invented numbers, look at the item behavior and an internal-consistency estimate for each key construct:\n# On YOUR data. Do not report invented coefficients.\n# items &lt;- your_data[, c(\"q1\", \"q2\", \"q3\", \"q4\")]\n# psych::alpha(items)       # internal consistency + item-level diagnostics\n# psych::omega(items)       # model-based reliability\n# psych::fa.parallel(items) # how many dimensions are actually in there?\nRead the item-level output, not just the headline. An item that barely correlates with the rest, or a “scale” that turns out to be two factors in a trench coat, will tell you more than alpha ever does alone."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html#why-this-goes-before-the-impact-model",
+    "href": "posts/03-measurement-before-models/index.html#why-this-goes-before-the-impact-model",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "Why this goes before the impact model",
+    "text": "Why this goes before the impact model\nBecause everything downstream inherits it. Here’s the same point, simulated. The program has a real effect, true standardized 0.5. The only thing I change is how reliably the outcome is measured:\n\n\n\nOutcome reliability\nObserved effect\nPower\n\n\n\n\n1.00\n0.50\n70%\n\n\n0.80\n0.45\n60%\n\n\n0.60\n0.39\n48%\n\n\n0.40\n0.31\n34%\n\n\n\n\n\n\nAs outcome reliability falls, the observed effect and the power both fall.\n\n\nSame program. Same design. Same sample. Only the ruler gets noisier, and the effect you’d report slides from 0.50 to 0.31 while your power to see anything falls from 70% to 34%. Half your ability to detect a real effect, gone, because the outcome measure was weak.\nMeasurement isn’t the boring prelude to the real analysis. On a bad measure, it is the result. Check the ruler before you trust the measurement.\n\nI build baselinr and a cohort course on credible evaluation and measurement in education, where this is basically a whole week. subscribe via RSS to follow along."
+  },
+  {
+    "objectID": "posts/value-added-scores/index.html",
+    "href": "posts/value-added-scores/index.html",
+    "title": "What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)",
+    "section": "",
+    "text": "Somewhere right now a teacher is being handed a number that says she went from the 40th percentile to the 70th in a single year, and a district is quietly deciding what that number says about her. Maybe a bonus. Maybe a “see, the system works.”\nI want to talk about how little that number might actually be saying, because the people on the other end of it don’t get to see the error bars."
+  },
+  {
+    "objectID": "posts/value-added-scores/index.html#what-its-trying-to-do",
+    "href": "posts/value-added-scores/index.html#what-its-trying-to-do",
+    "title": "What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)",
+    "section": "What it’s trying to do",
+    "text": "What it’s trying to do\nA value-added model starts from a fair idea. Predict each kid’s score from where they started and a few covariates, and credit the teacher with the part that beat the prediction. Net out the head start, reward the gain. I don’t think the goal is wrong.\nThe problem is that the teacher’s real contribution is small next to everything else shoving those scores around, and the one thing the model can’t fully scrub out is the biggest one: kids are not handed to teachers at random."
+  },
+  {
+    "objectID": "posts/value-added-scores/index.html#whats-actually-inside-the-score",
+    "href": "posts/value-added-scores/index.html#whats-actually-inside-the-score",
+    "title": "What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)",
+    "section": "What’s actually inside the score",
+    "text": "What’s actually inside the score\nThe number says “effectiveness,” but it’s carrying a lot of passengers. Some of it is real teaching. Some of it is sorting, because if the stronger or better-supported kids keep landing with certain teachers, adjusting for prior scores shrinks that bias but never kills it, and whatever you didn’t measure rides straight through. Some of it is test measurement error, which goes in one end and comes out the other as “effectiveness.” Some of it is just small samples, a teacher judged on one or two classrooms, where a couple of unusual kids swing the whole thing. And some of it is the test’s scale.\nStack all of that up and the year-to-year stability of these scores tends to be modest, well below what a high-stakes ranking quietly assumes."
+  },
+  {
+    "objectID": "posts/value-added-scores/index.html#watch-it-happen",
+    "href": "posts/value-added-scores/index.html#watch-it-happen",
+    "title": "What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)",
+    "section": "Watch it happen",
+    "text": "Watch it happen\nI gave 300 simulated teachers a fixed, unchanging true effectiveness. It does not move. The only thing that changes between year one and year two is noise: small classes, test error, the luck of the draw.\nvam1 &lt;- mu + noise   # year 1 estimate\nvam2 &lt;- mu + noise   # year 2 estimate, same true mu, fresh noise\ncor(vam1, vam2)      # year-to-year reliability\nThe year-to-year reliability comes out at 0.47. Of the teachers in the bottom quartile one year, 23% land above the median the next, same people, same skill. And a representative teacher slides from the 42nd to the 69th percentile between years without changing a thing.\n\n\n\nYear 1 vs year 2 percentile ranks scatter widely around the diagonal; true skill is unchanged.\n\n\nThat jump from the low 40s to the high 60s, the one a district would frame as a turnaround? Pure noise. The scatter says it flatly: where a teacher ranks one year barely tells you where they’ll rank the next."
+  },
+  {
+    "objectID": "posts/value-added-scores/index.html#and-then-it-gets-worse",
+    "href": "posts/value-added-scores/index.html#and-then-it-gets-worse",
+    "title": "What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)",
+    "section": "And then it gets worse",
+    "text": "And then it gets worse\nOnce a number carries stakes, Campbell’s Law shows up: the moment a metric becomes a target, people optimize the metric instead of the thing it was supposed to stand for. Teaching to the test. Quietly steering which kids end up in your room. Narrowing what gets taught. The score stops being even the noisy proxy it started as."
+  },
+  {
+    "objectID": "posts/value-added-scores/index.html#what-to-do",
+    "href": "posts/value-added-scores/index.html#what-to-do",
+    "title": "What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)",
+    "section": "What to do",
+    "text": "What to do\nIf you’re going to use these at all: report the uncertainty, and actually look at how wide it is. Shrink the estimates (empirical Bayes pulls noisy small-sample numbers toward the average, which is exactly right when most of the spread is noise). Never hang a high-stakes decision on a single year. And say out loud what you’re assuming about how kids got sorted to teachers, because the entire causal story rests on it.\nThese scores can inform. Used as a one-number verdict on someone’s career, they mostly measure which children walked through the door.\n\nThis is where methods and policy collide, which is the part of this work I care about most. I build baselinr and a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
+  },
+  {
+    "objectID": "posts/clustering-independence/index.html",
+    "href": "posts/clustering-independence/index.html",
+    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
+    "section": "",
+    "text": "Sixty schools, three thousand students, and a p-value with more zeros after the decimal than you have ever earned honestly. It feels amazing. I’ve had that little rush, the one where you think oh, this is going in the abstract.\nI’m sorry to tell you it’s frequently a lie, and the lie is baked into the very first thing you assumed: that you have three thousand independent pieces of information.\nYou don’t."
+  },
+  {
+    "objectID": "posts/clustering-independence/index.html#why-n-3000-is-fiction",
+    "href": "posts/clustering-independence/index.html#why-n-3000-is-fiction",
+    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
+    "section": "Why “n = 3,000” is fiction",
+    "text": "Why “n = 3,000” is fiction\nKids in the same school resemble each other. Same teachers, same building, same neighborhood, same everything. So each extra student from a school you’ve already sampled tells you less than a brand-new, unrelated student would. Regression assumes your rows are independent. When they’re clustered and you shrug and run it anyway, your standard errors come out too small, your test statistics too big, and out the other end pours a parade of “significant” effects that are mostly just the model fooling itself.\nHow much smaller depends on the intraclass correlation, the ICC, which is the share of the variation that lives between schools rather than within them. A little clustering barely dents you. A lot of it quietly guts your real sample size down toward the number of schools rather than the number of students."
+  },
+  {
+    "objectID": "posts/clustering-independence/index.html#the-machinery-quickly",
+    "href": "posts/clustering-independence/index.html#the-machinery-quickly",
+    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
+    "section": "The machinery, quickly",
+    "text": "The machinery, quickly\nICC measures how much students within a cluster move together. The design effect turns that into how badly your naive standard errors lie. Cluster-robust standard errors and multilevel models are the two standard fixes (robust SEs patch the uncertainty; multilevel models patch it and let you study how schools differ). And if you’ve only got a handful of clusters, even robust SEs get shaky, and you reach for a wild cluster bootstrap."
+  },
+  {
+    "objectID": "posts/clustering-independence/index.html#watch-it-happen",
+    "href": "posts/clustering-independence/index.html#watch-it-happen",
+    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
+    "section": "Watch it happen",
+    "text": "Watch it happen\nThis is my favorite part, because it’s so stark. Sixty schools, fifty kids each, a school-level treatment, and a true effect of exactly zero. The within-school correlation gives an ICC around 0.26, a design effect of roughly 14, so those 3,000 students carry about as much information as 210.\nOne representative null study:\nm &lt;- lm(y ~ treat, data = study)        # student-level, ignores clustering\nsqrt(diag(vcov(m)))[\"treat\"]                          # naive SE\nsqrt(diag(sandwich::vcovCL(m, cluster = ~school)))[\"treat\"]  # cluster-robust SE\n\n\n\nStandard error\nSE\np-value\n\n\n\n\nNaive (student-level)\n0.043\n&lt; 0.0001\n\n\nCluster-robust (school)\n0.157\n0.167\n\n\n\nSame estimate, same data. The naive version is screaming significance. The honest version shrugs, correctly, because there is nothing there.\nAnd it’s not one unlucky draw. Across 600 simulated null studies:\n\n\n\nNaive analysis calls 57% of null studies significant; cluster-robust ~6%.\n\n\nThe naive analysis declares a significant effect in 57% of studies where the truth is nothing. Fifty-seven percent. The cluster-robust version sits at 6%, right about the 5% you signed up for. If you ignore clustering, “p &lt; .05” doesn’t mean what you think it means. It barely means anything."
+  },
+  {
+    "objectID": "posts/clustering-independence/index.html#what-to-do",
+    "href": "posts/clustering-independence/index.html#what-to-do",
+    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
+    "section": "What to do",
+    "text": "What to do\nCluster at the level treatment was actually assigned (rolled out by school? then school, not student). Report the ICC so your reader knows how much this even matters here. Watch out when you’ve only got a few clusters. And if you genuinely care about how schools differ, not just correcting for it, go multilevel.\nBefore you celebrate a tiny p-value, just ask where the rows came from. In education they’re almost always nested, which means “n” is not the number of students, and significance computed as if it were is significance you didn’t earn.\n\nI build baselinr and I’m building a cohort course on running education evaluations you can actually trust. subscribe via RSS to follow along."
+  }
+]

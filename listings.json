@@ -1,0 +1,15 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/02-effect-sizes-wwc/index.html",
+      "/posts/text-classifier-error/index.html",
+      "/posts/03-measurement-before-models/index.html",
+      "/posts/controls-collider/index.html",
+      "/posts/value-added-scores/index.html",
+      "/posts/01-baseline-table/index.html",
+      "/posts/clustering-independence/index.html",
+      "/posts/measurement-invariance/index.html"
+    ]
+  }
+]
