@@ -87,9 +87,7 @@
 </section>
 
  ]]></description>
-  <category>effect size</category>
-  <category>measurement</category>
-  <category>WWC</category>
+  <category>impact evaluation</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/02-effect-sizes-wwc/</guid>
   <pubDate>Wed, 24 Jun 2026 07:00:00 GMT</pubDate>
 </item>
@@ -192,10 +190,7 @@ font-style: inherit;"># 85% accurate overall, but worse for one group</span></sp
 </section>
 
  ]]></description>
-  <category>computational text analysis</category>
-  <category>measurement error</category>
-  <category>NLP</category>
-  <category>causal inference</category>
+  <category>measurement</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/text-classifier-error/</guid>
   <pubDate>Wed, 24 Jun 2026 07:00:00 GMT</pubDate>
 </item>
@@ -294,9 +289,6 @@ font-style: inherit;"># psych::fa.parallel(items) # how many dimensions are actu
 
  ]]></description>
   <category>measurement</category>
-  <category>psychometrics</category>
-  <category>reliability</category>
-  <category>validity</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/03-measurement-before-models/</guid>
   <pubDate>Wed, 24 Jun 2026 07:00:00 GMT</pubDate>
 </item>
@@ -421,9 +413,6 @@ font-style: inherit;"># also adjust for the post treatment mediator</span></span
 
  ]]></description>
   <category>causal inference</category>
-  <category>DAG</category>
-  <category>confounding</category>
-  <category>education research</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/</guid>
   <pubDate>Wed, 24 Jun 2026 07:00:00 GMT</pubDate>
 </item>
@@ -494,10 +483,7 @@ font-style: inherit;"># year to year reliability</span></span></code></pre></div
 </section>
 
  ]]></description>
-  <category>accountability</category>
-  <category>value added</category>
   <category>education policy</category>
-  <category>measurement error</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/</guid>
   <pubDate>Wed, 24 Jun 2026 07:00:00 GMT</pubDate>
 </item>
@@ -705,8 +691,6 @@ font-style: inherit;">"ell"</span>)))</span></code></pre></div></div>
 
  ]]></description>
   <category>impact evaluation</category>
-  <category>baseline equivalence</category>
-  <category>WWC</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/01-baseline-table/</guid>
   <pubDate>Wed, 24 Jun 2026 07:00:00 GMT</pubDate>
 </item>
@@ -816,10 +800,7 @@ font-style: inherit;"># cluster robust SE</span></span></code></pre></div></div>
 </section>
 
  ]]></description>
-  <category>education data</category>
-  <category>clustering</category>
-  <category>standard errors</category>
-  <category>multilevel models</category>
+  <category>impact evaluation</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/clustering-independence/</guid>
   <pubDate>Wed, 24 Jun 2026 07:00:00 GMT</pubDate>
 </item>
@@ -907,9 +888,6 @@ font-style: inherit;"># observed, dropping the one DIF item</span></span></code>
 
  ]]></description>
   <category>measurement</category>
-  <category>psychometrics</category>
-  <category>measurement invariance</category>
-  <category>DIF</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/measurement-invariance/</guid>
   <pubDate>Wed, 24 Jun 2026 07:00:00 GMT</pubDate>
 </item>
