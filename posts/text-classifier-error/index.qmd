@@ -7,7 +7,7 @@ draft: false
 ---
 
 There's a very specific high that hits when a classifier you've been wrestling
-with for days finally clears 85% on the held-out set. It works. You run it over
+with for days finally clears 85% on the held out set. It works. You run it over
 all fifty thousand comments, attach the predicted labels to your dataset, and
 move on to the analysis you actually cared about.
 
@@ -27,7 +27,7 @@ the regression they're there.
 
 And the phrase "ground truth" makes it so much worse, because it's not ground
 truth. It's the classifier's training target. In your actual analysis those labels
-are a noisy stand-in, and calling them truth is how the error sneaks past you.
+are a noisy stand in, and calling them truth is how the error sneaks past you.
 
 ## What the error does depends on what kind it is
 
@@ -64,7 +64,7 @@ coef(lm(Y ~ Zhat_d))         # 85% accurate overall, but worse for one group
 | Labels used | Estimated effect |
 |---|---:|
 | True labels | **1.00** |
-| Predicted — non-differential error | **0.68** |
+| Predicted — nondifferential error | **0.68** |
 | Predicted — differential error | **0.72** |
 
 ![Both classifiers are 85% accurate, yet the estimated effect is attenuated and the bias differs.](fig-attenuation.png)
@@ -78,12 +78,12 @@ breaking accuracy out by subgroup can.
 
 ## What to actually do
 
-Keep a human-labeled gold set, and not just for tuning. You need it to *measure*
+Keep a human labeled gold set, and not just for tuning. You need it to *measure*
 the error so you can correct for it later. Report classifier performance broken
 out by the groups you'll compare, because "85% overall" is precisely where
 differential error hides. And then either propagate that uncertainty into the
 analysis or use an estimator built for predicted labels (there's a small but
-real literature on inference with machine-predicted variables now). Whatever you
+real literature on inference with machine predicted variables now). Whatever you
 do, stop quietly swapping predictions in for observations and calling it done.
 
 Measure your measurement. Report it by group. Let the error into the model the

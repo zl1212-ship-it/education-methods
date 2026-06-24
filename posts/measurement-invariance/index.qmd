@@ -1,6 +1,6 @@
 ---
 title: "Before you compare two groups' survey scores, check this"
-description: "Comparing latent-construct means across groups assumes the scale means the same thing to both. When it doesn't, the difference is the instrument, not the construct."
+description: "Comparing latent construct means across groups assumes the scale means the same thing to both. When it doesn't, the difference is the instrument, not the construct."
 date: "2026-06-24"
 categories: [measurement, psychometrics, measurement invariance, DIF]
 draft: false
@@ -33,7 +33,7 @@ the basic shape. If the loadings are equal too (metric), you can start comparing
 are you actually allowed to compare means.
 
 That last one is the level your group comparison quietly assumed it had. You test
-for it with a multi-group CFA. And when a single item behaves differently across
+for it with a multigroup CFA. And when a single item behaves differently across
 groups, that's DIF, differential item functioning, which is a fancy way of saying
 the lens has a chip in it right there.
 
@@ -58,7 +58,7 @@ hedges_g(scale_inv, group)    # observed, dropping the one DIF item
 | Observed 5-item scale | **−0.25** |
 | Scale without the DIF item | **−0.02** |
 
-![Per-item group difference: items 1–4 are flat, item 5 carries the whole gap.](fig-dif.png)
+![Per item group difference: items 1–4 are flat, item 5 carries the whole gap.](fig-dif.png)
 
 The groups are equal. I promise, I made them that way. And the full scale still
 reports g = −0.25, which most people would write up as "Group B is less engaged."
@@ -74,7 +74,7 @@ Test invariance before you compare means, every time you're comparing a latent
 thing across groups. If it fails, don't throw the whole comparison out, go find
 the items that broke (the DIF ones). And then report partial invariance honestly,
 anchored on the items that held. It's less clean than a single triumphant
-p-value. It's also the difference between a finding about students and a finding
+p value. It's also the difference between a finding about students and a finding
 about your questionnaire.
 
 ---

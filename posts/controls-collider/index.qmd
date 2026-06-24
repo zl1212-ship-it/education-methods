@@ -21,7 +21,7 @@ that behave nothing alike.
 ## Three reasons a variable is in your model
 
 One: it's a **confounder**. Something that causes both who got treated *and* the
-outcome. Pretest scores, if the higher-scoring kids were also more likely to get
+outcome. Pretest scores, if the higher scoring kids were also more likely to get
 the program. You want these in the model. Leaving them out is the thing everyone's
 (rightly) scared of.
 
@@ -68,7 +68,7 @@ real confounder), and `M` is motivation measured after the program (a mediator).
 # Estimand: total effect of `treat` on `Y` (simulated; true value = 8.5)
 coef(lm(Y ~ treat))["treat"]          # naive
 coef(lm(Y ~ treat + C))["treat"]      # adjust for the confounder
-coef(lm(Y ~ treat + C + M))["treat"]  # also adjust for the post-treatment mediator
+coef(lm(Y ~ treat + C + M))["treat"]  # also adjust for the post treatment mediator
 ```
 
 | Model | Estimate |
@@ -81,7 +81,7 @@ coef(lm(Y ~ treat + C + M))["treat"]  # also adjust for the post-treatment media
 
 The naive number is too big because treated kids started ahead. Adjust for the
 confounder and it snaps to 8.61, basically the truth. Then you add the
-after-the-fact mediator and it falls to 3.99, because you just controlled away the
+after the fact mediator and it falls to 3.99, because you just controlled away the
 thing the program works through. The model with the *most* controls is the most
 wrong. That's the whole point.
 
@@ -89,17 +89,17 @@ wrong. That's the whole point.
 
 - Sketch the DAG before I touch the model. A bad drawing on a receipt counts.
 - Only control for things measured *before* treatment.
-- If a variable was measured after the treatment, I treat it as off-limits until
+- If a variable was measured after the treatment, I treat it as off limits until
   the picture tells me otherwise.
 - For every control, I make myself say which of the three it is. If I can't, it
   doesn't go in.
 
-I'm not anti-control. I'm anti "more controls = more rigor," because that one's
+I'm not against controls. I'm anti "more controls = more rigor," because that one's
 just false, and it's the kind of false that looks like care.
 
 ---
 
 *I'm building [`baselinr`](https://github.com/zl1212-ship-it/baselinr), a small R
-package for WWC-aligned baseline equivalence, and a cohort course on running
+package for WWC aligned baseline equivalence, and a cohort course on running
 education evaluations you can actually trust. [subscribe via RSS](https://zl1212-ship-it.github.io/education-methods/index.xml) if
 that's your thing.*

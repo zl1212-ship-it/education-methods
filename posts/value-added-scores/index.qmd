@@ -1,8 +1,8 @@
 ---
 title: "What a 'teacher effectiveness' score actually measures (and what it doesn't)"
-description: "Value-added scores are noisier and more assumption-laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck."
+description: "Value added scores are noisier and more assumption laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck."
 date: "2026-06-24"
-categories: [accountability, value-added, education policy, measurement error]
+categories: [accountability, value added, education policy, measurement error]
 draft: false
 ---
 
@@ -15,7 +15,7 @@ people on the other end of it don't get to see the error bars.
 
 ## What it's trying to do
 
-A value-added model starts from a fair idea. Predict each kid's score from where
+A value added model starts from a fair idea. Predict each kid's score from where
 they started and a few covariates, and credit the teacher with the part that beat
 the prediction. Net out the head start, reward the gain. I don't think the goal is
 wrong.
@@ -27,7 +27,7 @@ out is the biggest one: kids are not handed to teachers at random.
 ## What's actually inside the score
 
 The number says "effectiveness," but it's carrying a lot of passengers. Some of it
-is real teaching. Some of it is sorting, because if the stronger or better-supported
+is real teaching. Some of it is sorting, because if the stronger or better supported
 kids keep landing with certain teachers, adjusting for prior scores shrinks that
 bias but never kills it, and whatever you didn't measure rides straight through.
 Some of it is test measurement error, which goes in one end and comes out the
@@ -35,8 +35,8 @@ other as "effectiveness." Some of it is just small samples, a teacher judged on 
 or two classrooms, where a couple of unusual kids swing the whole thing. And some
 of it is the test's scale.
 
-Stack all of that up and the year-to-year stability of these scores tends to be
-modest, well below what a high-stakes ranking quietly assumes.
+Stack all of that up and the year to year stability of these scores tends to be
+modest, well below what a high stakes ranking quietly assumes.
 
 ## Watch it happen
 
@@ -47,10 +47,10 @@ classes, test error, the luck of the draw.
 ```r
 vam1 <- mu + noise   # year 1 estimate
 vam2 <- mu + noise   # year 2 estimate, same true mu, fresh noise
-cor(vam1, vam2)      # year-to-year reliability
+cor(vam1, vam2)      # year to year reliability
 ```
 
-The year-to-year reliability comes out at **0.47**. Of the teachers in the bottom
+The year to year reliability comes out at **0.47**. Of the teachers in the bottom
 quartile one year, **23% land above the median the next**, same people, same
 skill. And a representative teacher slides from the **42nd to the 69th percentile**
 between years without changing a thing.
@@ -72,13 +72,13 @@ as.
 ## What to do
 
 If you're going to use these at all: report the uncertainty, and actually look at
-how wide it is. Shrink the estimates (empirical Bayes pulls noisy small-sample
+how wide it is. Shrink the estimates (empirical Bayes pulls noisy small sample
 numbers toward the average, which is exactly right when most of the spread is
-noise). Never hang a high-stakes decision on a single year. And say out loud what
+noise). Never hang a high stakes decision on a single year. And say out loud what
 you're assuming about how kids got sorted to teachers, because the entire causal
 story rests on it.
 
-These scores can inform. Used as a one-number verdict on someone's career, they
+These scores can inform. Used as a one number verdict on someone's career, they
 mostly measure which children walked through the door.
 
 ---

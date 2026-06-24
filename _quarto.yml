@@ -10,7 +10,7 @@ project:
 
 website:
   title: "Education Methods"
-  description: "Plain-spoken notes on credible impact evaluation and measurement in education."
+  description: "Plain, honest notes on credible impact evaluation and measurement in education."
   site-url: "https://zl1212-ship-it.github.io/education-methods/"
   navbar:
     title: "Education Methods"

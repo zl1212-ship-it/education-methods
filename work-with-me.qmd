@@ -10,18 +10,18 @@ work, and how do we know?" That's exactly what this whole site is about.
 
 - **Impact evaluation design & analysis:** matching the question to a defensible
   design (RD, DiD, matching, RCTs), and the analysis that follows
-- **Baseline equivalence & WWC-aligned reporting:** the tables and effect sizes
+- **Baseline equivalence & WWC aligned reporting:** the tables and effect sizes
   reviewers and funders expect (this is what [`baselinr`](https://github.com/zl1212-ship-it/baselinr)
   automates)
 - **Measurement & instrument validation:** reliability, validity, measurement
   invariance before you compare groups
-- **Computational text analysis:** turning open-ended responses, feedback, or
-  policy text into analysis-ready data, without pretending the classifier is
+- **Computational text analysis:** turning open ended responses, feedback, or
+  policy text into analysis ready data, without pretending the classifier is
   ground truth
 
 ## Who I work with
 
-Education researchers, school districts and systems, ed-tech teams, nonprofits,
+Education researchers, school districts and systems, ed tech teams, nonprofits,
 and foundations that need an effectiveness claim to hold up, whether that's
 designing an evaluation, reviewing one, or rescuing an analysis that's gone
 sideways.
@@ -34,4 +34,4 @@ you honestly whether and how I can help.
 [**→ Email me**](mailto:zl1212@uw.edu?subject=Consulting%20inquiry&body=Hi%20Yuxia%2C%20here%27s%20the%20project%20I%27m%20thinking%20about%3A)
 
 Background: Yuxia Liang, M.Ed. in Educational Leadership & Policy, University of
-Washington; author of the open-source `baselinr` R package.
+Washington; author of the open source `baselinr` R package.

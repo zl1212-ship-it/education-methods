@@ -7,6 +7,6 @@ whether the conclusions hold up: baseline equivalence, measurement, effect
 sizes, and honest communication of uncertainty.
 
 Written by Yuxia Liang, M.Ed. in Educational Leadership & Policy (University of
-Washington). Author of the open-source
+Washington). Author of the open source
 [`baselinr`](https://github.com/zl1212-ship-it/baselinr) R package for
-WWC-aligned baseline equivalence.
+WWC aligned baseline equivalence.

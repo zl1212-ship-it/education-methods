@@ -1,5 +1,5 @@
 ---
-title: "Your baseline table is doing more work than your p-value"
+title: "Your baseline table is doing more work than your p value"
 description: "Baseline equivalence carries the credibility of a whole impact evaluation, and most of us assemble it last, in a hurry. Here's how the field actually wants it reported."
 date: "2026-06-24"
 categories: [impact evaluation, baseline equivalence, WWC]
@@ -7,7 +7,7 @@ draft: false
 ---
 
 For a long time the baseline table was the part of a report I did last, fast, and
-a little resentfully. Throat-clearing before the real analysis, was how I thought
+a little resentfully. Throat clearing before the real analysis, was how I thought
 about it. Get it out of the way, get to the effect.
 
 I had it exactly backwards about which part was the real analysis.
@@ -24,17 +24,17 @@ Plain version: before the program started, were these groups similar enough that
 can pin later differences on the program instead of on who was in each group?
 
 Notice what that is *not*. It is not "is the baseline difference statistically
-significant?" That's the reflex, run a t-test on the pretest, see p > .05, declare
+significant?" That's the reflex, run a t test on the pretest, see p > .05, declare
 the groups fine, move on. But significance is the wrong tool here, for a reason
 that has nothing to do with the program. With a big sample, a trivial difference
 turns "significant." With a small one, a real gap sails through as "not
-significant." A p-value is mostly telling you about your sample size. Equivalence
+significant." A p value is mostly telling you about your sample size. Equivalence
 is a question about *size of the gap*. Different question.
 
 ## What the WWC asks for instead
 
 For each covariate you report a standardized mean difference (Hedges' g, which is
-Cohen's d with a small-sample correction), and you read it against two numbers:
+Cohen's d with a small sample correction), and you read it against two numbers:
 
 | Hedges' g (absolute value) | Category | What it commits you to |
 |---|---|---|
@@ -97,7 +97,7 @@ adjusts for it. The table says one thing, the model does another, and a careful
 reader catches it instantly. If a covariate lands in the middle band, it has to
 show up in the model. Every time.
 
-Treat the baseline table like the load-bearing wall it is, not the trim you tack
+Treat the baseline table like the load bearing wall it is, not the trim you tack
 on at the end. Get it right and everything downstream has something solid to stand
 on. Get it wrong and your fanciest model is just measuring the head start.
 
