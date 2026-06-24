@@ -1,0 +1,12 @@
+---
+title: "Education Methods"
+subtitle: "Methods notes on credible impact evaluation & measurement in education."
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+  fields: [date, title, description, reading-time]
+page-layout: full
+---

@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - about.qmd
+    - posts/
+
+website:
+  title: "Education Methods"
+  description: "Plain-spoken notes on credible impact evaluation and measurement in education."
+  site-url: "https://zl1212-ship-it.github.io/education-methods/"
+  navbar:
+    title: "Education Methods"
+    right:
+      - text: "Posts"
+        href: index.qmd
+      - about.qmd
+      - icon: rss
+        href: index.xml
+  page-footer: "© 2026 Yuxia Liang"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    fig-cap-location: bottom

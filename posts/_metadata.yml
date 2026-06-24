@@ -1,0 +1,6 @@
+# Defaults applied to every post
+freeze: true
+author: "Yuxia Liang" # DRAFT
+format:
+  html:
+    toc: true
