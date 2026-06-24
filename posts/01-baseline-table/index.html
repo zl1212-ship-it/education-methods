@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2026-06-24">
 <meta name="description" content="Baseline equivalence carries the credibility of a whole impact evaluation, and most of us assemble it last, in a hurry. Here’s how the field actually wants it reported.">
 
-<title>Your baseline table is doing more work than your p-value – Education Methods</title>
+<title>Your baseline table is doing more work than your p value – Education Methods</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -178,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Your baseline table is doing more work than your p-value</h1>
+<h1 class="title">Your baseline table is doing more work than your p value</h1>
   <div class="quarto-categories">
     <div class="quarto-category">impact evaluation</div>
     <div class="quarto-category">baseline equivalence</div>
@@ -217,17 +217,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>For a long time the baseline table was the part of a report I did last, fast, and a little resentfully. Throat-clearing before the real analysis, was how I thought about it. Get it out of the way, get to the effect.</p>
+<p>For a long time the baseline table was the part of a report I did last, fast, and a little resentfully. Throat clearing before the real analysis, was how I thought about it. Get it out of the way, get to the effect.</p>
 <p>I had it exactly backwards about which part was the real analysis.</p>
 <p>By the time you’re estimating a program effect, you’ve already placed the bet that matters: that the two groups were comparable to begin with. If they weren’t, you’re not measuring the program. You’re measuring the head start. No model downstream fixes that, and reviewers, funders, and the What Works Clearinghouse all know exactly where to look.</p>
 <section id="the-question-its-actually-answering" class="level2">
 <h2 class="anchored" data-anchor-id="the-question-its-actually-answering">The question it’s actually answering</h2>
 <p>Plain version: before the program started, were these groups similar enough that I can pin later differences on the program instead of on who was in each group?</p>
-<p>Notice what that is <em>not</em>. It is not “is the baseline difference statistically significant?” That’s the reflex, run a t-test on the pretest, see p &gt; .05, declare the groups fine, move on. But significance is the wrong tool here, for a reason that has nothing to do with the program. With a big sample, a trivial difference turns “significant.” With a small one, a real gap sails through as “not significant.” A p-value is mostly telling you about your sample size. Equivalence is a question about <em>size of the gap</em>. Different question.</p>
+<p>Notice what that is <em>not</em>. It is not “is the baseline difference statistically significant?” That’s the reflex, run a t test on the pretest, see p &gt; .05, declare the groups fine, move on. But significance is the wrong tool here, for a reason that has nothing to do with the program. With a big sample, a trivial difference turns “significant.” With a small one, a real gap sails through as “not significant.” A p value is mostly telling you about your sample size. Equivalence is a question about <em>size of the gap</em>. Different question.</p>
 </section>
 <section id="what-the-wwc-asks-for-instead" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-wwc-asks-for-instead">What the WWC asks for instead</h2>
-<p>For each covariate you report a standardized mean difference (Hedges’ g, which is Cohen’s d with a small-sample correction), and you read it against two numbers:</p>
+<p>For each covariate you report a standardized mean difference (Hedges’ g, which is Cohen’s d with a small sample correction), and you read it against two numbers:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -355,7 +355,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-part-that-quietly-leaks-credibility" class="level2">
 <h2 class="anchored" data-anchor-id="the-part-that-quietly-leaks-credibility">The part that quietly leaks credibility</h2>
 <p>“Satisfied with adjustment” is not a passing grade. It’s a promise. It says: these groups are close enough, <em>as long as</em> I actually control for this covariate in the impact model. And it is genuinely common to see a baseline table that files a covariate under “satisfied with adjustment” and then an impact model that never adjusts for it. The table says one thing, the model does another, and a careful reader catches it instantly. If a covariate lands in the middle band, it has to show up in the model. Every time.</p>
-<p>Treat the baseline table like the load-bearing wall it is, not the trim you tack on at the end. Get it right and everything downstream has something solid to stand on. Get it wrong and your fanciest model is just measuring the head start.</p>
+<p>Treat the baseline table like the load bearing wall it is, not the trim you tack on at the end. Get it right and everything downstream has something solid to stand on. Get it wrong and your fanciest model is just measuring the head start.</p>
 <hr>
 <p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package that produces these tables, and a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 

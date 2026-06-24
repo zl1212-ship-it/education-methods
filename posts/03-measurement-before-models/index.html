@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yuxia Liang">
 <meta name="dcterms.date" content="2026-06-24">
-<meta name="description" content="A noisy outcome quietly shrinks the effect you can detect. Reliability and validity aren’t box-checking; they decide whether a real program looks like it worked.">
+<meta name="description" content="A noisy outcome quietly shrinks the effect you can detect. Reliability and validity aren’t box checking; they decide whether a real program looks like it worked.">
 
 <title>Measurement before models: the check most evaluations skip – Education Methods</title>
 <style>
@@ -190,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    A noisy outcome quietly shrinks the effect you can detect. Reliability and validity aren’t box-checking; they decide whether a real program looks like it worked.
+    A noisy outcome quietly shrinks the effect you can detect. Reliability and validity aren’t box checking; they decide whether a real program looks like it worked.
   </div>
 </div>
 
@@ -223,7 +223,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Here’s the part that stings: teams will spend months on the design, the randomization, the comparison group, the matching, and then about ten minutes on the thing they actually measure. And then they’re surprised by a null result.</p>
 <section id="what-a-noisy-outcome-quietly-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-a-noisy-outcome-quietly-does">What a noisy outcome quietly does</h2>
-<p>Random measurement error in your outcome doesn’t just scatter the points around a bit. It inflates the variance of the outcome, which widens your standard errors, which costs you power. And because the standard deviation in your effect-size denominator just got bigger, the standardized effect you can report <em>shrinks</em>. You can run a flawless design on a bad measure and find nothing, not because the program failed, but because your ruler was made of rubber.</p>
+<p>Random measurement error in your outcome doesn’t just scatter the points around a bit. It inflates the variance of the outcome, which widens your standard errors, which costs you power. And because the standard deviation in your effect size denominator just got bigger, the standardized effect you can report <em>shrinks</em>. You can run a flawless design on a bad measure and find nothing, not because the program failed, but because your ruler was made of rubber.</p>
 <p>So before the model, check the ruler.</p>
 </section>
 <section id="reliability-what-one-number-hides" class="level2">
@@ -237,13 +237,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="a-check-you-can-actually-run" class="level2">
 <h2 class="anchored" data-anchor-id="a-check-you-can-actually-run">A check you can actually run</h2>
-<p>Before you trust an outcome, look at it. On your own data, not invented numbers, look at the item behavior and an internal-consistency estimate for each key construct:</p>
+<p>Before you trust an outcome, look at it. On your own data, not invented numbers, look at the item behavior and an internal consistency estimate for each key construct:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On YOUR data. Do not report invented coefficients.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># items &lt;- your_data[, c("q1", "q2", "q3", "q4")]</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># psych::alpha(items)       # internal consistency + item-level diagnostics</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># psych::omega(items)       # model-based reliability</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># psych::alpha(items)       # internal consistency + item level diagnostics</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># psych::omega(items)       # model based reliability</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># psych::fa.parallel(items) # how many dimensions are actually in there?</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Read the item-level output, not just the headline. An item that barely correlates with the rest, or a “scale” that turns out to be two factors in a trench coat, will tell you more than alpha ever does alone.</p>
+<p>Read the item level output, not just the headline. An item that barely correlates with the rest, or a “scale” that turns out to be two factors in a trench coat, will tell you more than alpha ever does alone.</p>
 </section>
 <section id="why-this-goes-before-the-impact-model" class="level2">
 <h2 class="anchored" data-anchor-id="why-this-goes-before-the-impact-model">Why this goes before the impact model</h2>

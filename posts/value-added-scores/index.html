@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yuxia Liang">
 <meta name="dcterms.date" content="2026-06-24">
-<meta name="description" content="Value-added scores are noisier and more assumption-laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck.">
+<meta name="description" content="Value added scores are noisier and more assumption laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck.">
 
 <title>What a ‘teacher effectiveness’ score actually measures (and what it doesn’t) – Education Methods</title>
 <style>
@@ -182,7 +182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 class="title">What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)</h1>
   <div class="quarto-categories">
     <div class="quarto-category">accountability</div>
-    <div class="quarto-category">value-added</div>
+    <div class="quarto-category">value added</div>
     <div class="quarto-category">education policy</div>
     <div class="quarto-category">measurement error</div>
   </div>
@@ -190,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    Value-added scores are noisier and more assumption-laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck.
+    Value added scores are noisier and more assumption laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck.
   </div>
 </div>
 
@@ -223,21 +223,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>I want to talk about how little that number might actually be saying, because the people on the other end of it don’t get to see the error bars.</p>
 <section id="what-its-trying-to-do" class="level2">
 <h2 class="anchored" data-anchor-id="what-its-trying-to-do">What it’s trying to do</h2>
-<p>A value-added model starts from a fair idea. Predict each kid’s score from where they started and a few covariates, and credit the teacher with the part that beat the prediction. Net out the head start, reward the gain. I don’t think the goal is wrong.</p>
+<p>A value added model starts from a fair idea. Predict each kid’s score from where they started and a few covariates, and credit the teacher with the part that beat the prediction. Net out the head start, reward the gain. I don’t think the goal is wrong.</p>
 <p>The problem is that the teacher’s real contribution is <em>small</em> next to everything else shoving those scores around, and the one thing the model can’t fully scrub out is the biggest one: kids are not handed to teachers at random.</p>
 </section>
 <section id="whats-actually-inside-the-score" class="level2">
 <h2 class="anchored" data-anchor-id="whats-actually-inside-the-score">What’s actually inside the score</h2>
-<p>The number says “effectiveness,” but it’s carrying a lot of passengers. Some of it is real teaching. Some of it is sorting, because if the stronger or better-supported kids keep landing with certain teachers, adjusting for prior scores shrinks that bias but never kills it, and whatever you didn’t measure rides straight through. Some of it is test measurement error, which goes in one end and comes out the other as “effectiveness.” Some of it is just small samples, a teacher judged on one or two classrooms, where a couple of unusual kids swing the whole thing. And some of it is the test’s scale.</p>
-<p>Stack all of that up and the year-to-year stability of these scores tends to be modest, well below what a high-stakes ranking quietly assumes.</p>
+<p>The number says “effectiveness,” but it’s carrying a lot of passengers. Some of it is real teaching. Some of it is sorting, because if the stronger or better supported kids keep landing with certain teachers, adjusting for prior scores shrinks that bias but never kills it, and whatever you didn’t measure rides straight through. Some of it is test measurement error, which goes in one end and comes out the other as “effectiveness.” Some of it is just small samples, a teacher judged on one or two classrooms, where a couple of unusual kids swing the whole thing. And some of it is the test’s scale.</p>
+<p>Stack all of that up and the year to year stability of these scores tends to be modest, well below what a high stakes ranking quietly assumes.</p>
 </section>
 <section id="watch-it-happen" class="level2">
 <h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
 <p>I gave 300 simulated teachers a fixed, unchanging true effectiveness. It does not move. The only thing that changes between year one and year two is noise: small classes, test error, the luck of the draw.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vam1 <span class="ot">&lt;-</span> mu <span class="sc">+</span> noise   <span class="co"># year 1 estimate</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>vam2 <span class="ot">&lt;-</span> mu <span class="sc">+</span> noise   <span class="co"># year 2 estimate, same true mu, fresh noise</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(vam1, vam2)      <span class="co"># year-to-year reliability</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The year-to-year reliability comes out at <strong>0.47</strong>. Of the teachers in the bottom quartile one year, <strong>23% land above the median the next</strong>, same people, same skill. And a representative teacher slides from the <strong>42nd to the 69th percentile</strong> between years without changing a thing.</p>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(vam1, vam2)      <span class="co"># year to year reliability</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The year to year reliability comes out at <strong>0.47</strong>. Of the teachers in the bottom quartile one year, <strong>23% land above the median the next</strong>, same people, same skill. And a representative teacher slides from the <strong>42nd to the 69th percentile</strong> between years without changing a thing.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="fig-vam-churn.png" class="img-fluid figure-img"></p>
@@ -252,8 +252,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="what-to-do" class="level2">
 <h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
-<p>If you’re going to use these at all: report the uncertainty, and actually look at how wide it is. Shrink the estimates (empirical Bayes pulls noisy small-sample numbers toward the average, which is exactly right when most of the spread is noise). Never hang a high-stakes decision on a single year. And say out loud what you’re assuming about how kids got sorted to teachers, because the entire causal story rests on it.</p>
-<p>These scores can inform. Used as a one-number verdict on someone’s career, they mostly measure which children walked through the door.</p>
+<p>If you’re going to use these at all: report the uncertainty, and actually look at how wide it is. Shrink the estimates (empirical Bayes pulls noisy small sample numbers toward the average, which is exactly right when most of the spread is noise). Never hang a high stakes decision on a single year. And say out loud what you’re assuming about how kids got sorted to teachers, because the entire causal story rests on it.</p>
+<p>These scores can inform. Used as a one number verdict on someone’s career, they mostly measure which children walked through the door.</p>
 <hr>
 <p><em>This is where methods and policy collide, which is the part of this work I care about most. I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 

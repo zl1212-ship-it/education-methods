@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yuxia Liang">
 <meta name="dcterms.date" content="2026-06-24">
-<meta name="description" content="Cohen’s d, Hedges’ g, and the small-sample correction. Which standardized difference to report, and why getting it lazy quietly changes your conclusion.">
+<meta name="description" content="Cohen’s d, Hedges’ g, and the small sample correction. Which standardized difference to report, and why getting it lazy quietly changes your conclusion.">
 
 <title>Effect sizes for education: what WWC actually wants – Education Methods</title>
 <style>
@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Cohen’s d, Hedges’ g, and the small-sample correction. Which standardized difference to report, and why getting it lazy quietly changes your conclusion.
+    Cohen’s d, Hedges’ g, and the small sample correction. Which standardized difference to report, and why getting it lazy quietly changes your conclusion.
   </div>
 </div>
 
@@ -186,17 +186,17 @@ ul.task-list li input[type="checkbox"] {
 <p>It’s not that it’s wrong. It’s that it tells you almost nothing. Significant says <em>we detected something</em>. It says nothing about <em>how big</em>, which is the only thing a school board or a funder or the What Works Clearinghouse actually wants to know. That’s what an effect size is for, and in education that means a standardized mean difference, with a couple of small decisions baked in that quietly move the number.</p>
 <section id="the-thing-itself" class="level2">
 <h2 class="anchored" data-anchor-id="the-thing-itself">The thing itself</h2>
-<p>Strip it down: take the gap between the two group means, divide by a standard deviation. Now the effect is in standard-deviation units, so a reading program and a math program can sit on the same ruler. Two studies with the same raw point gain can land at very different standardized effects, because the spread of scores differs. Which is the point. It’s also where the choices start to matter.</p>
+<p>Strip it down: take the gap between the two group means, divide by a standard deviation. Now the effect is in standard deviation units, so a reading program and a math program can sit on the same ruler. Two studies with the same raw point gain can land at very different standardized effects, because the spread of scores differs. Which is the point. It’s also where the choices start to matter.</p>
 </section>
 <section id="cohens-d-vs.-hedges-g" class="level2">
 <h2 class="anchored" data-anchor-id="cohens-d-vs.-hedges-g">Cohen’s d vs.&nbsp;Hedges’ g</h2>
-<p>Cohen’s d puts the pooled within-group SD in that denominator. Fine, except it has a known flaw: in small samples it’s biased <em>upward</em>. It overstates. And education studies are small constantly, a few classrooms, a handful of schools, so this is not a hypothetical.</p>
-<p>Hedges’ g is just Cohen’s d times a small-sample correction. When the sample is big, the correction is basically 1 and the two agree. When it’s small, the correction pulls the estimate back toward the truth. WWC reports g for exactly this reason, and once you see the size of the bias you stop arguing about it.</p>
+<p>Cohen’s d puts the pooled within group SD in that denominator. Fine, except it has a known flaw: in small samples it’s biased <em>upward</em>. It overstates. And education studies are small constantly, a few classrooms, a handful of schools, so this is not a hypothetical.</p>
+<p>Hedges’ g is just Cohen’s d times a small sample correction. When the sample is big, the correction is basically 1 and the two agree. When it’s small, the correction pulls the estimate back toward the truth. WWC reports g for exactly this reason, and once you see the size of the bias you stop arguing about it.</p>
 <p>Here’s the bias, simulated. True standardized effect is 0.5. I draw a pile of small studies and average each estimator:</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: right;">Per-group n</th>
+<th style="text-align: right;">Per group n</th>
 <th style="text-align: right;">Cohen’s d</th>
 <th style="text-align: right;">Hedges’ g</th>
 </tr>
@@ -234,16 +234,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="the-little-decisions-people-get-wrong" class="level2">
 <h2 class="anchored" data-anchor-id="the-little-decisions-people-get-wrong">The little decisions people get wrong</h2>
-<p>Which SD goes in the denominator. Pooled (both groups) is the usual choice and what the WWC convention assumes. Control-group-only is sometimes defensible, but if you pick it without saying so, your effect size isn’t comparable to anyone else’s. State your denominator.</p>
-<p>Treating a small-sample d as if it were unbiased. If n is small and you skipped the correction, your number is inflated. Use g.</p>
+<p>Which SD goes in the denominator. Pooled (both groups) is the usual choice and what the WWC convention assumes. control group only is sometimes defensible, but if you pick it without saying so, your effect size isn’t comparable to anyone else’s. State your denominator.</p>
+<p>Treating a small sample d as if it were unbiased. If n is small and you skipped the correction, your number is inflated. Use g.</p>
 <p>And comparing effect sizes across studies that standardized differently. A 0.30 on a narrow, homogeneous sample is not the same animal as a 0.30 on a broad one. Effect sizes are only comparable when the rulers are.</p>
 </section>
 <section id="reporting-it-like-you-mean-it" class="level2">
 <h2 class="anchored" data-anchor-id="reporting-it-like-you-mean-it">Reporting it like you mean it</h2>
-<p>Give the effect size with an interval, not a lonely point estimate; “g = 0.8” with no uncertainty begs to be over-trusted. Tie the number to a decision, because “significant” and “meaningful” are different words. And say your choices out loud so the number can be checked.</p>
+<p>Give the effect size with an interval, not a lonely point estimate; “g = 0.8” with no uncertainty begs to be over trusted. Tie the number to a decision, because “significant” and “meaningful” are different words. And say your choices out loud so the number can be checked.</p>
 <p>A standardized mean difference is a tiny calculation carrying a big claim. Get the denominator and the correction right, attach honest uncertainty, translate it into something a human can act on. Skip those and “significant” becomes a word that hides more than it tells.</p>
 <hr>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for WWC-aligned baseline equivalence and effect sizes, and a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for WWC aligned baseline equivalence and effect sizes, and a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>

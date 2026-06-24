@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yuxia Liang">
 <meta name="dcterms.date" content="2026-06-24">
-<meta name="description" content="Treat clustered students as independent and your standard errors shrink, your p-values glow, and your significant result is a mirage. The fix is routine.">
+<meta name="description" content="Treat clustered students as independent and your standard errors shrink, your p values glow, and your significant result is a mirage. The fix is routine.">
 
 <title>Students aren’t independent: the clustering mistake that makes everything look significant – Education Methods</title>
 <style>
@@ -189,7 +189,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    Treat clustered students as independent and your standard errors shrink, your p-values glow, and your significant result is a mirage. The fix is routine.
+    Treat clustered students as independent and your standard errors shrink, your p values glow, and your significant result is a mirage. The fix is routine.
   </div>
 </div>
 
@@ -218,41 +218,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Sixty schools, three thousand students, and a p-value with more zeros after the decimal than you have ever earned honestly. It feels amazing. I’ve had that little rush, the one where you think <em>oh, this is going in the abstract.</em></p>
+<p>Sixty schools, three thousand students, and a p value with more zeros after the decimal than you have ever earned honestly. It feels amazing. I’ve had that little rush, the one where you think <em>oh, this is going in the abstract.</em></p>
 <p>I’m sorry to tell you it’s frequently a lie, and the lie is baked into the very first thing you assumed: that you have three thousand independent pieces of information.</p>
 <p>You don’t.</p>
 <section id="why-n-3000-is-fiction" class="level2">
 <h2 class="anchored" data-anchor-id="why-n-3000-is-fiction">Why “n = 3,000” is fiction</h2>
-<p>Kids in the same school resemble each other. Same teachers, same building, same neighborhood, same everything. So each extra student from a school you’ve already sampled tells you less than a brand-new, unrelated student would. Regression assumes your rows are independent. When they’re clustered and you shrug and run it anyway, your standard errors come out too small, your test statistics too big, and out the other end pours a parade of “significant” effects that are mostly just the model fooling itself.</p>
+<p>Kids in the same school resemble each other. Same teachers, same building, same neighborhood, same everything. So each extra student from a school you’ve already sampled tells you less than a brand new, unrelated student would. Regression assumes your rows are independent. When they’re clustered and you shrug and run it anyway, your standard errors come out too small, your test statistics too big, and out the other end pours a parade of “significant” effects that are mostly just the model fooling itself.</p>
 <p>How much smaller depends on the intraclass correlation, the ICC, which is the share of the variation that lives <em>between</em> schools rather than within them. A little clustering barely dents you. A lot of it quietly guts your real sample size down toward the number of <em>schools</em> rather than the number of students.</p>
 </section>
 <section id="the-machinery-quickly" class="level2">
 <h2 class="anchored" data-anchor-id="the-machinery-quickly">The machinery, quickly</h2>
-<p>ICC measures how much students within a cluster move together. The design effect turns that into how badly your naive standard errors lie. Cluster-robust standard errors and multilevel models are the two standard fixes (robust SEs patch the uncertainty; multilevel models patch it <em>and</em> let you study how schools differ). And if you’ve only got a handful of clusters, even robust SEs get shaky, and you reach for a wild cluster bootstrap.</p>
+<p>ICC measures how much students within a cluster move together. The design effect turns that into how badly your naive standard errors lie. Cluster robust standard errors and multilevel models are the two standard fixes (robust SEs patch the uncertainty; multilevel models patch it <em>and</em> let you study how schools differ). And if you’ve only got a handful of clusters, even robust SEs get shaky, and you reach for a wild cluster bootstrap.</p>
 </section>
 <section id="watch-it-happen" class="level2">
 <h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
-<p>This is my favorite part, because it’s so stark. Sixty schools, fifty kids each, a school-level treatment, and a true effect of exactly zero. The within-school correlation gives an ICC around 0.26, a design effect of roughly 14, so those 3,000 students carry about as much information as 210.</p>
+<p>This is my favorite part, because it’s so stark. Sixty schools, fifty kids each, a school level treatment, and a true effect of exactly zero. The within school correlation gives an ICC around 0.26, a design effect of roughly 14, so those 3,000 students carry about as much information as 210.</p>
 <p>One representative null study:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> treat, <span class="at">data =</span> study)        <span class="co"># student-level, ignores clustering</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> treat, <span class="at">data =</span> study)        <span class="co"># student level, ignores clustering</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">vcov</span>(m)))[<span class="st">"treat"</span>]                          <span class="co"># naive SE</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">diag</span>(sandwich<span class="sc">::</span><span class="fu">vcovCL</span>(m, <span class="at">cluster =</span> <span class="sc">~</span>school)))[<span class="st">"treat"</span>]  <span class="co"># cluster-robust SE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">diag</span>(sandwich<span class="sc">::</span><span class="fu">vcovCL</span>(m, <span class="at">cluster =</span> <span class="sc">~</span>school)))[<span class="st">"treat"</span>]  <span class="co"># cluster robust SE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Standard error</th>
 <th style="text-align: right;">SE</th>
-<th style="text-align: right;">p-value</th>
+<th style="text-align: right;">p value</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Naive (student-level)</td>
+<td>Naive (student level)</td>
 <td style="text-align: right;">0.043</td>
 <td style="text-align: right;"><strong>&lt; 0.0001</strong></td>
 </tr>
 <tr class="even">
-<td>Cluster-robust (school)</td>
+<td>Cluster robust (school)</td>
 <td style="text-align: right;">0.157</td>
 <td style="text-align: right;"><strong>0.167</strong></td>
 </tr>
@@ -263,15 +263,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="fig-falsepos.png" class="img-fluid figure-img"></p>
-<figcaption>Naive analysis calls 57% of null studies significant; cluster-robust ~6%.</figcaption>
+<figcaption>Naive analysis calls 57% of null studies significant; cluster robust ~6%.</figcaption>
 </figure>
 </div>
-<p>The naive analysis declares a significant effect in <strong>57%</strong> of studies where the truth is <em>nothing</em>. Fifty-seven percent. The cluster-robust version sits at 6%, right about the 5% you signed up for. If you ignore clustering, “p &lt; .05” doesn’t mean what you think it means. It barely means anything.</p>
+<p>The naive analysis declares a significant effect in <strong>57%</strong> of studies where the truth is <em>nothing</em>. 57 percent. The cluster robust version sits at 6%, right about the 5% you signed up for. If you ignore clustering, “p &lt; .05” doesn’t mean what you think it means. It barely means anything.</p>
 </section>
 <section id="what-to-do" class="level2">
 <h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>Cluster at the level treatment was actually assigned (rolled out by school? then school, not student). Report the ICC so your reader knows how much this even matters here. Watch out when you’ve only got a few clusters. And if you genuinely care about how schools differ, not just correcting for it, go multilevel.</p>
-<p>Before you celebrate a tiny p-value, just ask where the rows came from. In education they’re almost always nested, which means “n” is not the number of students, and significance computed as if it were is significance you didn’t earn.</p>
+<p>Before you celebrate a tiny p value, just ask where the rows came from. In education they’re almost always nested, which means “n” is not the number of students, and significance computed as if it were is significance you didn’t earn.</p>
 <hr>
 <p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and I’m building a cohort course on running education evaluations you can actually trust. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 

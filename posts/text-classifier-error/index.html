@@ -218,13 +218,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>There’s a very specific high that hits when a classifier you’ve been wrestling with for days finally clears 85% on the held-out set. It works. You run it over all fifty thousand comments, attach the predicted labels to your dataset, and move on to the analysis you actually cared about.</p>
+<p>There’s a very specific high that hits when a classifier you’ve been wrestling with for days finally clears 85% on the held out set. It works. You run it over all fifty thousand comments, attach the predicted labels to your dataset, and move on to the analysis you actually cared about.</p>
 <p>That’s the exact moment I want to grab your arm.</p>
 <p>Because the 15% it got wrong doesn’t politely stay inside the classifier. It rides along into the regression, and it changes your answer. “Accuracy” is hiding how much.</p>
 <section id="a-predicted-label-is-a-guess-youre-treating-as-a-fact" class="level2">
 <h2 class="anchored" data-anchor-id="a-predicted-label-is-a-guess-youre-treating-as-a-fact">A predicted label is a guess you’re treating as a fact</h2>
 <p>That’s the whole problem in one sentence. You didn’t <em>observe</em> “this feedback is specific.” You <em>estimated</em> it, with a model that’s right most of the time and wrong some of the time. The minute you drop those predictions into a regression as if they were the real thing, you’ve imported the model’s mistakes without telling the regression they’re there.</p>
-<p>And the phrase “ground truth” makes it so much worse, because it’s not ground truth. It’s the classifier’s training target. In your actual analysis those labels are a noisy stand-in, and calling them truth is how the error sneaks past you.</p>
+<p>And the phrase “ground truth” makes it so much worse, because it’s not ground truth. It’s the classifier’s training target. In your actual analysis those labels are a noisy stand in, and calling them truth is how the error sneaks past you.</p>
 </section>
 <section id="what-the-error-does-depends-on-what-kind-it-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-error-does-depends-on-what-kind-it-is">What the error does depends on what kind it is</h2>
@@ -252,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;"><strong>1.00</strong></td>
 </tr>
 <tr class="even">
-<td>Predicted — non-differential error</td>
+<td>Predicted — nondifferential error</td>
 <td style="text-align: right;"><strong>0.68</strong></td>
 </tr>
 <tr class="odd">
@@ -271,7 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="what-to-actually-do" class="level2">
 <h2 class="anchored" data-anchor-id="what-to-actually-do">What to actually do</h2>
-<p>Keep a human-labeled gold set, and not just for tuning. You need it to <em>measure</em> the error so you can correct for it later. Report classifier performance broken out by the groups you’ll compare, because “85% overall” is precisely where differential error hides. And then either propagate that uncertainty into the analysis or use an estimator built for predicted labels (there’s a small but real literature on inference with machine-predicted variables now). Whatever you do, stop quietly swapping predictions in for observations and calling it done.</p>
+<p>Keep a human labeled gold set, and not just for tuning. You need it to <em>measure</em> the error so you can correct for it later. Report classifier performance broken out by the groups you’ll compare, because “85% overall” is precisely where differential error hides. And then either propagate that uncertainty into the analysis or use an estimator built for predicted labels (there’s a small but real literature on inference with machine predicted variables now). Whatever you do, stop quietly swapping predictions in for observations and calling it done.</p>
 <p>Measure your measurement. Report it by group. Let the error into the model the same way it’s already, invisibly, in your data.</p>
 <hr>
 <p><em>This exact corner, where text models meet measurement error, is what I work on. I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and I’m putting together a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if you want to follow along.</em></p>
