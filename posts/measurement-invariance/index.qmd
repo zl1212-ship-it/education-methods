@@ -2,7 +2,7 @@
 title: "Before you compare two groups' survey scores, check this"
 description: "Comparing latent construct means across groups assumes the scale means the same thing to both. When it doesn't, the difference is the instrument, not the construct."
 date: "2026-06-24"
-categories: [measurement, psychometrics, measurement invariance, DIF]
+categories: [measurement]
 draft: false
 ---
 

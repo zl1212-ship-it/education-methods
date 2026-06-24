@@ -2,7 +2,7 @@
 title: "Your baseline table is doing more work than your p value"
 description: "Baseline equivalence carries the credibility of a whole impact evaluation, and most of us assemble it last, in a hurry. Here's how the field actually wants it reported."
 date: "2026-06-24"
-categories: [impact evaluation, baseline equivalence, WWC]
+categories: [impact evaluation]
 draft: false
 ---
 

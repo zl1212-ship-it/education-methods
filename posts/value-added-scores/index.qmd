@@ -2,7 +2,7 @@
 title: "What a 'teacher effectiveness' score actually measures (and what it doesn't)"
 description: "Value added scores are noisier and more assumption laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck."
 date: "2026-06-24"
-categories: [accountability, value added, education policy, measurement error]
+categories: [education policy]
 draft: false
 ---
 

@@ -2,7 +2,7 @@
 title: "Your text classifier is 85% accurate. That error doesn't vanish when you run the regression."
 description: "Treating predicted labels as ground truth quietly biases everything downstream. With differential error it gets worse, and the accuracy number hides all of it."
 date: "2026-06-24"
-categories: [computational text analysis, measurement error, NLP, causal inference]
+categories: [measurement]
 draft: false
 ---
 

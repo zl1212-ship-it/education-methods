@@ -2,7 +2,7 @@
 title: "Effect sizes for education: what WWC actually wants"
 description: "Cohen's d, Hedges' g, and the small sample correction. Which standardized difference to report, and why getting it lazy quietly changes your conclusion."
 date: "2026-06-24"
-categories: [effect size, measurement, WWC]
+categories: [impact evaluation]
 draft: false
 ---
 

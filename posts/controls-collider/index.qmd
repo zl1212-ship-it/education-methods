@@ -2,7 +2,7 @@
 title: "More controls ≠ less bias: the variables you should never put in your model"
 description: "Adding a control and watching the coefficient move feels like being careful. Sometimes you just fed your model a fresh bias."
 date: "2026-06-24"
-categories: [causal inference, DAG, confounding, education research]
+categories: [causal inference]
 draft: false
 ---
 

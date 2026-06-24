@@ -2,7 +2,7 @@
 title: "Students aren't independent: the clustering mistake that makes everything look significant"
 description: "Treat clustered students as independent and your standard errors shrink, your p values glow, and your significant result is a mirage. The fix is routine."
 date: "2026-06-24"
-categories: [education data, clustering, standard errors, multilevel models]
+categories: [impact evaluation]
 draft: false
 ---
 

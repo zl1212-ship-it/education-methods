@@ -2,7 +2,7 @@
 title: "Measurement before models: the check most evaluations skip"
 description: "A noisy outcome quietly shrinks the effect you can detect. Reliability and validity aren't box checking; they decide whether a real program looks like it worked."
 date: "2026-06-24"
-categories: [measurement, psychometrics, reliability, validity]
+categories: [measurement]
 draft: false
 ---
 
