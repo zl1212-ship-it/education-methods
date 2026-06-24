@@ -1,11 +1,11 @@
 ---
 title: "The course: credible impact evaluation & measurement"
-subtitle: "A small, live, project-based cohort — built around your own data."
+subtitle: "A small, live, project-based cohort, built around your own data."
 ---
 
 Most of what I write here comes back to the same thing: evaluations fall apart at
 predictable places, and the fixes aren't fancy. This is the course version of
-that — five weeks, live, in a small group, where you bring your own study (or use
+that. Five weeks, live, in a small group, where you bring your own study (or use
 mine) and leave with something defensible.
 
 ## Who it's for
@@ -16,7 +16,7 @@ ed-tech analysts who have to defend an effectiveness claim. If you can run a
 regression in R and have a dataset you care about, you're ready. No prior
 causal-inference coursework assumed.
 
-## What you'll leave with — on your own data
+## What you'll leave with, on your own data
 
 - A defensible evaluation question and identification strategy
 - A WWC-aligned **baseline equivalence** table (and the reasoning behind each
@@ -26,19 +26,19 @@ causal-inference coursework assumed.
 
 ## The five weeks
 
-1. **From question to design** — estimands, the menu of designs, what each assumes
-2. **Baseline equivalence done right** — standardized differences, the WWC
+1. **From question to design:** estimands, the menu of designs, what each assumes
+2. **Baseline equivalence done right:** standardized differences, the WWC
    thresholds, what "satisfied with adjustment" really commits you to (hands-on
    with [`baselinr`](https://github.com/zl1212-ship-it/baselinr))
-3. **Measurement before models** — reliability and validity, and why a noisy
+3. **Measurement before models:** reliability and validity, and why a noisy
    outcome quietly kills your effect
-4. **Estimation & honest effects** — effect sizes, uncertainty, "significant" vs
+4. **Estimation & honest effects:** effect sizes, uncertainty, "significant" vs
    "meaningful"
-5. **Communicating credibly + capstone** — turning analysis into a memo, plus your
+5. **Communicating credibly + capstone:** turning analysis into a memo, plus your
    own mini-evaluation
 
-~4–6 hours/week, including a weekly deliverable. Small cohort, live sessions
-(recorded), asynchronous work blocks.
+About 4 to 6 hours a week, including a weekly deliverable. Small cohort, live
+sessions (recorded), asynchronous work blocks.
 
 ## Instructor
 
@@ -50,7 +50,7 @@ analysis, and I build the open-source
 ## Join the waitlist
 
 The first cohort and pricing are still being set, and waitlist members hear first
-(and get founding-cohort terms). Drop your email — no spam, no commitment.
+(and get founding-cohort terms). Drop your email. No spam, no commitment.
 
 ```{=html}
 <form action="https://buttondown.com/api/emails/embed-subscribe/esa" method="post" target="_blank" class="embeddable-buttondown-form" style="margin:0.6em 0;">

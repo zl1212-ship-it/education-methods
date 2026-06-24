@@ -11,7 +11,7 @@ listing:
 page-layout: full
 ---
 
-Plain-spoken notes on running education evaluations you can actually trust — baseline equivalence, measurement, effect sizes, and the quiet mistakes that wreck a study. New posts every couple of weeks; get them by email:
+Plain, honest notes on running education evaluations that actually hold up: baseline equivalence, measurement, effect sizes, and the quiet mistakes that wreck a study. New posts every couple of weeks, get them by email:
 
 ```{=html}
 <form action="https://buttondown.com/api/emails/embed-subscribe/esa" method="post" target="_blank" class="embeddable-buttondown-form" style="margin:0.6em 0 1.2em;">
