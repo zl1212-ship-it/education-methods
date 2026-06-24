@@ -50,8 +50,12 @@ analysis, and I build the open-source
 ## Join the waitlist
 
 The first cohort and pricing are still being set, and waitlist members hear first
-(and get founding-cohort terms). No spam, no commitment.
+(and get founding-cohort terms). Drop your email — no spam, no commitment.
 
-[**→ Join the waitlist**](mailto:zl1212@uw.edu?subject=Education%20Methods%20course%20waitlist&body=Hi%20Yuxia%2C%20please%20add%20me%20to%20the%20course%20waitlist.)
-
-*(That's just an email for now — say a line about what you work on if you like.)*
+```{=html}
+<form action="https://buttondown.com/api/emails/embed-subscribe/esa" method="post" target="_blank" class="embeddable-buttondown-form" style="margin:0.6em 0;">
+  <input type="email" name="email" id="bd-email-course" placeholder="you@example.com" required aria-label="Email address" style="padding:0.45em; min-width:18em; margin-right:0.4em;" />
+  <input type="submit" value="Join the waitlist" style="padding:0.45em 1em;" />
+  <p style="font-size:0.8em; color:#666; margin-top:0.4em;"><a href="https://buttondown.com/refer/esa" target="_blank">Powered by Buttondown.</a></p>
+</form>
+```
