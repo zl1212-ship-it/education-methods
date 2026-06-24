@@ -20,9 +20,6 @@
 
 
 
-<!--
-VOICE PASS. Light pet-peeve energy. CTA + date to fill.
--->
 <p>“We found a significant effect.” I have a mild allergic reaction to that sentence and I’ve accepted it’s permanent.</p>
 <p>It’s not that it’s wrong. It’s that it tells you almost nothing. Significant says <em>we detected something</em>. It says nothing about <em>how big</em>, which is the only thing a school board or a funder or the What Works Clearinghouse actually wants to know. That’s what an effect size is for, and in education that means a standardized mean difference, with a couple of small decisions baked in that quietly move the number.</p>
 <section id="the-thing-itself" class="level2">
@@ -105,10 +102,6 @@ VOICE PASS. Light pet-peeve energy. CTA + date to fill.
 
 
 
-<!--
-VOICE PASS. Swap the opening into a real moment from your own NLP work if you
-have one. CTA links + date still to fill.
--->
 <p>There’s a very specific high that hits when a classifier you’ve been wrestling with for days finally clears 85% on the held-out set. It works. You run it over all fifty thousand comments, attach the predicted labels to your dataset, and move on to the analysis you actually cared about.</p>
 <p>That’s the exact moment I want to grab your arm.</p>
 <p>Because the 15% it got wrong doesn’t politely stay inside the classifier. It rides along into the regression, and it changes your answer. “Accuracy” is hiding how much.</p>
@@ -215,10 +208,6 @@ font-style: inherit;"># 85% accurate overall, but worse for one group</span></sp
 
 
 
-<!--
-VOICE PASS. Quieter, earnest register. Swap in a real example if you have one.
-CTA + date to fill.
--->
 <p>The saddest sentence in program evaluation is “the program didn’t work,” when what actually happened was “we measured it with a broken ruler.” Those two get mixed up constantly, and the second one wears the first one’s clothes.</p>
 <p>Here’s the part that stings: teams will spend months on the design, the randomization, the comparison group, the matching, and then about ten minutes on the thing they actually measure. And then they’re surprised by a null result.</p>
 <section id="what-a-noisy-outcome-quietly-does" class="level2">
@@ -320,10 +309,6 @@ font-style: inherit;"># psych::fa.parallel(items) # how many dimensions are actu
 
 
 
-<!--
-VOICE PASS v2. The opening story is written to fit your background; swap in a
-real detail so it's literally true to you. CTA links + date still to fill.
--->
 <p>Okay so. A reviewer once told me to control for a variable. I added it, the coefficient changed, and I took the change as proof the variable mattered.</p>
 <p>It is not proof the variable mattered. It took me way longer than I’d like to admit to get that.</p>
 <p>Adding a control and watching the number jump feels productive. It feels careful. But a number moving only tells you a number moved. It doesn’t tell you whether you got closer to the truth or further from it. That depends on what the variable actually is, and “just throw in more controls” quietly lumps together three things that behave nothing alike.</p>
@@ -451,11 +436,6 @@ font-style: inherit;"># also adjust for the post-treatment mediator</span></span
 
 
 
-<!--
-VOICE PASS. This one is meant to feel heavier; it's about real stakes for real
-people. Keep statistical claims qualitative unless you add a citation. CTA + date
-to fill.
--->
 <p>Somewhere right now a teacher is being handed a number that says she went from the 40th percentile to the 70th in a single year, and a district is quietly deciding what that number says about her. Maybe a bonus. Maybe a “see, the system works.”</p>
 <p>I want to talk about how little that number might actually be saying, because the people on the other end of it don’t get to see the error bars.</p>
 <section id="what-its-trying-to-do" class="level2">
@@ -530,10 +510,6 @@ font-style: inherit;"># year-to-year reliability</span></span></code></pre></div
 
 
 
-<!--
-VOICE PASS. Swap the opening confession for a real one if you've got it.
-CTA + date to fill.
--->
 <p>For a long time the baseline table was the part of a report I did last, fast, and a little resentfully. Throat-clearing before the real analysis, was how I thought about it. Get it out of the way, get to the effect.</p>
 <p>I had it exactly backwards about which part was the real analysis.</p>
 <p>By the time you’re estimating a program effect, you’ve already placed the bet that matters: that the two groups were comparable to begin with. If they weren’t, you’re not measuring the program. You’re measuring the head start. No model downstream fixes that, and reviewers, funders, and the What Works Clearinghouse all know exactly where to look.</p>
@@ -743,10 +719,6 @@ font-style: inherit;">"ell"</span>)))</span></code></pre></div></div>
 
 
 
-<!--
-VOICE PASS. Swap in a real "p-value that lied" moment if you have one.
-CTA + date to fill.
--->
 <p>Sixty schools, three thousand students, and a p-value with more zeros after the decimal than you have ever earned honestly. It feels amazing. I’ve had that little rush, the one where you think <em>oh, this is going in the abstract.</em></p>
 <p>I’m sorry to tell you it’s frequently a lie, and the lie is baked into the very first thing you assumed: that you have three thousand independent pieces of information.</p>
 <p>You don’t.</p>
@@ -860,10 +832,6 @@ font-style: inherit;"># cluster-robust SE</span></span></code></pre></div></div>
 
 
 
-<!--
-VOICE PASS. This is your home turf, so the voice leans a little nerdy/excited on
-purpose. Swap in a real scale/example if you have one. CTA + date to fill.
--->
 <p>Here’s a sentence that should make you flinch: “Group A scored higher on the belonging scale, so Group A feels more like they belong.”</p>
 <p>I have a soft spot for this trap, mostly because I’ve walked into it myself. It sounds airtight. Five items, two groups, one mean is higher, write it up. But there’s a premise buried in there that nobody says out loud, and the whole conclusion is sitting on top of it.</p>
 <p>The premise is that the scale <em>means the same thing</em> to both groups.</p>
