@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Yuxia Liang">
-<meta name="dcterms.date" content="2026-06-24">
-<meta name="description" content="Treat clustered students as independent and your standard errors shrink, your p-values glow, and your significant result is a mirage. The fix is routine.">
 
-<title>Students aren’t independent: the clustering mistake that makes everything look significant – Education Methods</title>
+<title>The course: credible impact evaluation &amp; measurement – Education Methods</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,61 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-4d3f3448f837ff03356db176d8adb603.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-4d3f3448f837ff03356db176d8adb603.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -119,7 +81,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Education Methods</span>
     </a>
   </div>
@@ -130,23 +92,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../course.html"> 
+    <a class="nav-link active" href="./course.html" aria-current="page"> 
 <span class="menu-text">Course</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../work-with-me.html"> 
+    <a class="nav-link" href="./work-with-me.html"> 
 <span class="menu-text">Work with me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -166,10 +128,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-n-3000-is-fiction" id="toc-why-n-3000-is-fiction" class="nav-link active" data-scroll-target="#why-n-3000-is-fiction">Why “n = 3,000” is fiction</a></li>
-  <li><a href="#the-machinery-quickly" id="toc-the-machinery-quickly" class="nav-link" data-scroll-target="#the-machinery-quickly">The machinery, quickly</a></li>
-  <li><a href="#watch-it-happen" id="toc-watch-it-happen" class="nav-link" data-scroll-target="#watch-it-happen">Watch it happen</a></li>
-  <li><a href="#what-to-do" id="toc-what-to-do" class="nav-link" data-scroll-target="#what-to-do">What to do</a></li>
+  <li><a href="#who-its-for" id="toc-who-its-for" class="nav-link active" data-scroll-target="#who-its-for">Who it’s for</a></li>
+  <li><a href="#what-youll-leave-with-on-your-own-data" id="toc-what-youll-leave-with-on-your-own-data" class="nav-link" data-scroll-target="#what-youll-leave-with-on-your-own-data">What you’ll leave with — on your own data</a></li>
+  <li><a href="#the-five-weeks" id="toc-the-five-weeks" class="nav-link" data-scroll-target="#the-five-weeks">The five weeks</a></li>
+  <li><a href="#instructor" id="toc-instructor" class="nav-link" data-scroll-target="#instructor">Instructor</a></li>
+  <li><a href="#join-the-waitlist" id="toc-join-the-waitlist" class="nav-link" data-scroll-target="#join-the-waitlist">Join the waitlist</a></li>
   </ul>
 </nav>
     </div>
@@ -178,37 +141,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Students aren’t independent: the clustering mistake that makes everything look significant</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">education data</div>
-    <div class="quarto-category">clustering</div>
-    <div class="quarto-category">standard errors</div>
-    <div class="quarto-category">multilevel models</div>
-  </div>
-  </div>
-
-<div>
-  <div class="description">
-    Treat clustered students as independent and your standard errors shrink, your p-values glow, and your significant result is a mirage. The fix is routine.
-  </div>
+<h1 class="title">The course: credible impact evaluation &amp; measurement</h1>
+<p class="subtitle lead">A small, live, project-based cohort — built around your own data.</p>
 </div>
+
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Yuxia Liang </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">June 24, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -218,62 +159,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Sixty schools, three thousand students, and a p-value with more zeros after the decimal than you have ever earned honestly. It feels amazing. I’ve had that little rush, the one where you think <em>oh, this is going in the abstract.</em></p>
-<p>I’m sorry to tell you it’s frequently a lie, and the lie is baked into the very first thing you assumed: that you have three thousand independent pieces of information.</p>
-<p>You don’t.</p>
-<section id="why-n-3000-is-fiction" class="level2">
-<h2 class="anchored" data-anchor-id="why-n-3000-is-fiction">Why “n = 3,000” is fiction</h2>
-<p>Kids in the same school resemble each other. Same teachers, same building, same neighborhood, same everything. So each extra student from a school you’ve already sampled tells you less than a brand-new, unrelated student would. Regression assumes your rows are independent. When they’re clustered and you shrug and run it anyway, your standard errors come out too small, your test statistics too big, and out the other end pours a parade of “significant” effects that are mostly just the model fooling itself.</p>
-<p>How much smaller depends on the intraclass correlation, the ICC, which is the share of the variation that lives <em>between</em> schools rather than within them. A little clustering barely dents you. A lot of it quietly guts your real sample size down toward the number of <em>schools</em> rather than the number of students.</p>
+<p>Most of what I write here comes back to the same thing: evaluations fall apart at predictable places, and the fixes aren’t fancy. This is the course version of that — five weeks, live, in a small group, where you bring your own study (or use mine) and leave with something defensible.</p>
+<section id="who-its-for" class="level2">
+<h2 class="anchored" data-anchor-id="who-its-for">Who it’s for</h2>
+<p>People who run or review impact studies in education and want them to hold up: applied researchers, evaluators, grad students doing quasi-experimental work, ed-tech analysts who have to defend an effectiveness claim. If you can run a regression in R and have a dataset you care about, you’re ready. No prior causal-inference coursework assumed.</p>
 </section>
-<section id="the-machinery-quickly" class="level2">
-<h2 class="anchored" data-anchor-id="the-machinery-quickly">The machinery, quickly</h2>
-<p>ICC measures how much students within a cluster move together. The design effect turns that into how badly your naive standard errors lie. Cluster-robust standard errors and multilevel models are the two standard fixes (robust SEs patch the uncertainty; multilevel models patch it <em>and</em> let you study how schools differ). And if you’ve only got a handful of clusters, even robust SEs get shaky, and you reach for a wild cluster bootstrap.</p>
+<section id="what-youll-leave-with-on-your-own-data" class="level2">
+<h2 class="anchored" data-anchor-id="what-youll-leave-with-on-your-own-data">What you’ll leave with — on your own data</h2>
+<ul>
+<li>A defensible evaluation question and identification strategy</li>
+<li>A WWC-aligned <strong>baseline equivalence</strong> table (and the reasoning behind each covariate’s category)</li>
+<li>A <strong>measurement check</strong> on a key construct</li>
+<li>A reproducible script plus a short <strong>memo a decision-maker will actually trust</strong></li>
+</ul>
 </section>
-<section id="watch-it-happen" class="level2">
-<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
-<p>This is my favorite part, because it’s so stark. Sixty schools, fifty kids each, a school-level treatment, and a true effect of exactly zero. The within-school correlation gives an ICC around 0.26, a design effect of roughly 14, so those 3,000 students carry about as much information as 210.</p>
-<p>One representative null study:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> treat, <span class="at">data =</span> study)        <span class="co"># student-level, ignores clustering</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">vcov</span>(m)))[<span class="st">"treat"</span>]                          <span class="co"># naive SE</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">diag</span>(sandwich<span class="sc">::</span><span class="fu">vcovCL</span>(m, <span class="at">cluster =</span> <span class="sc">~</span>school)))[<span class="st">"treat"</span>]  <span class="co"># cluster-robust SE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Standard error</th>
-<th style="text-align: right;">SE</th>
-<th style="text-align: right;">p-value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Naive (student-level)</td>
-<td style="text-align: right;">0.043</td>
-<td style="text-align: right;"><strong>&lt; 0.0001</strong></td>
-</tr>
-<tr class="even">
-<td>Cluster-robust (school)</td>
-<td style="text-align: right;">0.157</td>
-<td style="text-align: right;"><strong>0.167</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Same estimate, same data. The naive version is screaming significance. The honest version shrugs, correctly, because there is nothing there.</p>
-<p>And it’s not one unlucky draw. Across 600 simulated null studies:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="fig-falsepos.png" class="img-fluid figure-img"></p>
-<figcaption>Naive analysis calls 57% of null studies significant; cluster-robust ~6%.</figcaption>
-</figure>
-</div>
-<p>The naive analysis declares a significant effect in <strong>57%</strong> of studies where the truth is <em>nothing</em>. Fifty-seven percent. The cluster-robust version sits at 6%, right about the 5% you signed up for. If you ignore clustering, “p &lt; .05” doesn’t mean what you think it means. It barely means anything.</p>
+<section id="the-five-weeks" class="level2">
+<h2 class="anchored" data-anchor-id="the-five-weeks">The five weeks</h2>
+<ol type="1">
+<li><strong>From question to design</strong> — estimands, the menu of designs, what each assumes</li>
+<li><strong>Baseline equivalence done right</strong> — standardized differences, the WWC thresholds, what “satisfied with adjustment” really commits you to (hands-on with <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>)</li>
+<li><strong>Measurement before models</strong> — reliability and validity, and why a noisy outcome quietly kills your effect</li>
+<li><strong>Estimation &amp; honest effects</strong> — effect sizes, uncertainty, “significant” vs “meaningful”</li>
+<li><strong>Communicating credibly + capstone</strong> — turning analysis into a memo, plus your own mini-evaluation</li>
+</ol>
+<p>~4–6 hours/week, including a weekly deliverable. Small cohort, live sessions (recorded), asynchronous work blocks.</p>
 </section>
-<section id="what-to-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
-<p>Cluster at the level treatment was actually assigned (rolled out by school? then school, not student). Report the ICC so your reader knows how much this even matters here. Watch out when you’ve only got a few clusters. And if you genuinely care about how schools differ, not just correcting for it, go multilevel.</p>
-<p>Before you celebrate a tiny p-value, just ask where the rows came from. In education they’re almost always nested, which means “n” is not the number of students, and significance computed as if it were is significance you didn’t earn.</p>
-<hr>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and I’m building a cohort course on running education evaluations you can actually trust. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<section id="instructor" class="level2">
+<h2 class="anchored" data-anchor-id="instructor">Instructor</h2>
+<p>Yuxia Liang. M.Ed. in Educational Leadership &amp; Policy, University of Washington. I work on impact evaluation, measurement/psychometrics, and computational text analysis, and I build the open-source <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> R package the course uses.</p>
+</section>
+<section id="join-the-waitlist" class="level2">
+<h2 class="anchored" data-anchor-id="join-the-waitlist">Join the waitlist</h2>
+<p>The first cohort and pricing are still being set, and waitlist members hear first (and get founding-cohort terms). No spam, no commitment.</p>
+<p><a href="mailto:zl1212@uw.edu?subject=Education%20Methods%20course%20waitlist&amp;body=Hi%20Yuxia%2C%20please%20add%20me%20to%20the%20course%20waitlist."><strong>→ Join the waitlist</strong></a></p>
+<p><em>(That’s just an email for now — say a line about what you work on if you like.)</em></p>
 
 
 </section>

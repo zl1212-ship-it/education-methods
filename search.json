@@ -147,6 +147,34 @@
     "text": "What to actually do\nKeep a human-labeled gold set, and not just for tuning. You need it to measure the error so you can correct for it later. Report classifier performance broken out by the groups you’ll compare, because “85% overall” is precisely where differential error hides. And then either propagate that uncertainty into the analysis or use an estimator built for predicted labels (there’s a small but real literature on inference with machine-predicted variables now). Whatever you do, stop quietly swapping predictions in for observations and calling it done.\nMeasure your measurement. Report it by group. Let the error into the model the same way it’s already, invisibly, in your data.\n\nThis exact corner, where text models meet measurement error, is what I work on. I build baselinr and I’m putting together a cohort course on credible evaluation and measurement in education. subscribe via RSS if you want to follow along."
   },
   {
+    "objectID": "work-with-me.html",
+    "href": "work-with-me.html",
+    "title": "Work with me",
+    "section": "",
+    "text": "I take on a small number of projects where the question is “did this actually work, and how do we know?” — the kind of thing this whole site is about."
+  },
+  {
+    "objectID": "work-with-me.html#what-i-help-with",
+    "href": "work-with-me.html#what-i-help-with",
+    "title": "Work with me",
+    "section": "What I help with",
+    "text": "What I help with\n\nImpact evaluation design & analysis — matching the question to a defensible design (RD, DiD, matching, RCTs), and the analysis that follows\nBaseline equivalence & WWC-aligned reporting — the tables and effect sizes reviewers and funders expect (this is what baselinr automates)\nMeasurement & instrument validation — reliability, validity, measurement invariance before you compare groups\nComputational text analysis — turning open-ended responses, feedback, or policy text into analysis-ready data, without pretending the classifier is ground truth"
+  },
+  {
+    "objectID": "work-with-me.html#who-i-work-with",
+    "href": "work-with-me.html#who-i-work-with",
+    "title": "Work with me",
+    "section": "Who I work with",
+    "text": "Who I work with\nEducation researchers, school districts and systems, ed-tech teams, nonprofits, and foundations that need an effectiveness claim to hold up — whether that’s designing an evaluation, reviewing one, or rescuing an analysis that’s gone sideways."
+  },
+  {
+    "objectID": "work-with-me.html#get-in-touch",
+    "href": "work-with-me.html#get-in-touch",
+    "title": "Work with me",
+    "section": "Get in touch",
+    "text": "Get in touch\nTell me a bit about the project and what decision it’s informing, and I’ll tell you honestly whether and how I can help.\n→ Email me\nBackground: Yuxia Liang, M.Ed. in Educational Leadership & Policy, University of Washington; author of the open-source baselinr R package."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -159,6 +187,48 @@
     "title": "Education Methods",
     "section": "",
     "text": "Effect sizes for education: what WWC actually wants\n\n\nCohen’s d, Hedges’ g, and the small-sample correction. Which standardized difference to report, and why getting it lazy quietly changes your conclusion.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\n\n\nYour text classifier is 85% accurate. That error doesn’t vanish when you run the regression.\n\n\nTreating predicted labels as ground truth quietly biases everything downstream. With differential error it gets worse, and the accuracy number hides all of it.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nMeasurement before models: the check most evaluations skip\n\n\nA noisy outcome quietly shrinks the effect you can detect. Reliability and validity aren’t box-checking; they decide whether a real program looks like it worked.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nMore controls ≠ less bias: the variables you should never put in your model\n\n\nAdding a control and watching the coefficient move feels like being careful. Sometimes you just fed your model a fresh bias.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nWhat a ‘teacher effectiveness’ score actually measures (and what it doesn’t)\n\n\nValue-added scores are noisier and more assumption-laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nYour baseline table is doing more work than your p-value\n\n\nBaseline equivalence carries the credibility of a whole impact evaluation, and most of us assemble it last, in a hurry. Here’s how the field actually wants it reported.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nStudents aren’t independent: the clustering mistake that makes everything look significant\n\n\nTreat clustered students as independent and your standard errors shrink, your p-values glow, and your significant result is a mirage. The fix is routine.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\n\n\nBefore you compare two groups’ survey scores, check this\n\n\nComparing latent-construct means across groups assumes the scale means the same thing to both. When it doesn’t, the difference is the instrument, not the construct.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "course.html",
+    "href": "course.html",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "",
+    "text": "Most of what I write here comes back to the same thing: evaluations fall apart at predictable places, and the fixes aren’t fancy. This is the course version of that — five weeks, live, in a small group, where you bring your own study (or use mine) and leave with something defensible."
+  },
+  {
+    "objectID": "course.html#who-its-for",
+    "href": "course.html#who-its-for",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "Who it’s for",
+    "text": "Who it’s for\nPeople who run or review impact studies in education and want them to hold up: applied researchers, evaluators, grad students doing quasi-experimental work, ed-tech analysts who have to defend an effectiveness claim. If you can run a regression in R and have a dataset you care about, you’re ready. No prior causal-inference coursework assumed."
+  },
+  {
+    "objectID": "course.html#what-youll-leave-with-on-your-own-data",
+    "href": "course.html#what-youll-leave-with-on-your-own-data",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "What you’ll leave with — on your own data",
+    "text": "What you’ll leave with — on your own data\n\nA defensible evaluation question and identification strategy\nA WWC-aligned baseline equivalence table (and the reasoning behind each covariate’s category)\nA measurement check on a key construct\nA reproducible script plus a short memo a decision-maker will actually trust"
+  },
+  {
+    "objectID": "course.html#the-five-weeks",
+    "href": "course.html#the-five-weeks",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "The five weeks",
+    "text": "The five weeks\n\nFrom question to design — estimands, the menu of designs, what each assumes\nBaseline equivalence done right — standardized differences, the WWC thresholds, what “satisfied with adjustment” really commits you to (hands-on with baselinr)\nMeasurement before models — reliability and validity, and why a noisy outcome quietly kills your effect\nEstimation & honest effects — effect sizes, uncertainty, “significant” vs “meaningful”\nCommunicating credibly + capstone — turning analysis into a memo, plus your own mini-evaluation\n\n~4–6 hours/week, including a weekly deliverable. Small cohort, live sessions (recorded), asynchronous work blocks."
+  },
+  {
+    "objectID": "course.html#instructor",
+    "href": "course.html#instructor",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "Instructor",
+    "text": "Instructor\nYuxia Liang. M.Ed. in Educational Leadership & Policy, University of Washington. I work on impact evaluation, measurement/psychometrics, and computational text analysis, and I build the open-source baselinr R package the course uses."
+  },
+  {
+    "objectID": "course.html#join-the-waitlist",
+    "href": "course.html#join-the-waitlist",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "Join the waitlist",
+    "text": "Join the waitlist\nThe first cohort and pricing are still being set, and waitlist members hear first (and get founding-cohort terms). No spam, no commitment.\n→ Join the waitlist\n(That’s just an email for now — say a line about what you work on if you like.)"
   },
   {
     "objectID": "posts/02-effect-sizes-wwc/index.html",
