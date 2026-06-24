@@ -4,6 +4,8 @@ project:
   render:
     - index.qmd
     - about.qmd
+    - course.qmd
+    - work-with-me.qmd
     - posts/
 
 website:
@@ -15,6 +17,10 @@ website:
     right:
       - text: "Posts"
         href: index.qmd
+      - text: "Course"
+        href: course.qmd
+      - text: "Work with me"
+        href: work-with-me.qmd
       - about.qmd
       - icon: rss
         href: index.xml

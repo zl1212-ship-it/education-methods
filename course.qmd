@@ -1,0 +1,57 @@
+---
+title: "The course: credible impact evaluation & measurement"
+subtitle: "A small, live, project-based cohort — built around your own data."
+---
+
+Most of what I write here comes back to the same thing: evaluations fall apart at
+predictable places, and the fixes aren't fancy. This is the course version of
+that — five weeks, live, in a small group, where you bring your own study (or use
+mine) and leave with something defensible.
+
+## Who it's for
+
+People who run or review impact studies in education and want them to hold up:
+applied researchers, evaluators, grad students doing quasi-experimental work,
+ed-tech analysts who have to defend an effectiveness claim. If you can run a
+regression in R and have a dataset you care about, you're ready. No prior
+causal-inference coursework assumed.
+
+## What you'll leave with — on your own data
+
+- A defensible evaluation question and identification strategy
+- A WWC-aligned **baseline equivalence** table (and the reasoning behind each
+  covariate's category)
+- A **measurement check** on a key construct
+- A reproducible script plus a short **memo a decision-maker will actually trust**
+
+## The five weeks
+
+1. **From question to design** — estimands, the menu of designs, what each assumes
+2. **Baseline equivalence done right** — standardized differences, the WWC
+   thresholds, what "satisfied with adjustment" really commits you to (hands-on
+   with [`baselinr`](https://github.com/zl1212-ship-it/baselinr))
+3. **Measurement before models** — reliability and validity, and why a noisy
+   outcome quietly kills your effect
+4. **Estimation & honest effects** — effect sizes, uncertainty, "significant" vs
+   "meaningful"
+5. **Communicating credibly + capstone** — turning analysis into a memo, plus your
+   own mini-evaluation
+
+~4–6 hours/week, including a weekly deliverable. Small cohort, live sessions
+(recorded), asynchronous work blocks.
+
+## Instructor
+
+Yuxia Liang. M.Ed. in Educational Leadership & Policy, University of Washington.
+I work on impact evaluation, measurement/psychometrics, and computational text
+analysis, and I build the open-source
+[`baselinr`](https://github.com/zl1212-ship-it/baselinr) R package the course uses.
+
+## Join the waitlist
+
+The first cohort and pricing are still being set, and waitlist members hear first
+(and get founding-cohort terms). No spam, no commitment.
+
+[**→ Join the waitlist**](mailto:zl1212@uw.edu?subject=Education%20Methods%20course%20waitlist&body=Hi%20Yuxia%2C%20please%20add%20me%20to%20the%20course%20waitlist.)
+
+*(That's just an email for now — say a line about what you work on if you like.)*
