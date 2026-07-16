@@ -1,55 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/posts/composite-verdict/index.html</loc>
-    <lastmod>2026-07-15T04:05:31.387Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/posts/clustering-independence/index.html</loc>
-    <lastmod>2026-07-15T04:05:31.387Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/posts/02-effect-sizes-wwc/index.html</loc>
-    <lastmod>2026-07-15T04:05:31.386Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/posts/text-classifier-error/index.html</loc>
-    <lastmod>2026-07-15T04:05:31.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/posts/measurement-invariance/index.html</loc>
-    <lastmod>2026-07-15T04:05:31.389Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/posts/03-measurement-before-models/index.html</loc>
-    <lastmod>2026-07-15T04:05:31.386Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/index.html</loc>
-    <lastmod>2026-07-15T04:05:31.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/work-with-me.html</loc>
-    <lastmod>2026-07-15T04:05:31.390Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/about.html</loc>
-    <lastmod>2026-07-15T04:05:31.385Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/index.html</loc>
-    <lastmod>2026-07-15T04:05:31.385Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/course.html</loc>
-    <lastmod>2026-07-15T04:05:31.385Z</lastmod>
+    <loc>https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/index.html</loc>
+    <lastmod>2026-07-16T21:33:59.254Z</lastmod>
   </url>
   <url>
     <loc>https://zl1212-ship-it.github.io/education-methods/posts/01-baseline-table/index.html</loc>
-    <lastmod>2026-07-15T04:05:31.385Z</lastmod>
+    <lastmod>2026-07-16T21:33:59.250Z</lastmod>
   </url>
   <url>
-    <loc>https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/index.html</loc>
-    <lastmod>2026-07-15T04:05:31.388Z</lastmod>
+    <loc>https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/index.html</loc>
+    <lastmod>2026-07-16T21:33:59.257Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zl1212-ship-it.github.io/education-methods/posts/clustering-independence/index.html</loc>
+    <lastmod>2026-07-16T21:33:59.252Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zl1212-ship-it.github.io/education-methods/posts/reading-evaluations/index.html</loc>
+    <lastmod>2026-07-16T21:33:59.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zl1212-ship-it.github.io/education-methods/work-with-me.html</loc>
+    <lastmod>2026-07-16T21:33:59.257Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zl1212-ship-it.github.io/education-methods/about.html</loc>
+    <lastmod>2026-07-16T21:33:59.249Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zl1212-ship-it.github.io/education-methods/index.html</loc>
+    <lastmod>2026-07-16T21:33:59.249Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zl1212-ship-it.github.io/education-methods/course.html</loc>
+    <lastmod>2026-07-16T21:33:59.249Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zl1212-ship-it.github.io/education-methods/posts/02-effect-sizes-wwc/index.html</loc>
+    <lastmod>2026-07-16T21:33:59.251Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zl1212-ship-it.github.io/education-methods/posts/composite-verdict/index.html</loc>
+    <lastmod>2026-07-16T21:33:59.253Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zl1212-ship-it.github.io/education-methods/posts/03-measurement-before-models/index.html</loc>
+    <lastmod>2026-07-16T21:33:59.251Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zl1212-ship-it.github.io/education-methods/posts/measurement-invariance/index.html</loc>
+    <lastmod>2026-07-16T21:33:59.255Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zl1212-ship-it.github.io/education-methods/posts/text-classifier-error/index.html</loc>
+    <lastmod>2026-07-16T21:33:59.257Z</lastmod>
   </url>
 </urlset>
