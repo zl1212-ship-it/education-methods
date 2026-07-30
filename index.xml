@@ -9,8 +9,48 @@
 <link>https://zl1212-ship-it.github.io/education-methods/</link>
 <atom:link href="https://zl1212-ship-it.github.io/education-methods/index.xml" rel="self" type="application/rss+xml"/>
 <description>Plain, honest notes on credible impact evaluation and measurement in education.</description>
-<generator>quarto-1.9.38</generator>
-<lastBuildDate>Thu, 16 Jul 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Thu, 30 Jul 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>“We matched participants to similar students”: what that buys, and what it can’t</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/matched-on-observables/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>For a long time, the sentence “participants were matched to similar non-participants on grades, attendance, and demographics” quietly ended my skepticism. It sounds like the problem of comparison has been handled. The groups look alike; surely the difference that remains is the program.</p>
+<p>Then a professor in my program asked, in the margin of something I’d written, the question I now ask about every matched study: <em>if two students look identical in the data, why did only one of them sign up?</em></p>
+<section id="what-matching-actually-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-matching-actually-does">What matching actually does</h2>
+<p>Matching does one thing, and does it honestly: it makes the comparison group resemble the participants <strong>on the variables you matched</strong>. Same prior grades, same attendance band, same school poverty level. That is real progress; an unmatched comparison would be worse. After matching, the observable excuses are gone.</p>
+</section>
+<section id="what-it-cannot-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-cannot-do">What it cannot do</h2>
+<p>The trouble is that the reason a student enrolls is usually not a column in the file. A tutoring program’s sign-ups differ from non-sign-ups in motivation, in whether a parent pushed, in whether a counselor happened to mention it. Matching on grades cannot touch any of that, because none of it is recorded. The technical phrase is “selection on unobservables”; the plain version is that <strong>matching removes the differences you can see, and the decision to participate is driven partly by differences you can’t.</strong></p>
+<p>There is a subtler version of the trap that took me longer to see. Match a signed-up student with low prior grades to a non-participant with the same low grades, and you may have paired the <em>most</em> motivated student in one group (low grades, still sought help) with an ordinary student in the other. Matching on the observable can quietly sharpen the unobservable difference, not shrink it.</p>
+</section>
+<section id="the-four-things-i-look-for-in-a-matched-study" class="level2">
+<h2 class="anchored" data-anchor-id="the-four-things-i-look-for-in-a-matched-study">The four things I look for in a matched study</h2>
+<p><strong>A balance table, before and after.</strong> Matching is a claim about achieved similarity, and the claim is checkable: <a href="../../posts/01-baseline-table/">the same baseline-equivalence table any comparison-group study owes</a>, shown for the matched sample. No table, no claim.</p>
+<p><strong>The enrollment story.</strong> I try to write one honest sentence about how a student ended up in the program. If the sentence contains a word like “chose,” “volunteered,” or “was referred,” I ask whether two students with identical files could plausibly differ on exactly that word. Usually they could.</p>
+<p><strong>Who got dropped.</strong> Matching discards participants with no good counterpart, which changes the question from “did the program work?” to “did it work for the kind of participant who has a look-alike?” A report should say how many were dropped and who they were.</p>
+<p><strong>A sensitivity analysis.</strong> The best matched studies ask: how strong would a hidden difference have to be to erase this effect? Reporting that number doesn’t remove the assumption; it prices it. When it’s missing, I price it myself, pessimistically.</p>
+</section>
+<section id="the-right-amount-of-trust" class="level2">
+<h2 class="anchored" data-anchor-id="the-right-amount-of-trust">The right amount of trust</h2>
+<p>None of this makes matching a trick, and I say that as someone who matched on observables in a course project and felt very pleased with herself for a week. It is an honest tool for a narrower claim than the one usually attached to it, something like: <em>among students who look alike on what we measured, participants did better.</em> Studies that state the claim at that size, show the balance, and price the assumption are, in my experience, also the ones whose findings hold up. The reassuring sentence at the top was never the evidence. The table under it is.</p>
+<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for exactly that balance table (WWC-aligned, before and after matching), and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>causal inference</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/matched-on-observables/</guid>
+  <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>How I read an evaluation report I’m inclined to believe</title>
   <dc:creator>Yuxia Liang</dc:creator>
@@ -90,86 +130,6 @@ launch, before any paper is accepted. -->
   <category>audit findings</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/composite-verdict/</guid>
   <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Effect sizes for education: what WWC actually wants</title>
-  <dc:creator>Yuxia Liang</dc:creator>
-  <link>https://zl1212-ship-it.github.io/education-methods/posts/02-effect-sizes-wwc/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>“We found a significant effect.” I have a mild allergic reaction to that sentence and I’ve accepted it’s permanent.</p>
-<p>It’s not that it’s wrong. It’s that it tells you almost nothing. Significant says <em>we detected something</em>. It says nothing about <em>how big</em>, which is the only thing a school board or a funder or the What Works Clearinghouse actually wants to know. That’s what an effect size is for, and in education that means a standardized mean difference, with a couple of small decisions baked in that quietly move the number.</p>
-<section id="the-thing-itself" class="level2">
-<h2 class="anchored" data-anchor-id="the-thing-itself">The thing itself</h2>
-<p>Strip it down: take the gap between the two group means, divide by a standard deviation. Now the effect is in standard deviation units, so a reading program and a math program can sit on the same ruler. Two studies with the same raw point gain can land at very different standardized effects, because the spread of scores differs. Which is the point. It’s also where the choices start to matter.</p>
-</section>
-<section id="cohens-d-vs.-hedges-g" class="level2">
-<h2 class="anchored" data-anchor-id="cohens-d-vs.-hedges-g">Cohen’s d vs.&nbsp;Hedges’ g</h2>
-<p>Cohen’s d puts the pooled within group SD in that denominator. Fine, except it has a known flaw: in small samples it’s biased <em>upward</em>. It overstates. And education studies are small constantly, a few classrooms, a handful of schools, so this is not a hypothetical.</p>
-<p>Hedges’ g is just Cohen’s d times a small sample correction. When the sample is big, the correction is basically 1 and the two agree. When it’s small, the correction pulls the estimate back toward the truth. WWC reports g for exactly this reason, and once you see the size of the bias you stop arguing about it.</p>
-<p>Here’s the bias, simulated. True standardized effect is 0.5. I draw a pile of small studies and average each estimator:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: right;">Per group n</th>
-<th style="text-align: right;">Cohen’s d</th>
-<th style="text-align: right;">Hedges’ g</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: right;"><strong>0.618</strong></td>
-<td style="text-align: right;">0.495</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">0.572</td>
-<td style="text-align: right;">0.517</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">0.519</td>
-<td style="text-align: right;">0.497</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">0.501</td>
-<td style="text-align: right;">0.499</td>
-</tr>
-</tbody>
-</table>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/02-effect-sizes-wwc/fig-bias.png" class="img-fluid figure-img"></p>
-<figcaption>Cohen’s d sits above the true 0.5 at small samples; Hedges’ g tracks it.</figcaption>
-</figure>
-</div>
-<p>Three per group and uncorrected d averages 0.618, a 24% overstatement of an effect that is really 0.5. Hedges’ g sits at 0.495. By a hundred per group they shake hands. Small education studies live on the left edge of that plot, which is precisely where skipping the correction costs you.</p>
-</section>
-<section id="the-little-decisions-people-get-wrong" class="level2">
-<h2 class="anchored" data-anchor-id="the-little-decisions-people-get-wrong">The little decisions people get wrong</h2>
-<p>Which SD goes in the denominator. Pooled (both groups) is the usual choice and what the WWC convention assumes. control group only is sometimes defensible, but if you pick it without saying so, your effect size isn’t comparable to anyone else’s. State your denominator.</p>
-<p>Treating a small sample d as if it were unbiased. If n is small and you skipped the correction, your number is inflated. Use g.</p>
-<p>And comparing effect sizes across studies that standardized differently. A 0.30 on a narrow, homogeneous sample is not the same animal as a 0.30 on a broad one. Effect sizes are only comparable when the rulers are.</p>
-</section>
-<section id="reporting-it-like-you-mean-it" class="level2">
-<h2 class="anchored" data-anchor-id="reporting-it-like-you-mean-it">Reporting it like you mean it</h2>
-<p>Give the effect size with an interval, not a lonely point estimate; “g = 0.8” with no uncertainty begs to be over trusted. Tie the number to a decision, because “significant” and “meaningful” are different words. And say your choices out loud so the number can be checked.</p>
-<p>A standardized mean difference is a tiny calculation carrying a big claim. Get the denominator and the correction right, attach honest uncertainty, translate it into something a human can act on. Skip those and “significant” becomes a word that hides more than it tells.</p>
-<hr>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for WWC aligned baseline equivalence and effect sizes, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
-
-
-</section>
-
- ]]></description>
-  <category>impact evaluation</category>
-  <guid>https://zl1212-ship-it.github.io/education-methods/posts/02-effect-sizes-wwc/</guid>
-  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Students aren’t independent: the clustering mistake that makes everything look significant</title>
@@ -377,77 +337,6 @@ font-style: inherit;"># psych::fa.parallel(items) # how many dimensions are actu
  ]]></description>
   <category>measurement</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/03-measurement-before-models/</guid>
-  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)</title>
-  <dc:creator>Yuxia Liang</dc:creator>
-  <link>https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Somewhere right now a teacher is being handed a number that says she went from the 40th percentile to the 70th in a single year, and a district is quietly deciding what that number says about her. Maybe a bonus. Maybe a “see, the system works.”</p>
-<p>I want to talk about how little that number might actually be saying, because the people on the other end of it don’t get to see the error bars.</p>
-<section id="what-its-trying-to-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-its-trying-to-do">What it’s trying to do</h2>
-<p>A value added model starts from a fair idea. Predict each kid’s score from where they started and a few covariates, and credit the teacher with the part that beat the prediction. Net out the head start, reward the gain. I don’t think the goal is wrong.</p>
-<p>The problem is that the teacher’s real contribution is <em>small</em> next to everything else shoving those scores around, and the one thing the model can’t fully scrub out is the biggest one: kids are not handed to teachers at random.</p>
-</section>
-<section id="whats-actually-inside-the-score" class="level2">
-<h2 class="anchored" data-anchor-id="whats-actually-inside-the-score">What’s actually inside the score</h2>
-<p>The number says “effectiveness,” but it’s carrying a lot of passengers. Some of it is real teaching. Some of it is sorting, because if the stronger or better supported kids keep landing with certain teachers, adjusting for prior scores shrinks that bias but never kills it, and whatever you didn’t measure rides straight through. Some of it is test measurement error, which goes in one end and comes out the other as “effectiveness.” Some of it is just small samples, a teacher judged on one or two classrooms, where a couple of unusual kids swing the whole thing. And some of it is the test’s scale.</p>
-<p>Stack all of that up and the year to year stability of these scores tends to be modest, well below what a high stakes ranking quietly assumes.</p>
-</section>
-<section id="watch-it-happen" class="level2">
-<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
-<p>I gave 300 simulated teachers a fixed, unchanging true effectiveness. It does not move. The only thing that changes between year one and year two is noise: small classes, test error, the luck of the draw.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">vam1 <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> mu <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> noise   <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># year 1 estimate</span></span>
-<span id="cb1-2">vam2 <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> mu <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> noise   <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># year 2 estimate, same true mu, fresh noise</span></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cor</span>(vam1, vam2)      <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># year to year reliability</span></span></code></pre></div></div>
-<p>The year to year reliability comes out at <strong>0.47</strong>. Of the teachers in the bottom quartile one year, <strong>23% land above the median the next</strong>, same people, same skill. And a representative teacher slides from the <strong>42nd to the 69th percentile</strong> between years without changing a thing.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/fig-vam-churn.png" class="img-fluid figure-img"></p>
-<figcaption>Year 1 vs year 2 percentile ranks scatter widely around the diagonal; true skill is unchanged.</figcaption>
-</figure>
-</div>
-<p>That jump from the low 40s to the high 60s, the one a district would frame as a turnaround? Pure noise. The scatter says it flatly: where a teacher ranks one year barely tells you where they’ll rank the next.</p>
-</section>
-<section id="and-then-it-gets-worse" class="level2">
-<h2 class="anchored" data-anchor-id="and-then-it-gets-worse">And then it gets worse</h2>
-<p>Once a number carries stakes, Campbell’s Law shows up: the moment a metric becomes a target, people optimize the metric instead of the thing it was supposed to stand for. Teaching to the test. Quietly steering which kids end up in your room. Narrowing what gets taught. The score stops being even the noisy proxy it started as.</p>
-</section>
-<section id="what-to-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
-<p>If you’re going to use these at all: report the uncertainty, and actually look at how wide it is. Shrink the estimates (empirical Bayes pulls noisy small sample numbers toward the average, which is exactly right when most of the spread is noise). Never hang a high stakes decision on a single year. And say out loud what you’re assuming about how kids got sorted to teachers, because the entire causal story rests on it.</p>
-<p>These scores can inform. Used as a one number verdict on someone’s career, they mostly measure which children walked through the door.</p>
-<hr>
-<p><em>This is where methods and policy collide, which is the part of this work I care about most. I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
-
-
-</section>
-
- ]]></description>
-  <category>education policy</category>
-  <guid>https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/</guid>
   <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -745,109 +634,6 @@ font-style: inherit;">"ell"</span>)))</span></code></pre></div></div>
   <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Your text classifier is 85% accurate. That error doesn’t vanish when you run the regression.</title>
-  <dc:creator>Yuxia Liang</dc:creator>
-  <link>https://zl1212-ship-it.github.io/education-methods/posts/text-classifier-error/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>There’s a very specific high that hits when a classifier you’ve been wrestling with for days finally clears 85% on the held out set. It works. You run it over all fifty thousand comments, attach the predicted labels to your dataset, and move on to the analysis you actually cared about.</p>
-<p>That’s the exact moment I want to grab your arm.</p>
-<p>Because the 15% it got wrong doesn’t politely stay inside the classifier. It rides along into the regression, and it changes your answer. “Accuracy” is hiding how much.</p>
-<section id="a-predicted-label-is-a-guess-youre-treating-as-a-fact" class="level2">
-<h2 class="anchored" data-anchor-id="a-predicted-label-is-a-guess-youre-treating-as-a-fact">A predicted label is a guess you’re treating as a fact</h2>
-<p>That’s the whole problem in one sentence. You didn’t <em>observe</em> “this feedback is specific.” You <em>estimated</em> it, with a model that’s right most of the time and wrong some of the time. The minute you drop those predictions into a regression as if they were the real thing, you’ve imported the model’s mistakes without telling the regression they’re there.</p>
-<p>And the phrase “ground truth” makes it so much worse, because it’s not ground truth. It’s the classifier’s training target. In your actual analysis those labels are a noisy stand in, and calling them truth is how the error sneaks past you.</p>
-</section>
-<section id="what-the-error-does-depends-on-what-kind-it-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-error-does-depends-on-what-kind-it-is">What the error does depends on what kind it is</h2>
-<p>If the mistakes are just random (the classifier is equally clumsy everywhere), and the noisy variable is a predictor, the effect gets <strong>attenuated</strong>. Pulled toward zero. This is the part people get wrong in conversation, by the way. “It’s just noise, it averages out.” A regression coefficient on a mismeasured predictor does not average out. It shrinks.</p>
-<p>Differential error is the one that actually scares me. If the classifier is worse for some cases than others, in a way that’s tied to your outcome or your groups, the bias picks up a <em>direction</em>. You’re not just underestimating anymore. You can end up pointing the wrong way.</p>
-<p>Your setup is the textbook case: you predict “feedback specificity” from teacher comments, then relate it to student progress. Now suppose the model reads feedback from teachers of multilingual learners a little worse. That error is now braided into exactly the comparison you care about, and it doesn’t wash out. It bends the conclusion.</p>
-</section>
-<section id="watch-it-happen" class="level2">
-<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
-<p>Six thousand simulated comments. The true effect of the text feature on the outcome is 1.0. I feed two classifiers’ <em>predicted</em> labels into the same regression and treat them as truth:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># True effect of Z on Y is 1.0 (simulated).</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> Z))[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Z"</span>]         <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># if we had the true labels</span></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> Zhat_nd))        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># 85% accurate, error unrelated to anything</span></span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> Zhat_d))         <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># 85% accurate overall, but worse for one group</span></span></code></pre></div></div>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Labels used</th>
-<th style="text-align: right;">Estimated effect</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>True labels</td>
-<td style="text-align: right;"><strong>1.00</strong></td>
-</tr>
-<tr class="even">
-<td>Predicted — nondifferential error</td>
-<td style="text-align: right;"><strong>0.68</strong></td>
-</tr>
-<tr class="odd">
-<td>Predicted — differential error</td>
-<td style="text-align: right;"><strong>0.72</strong></td>
-</tr>
-</tbody>
-</table>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/text-classifier-error/fig-attenuation.png" class="img-fluid figure-img"></p>
-<figcaption>Both classifiers are 85% accurate, yet the estimated effect is attenuated and the bias differs.</figcaption>
-</figure>
-</div>
-<p>Sit with two things here. First: clean, random, 85%-accurate error drags a true effect of 1.0 down to 0.68. A third of your signal, gone, purely from treating guesses as data. Second, and this is the one that gets me: both classifiers report the <em>same</em> 85%. But the “differential” one is 93% accurate for one group and 78% for the other. The headline number cannot tell you which world you’re in. Only breaking accuracy out by subgroup can.</p>
-</section>
-<section id="what-to-actually-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-actually-do">What to actually do</h2>
-<p>Keep a human labeled gold set, and not just for tuning. You need it to <em>measure</em> the error so you can correct for it later. Report classifier performance broken out by the groups you’ll compare, because “85% overall” is precisely where differential error hides. And then either propagate that uncertainty into the analysis or use an estimator built for predicted labels (there’s a small but real literature on inference with machine predicted variables now). Whatever you do, stop quietly swapping predictions in for observations and calling it done.</p>
-<p>Measure your measurement. Report it by group. Let the error into the model the same way it’s already, invisibly, in your data.</p>
-<hr>
-<p><em>This exact corner, where text models meet measurement error, is what I work on. I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and I’m putting together a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if you want to follow along.</em></p>
-
-
-</section>
-
- ]]></description>
-  <category>measurement</category>
-  <guid>https://zl1212-ship-it.github.io/education-methods/posts/text-classifier-error/</guid>
-  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>More controls ≠ less bias: the variables you should never put in your model</title>
   <dc:creator>Yuxia Liang</dc:creator>
   <link>https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/</link>
@@ -969,6 +755,260 @@ font-style: inherit;"># also adjust for the post treatment mediator</span></span
  ]]></description>
   <category>causal inference</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/</guid>
+  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Effect sizes for education: what WWC actually wants</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/02-effect-sizes-wwc/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>“We found a significant effect.” I have a mild allergic reaction to that sentence and I’ve accepted it’s permanent.</p>
+<p>It’s not that it’s wrong. It’s that it tells you almost nothing. Significant says <em>we detected something</em>. It says nothing about <em>how big</em>, which is the only thing a school board or a funder or the What Works Clearinghouse actually wants to know. That’s what an effect size is for, and in education that means a standardized mean difference, with a couple of small decisions baked in that quietly move the number.</p>
+<section id="the-thing-itself" class="level2">
+<h2 class="anchored" data-anchor-id="the-thing-itself">The thing itself</h2>
+<p>Strip it down: take the gap between the two group means, divide by a standard deviation. Now the effect is in standard deviation units, so a reading program and a math program can sit on the same ruler. Two studies with the same raw point gain can land at very different standardized effects, because the spread of scores differs. Which is the point. It’s also where the choices start to matter.</p>
+</section>
+<section id="cohens-d-vs.-hedges-g" class="level2">
+<h2 class="anchored" data-anchor-id="cohens-d-vs.-hedges-g">Cohen’s d vs.&nbsp;Hedges’ g</h2>
+<p>Cohen’s d puts the pooled within group SD in that denominator. Fine, except it has a known flaw: in small samples it’s biased <em>upward</em>. It overstates. And education studies are small constantly, a few classrooms, a handful of schools, so this is not a hypothetical.</p>
+<p>Hedges’ g is just Cohen’s d times a small sample correction. When the sample is big, the correction is basically 1 and the two agree. When it’s small, the correction pulls the estimate back toward the truth. WWC reports g for exactly this reason, and once you see the size of the bias you stop arguing about it.</p>
+<p>Here’s the bias, simulated. True standardized effect is 0.5. I draw a pile of small studies and average each estimator:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Per group n</th>
+<th style="text-align: right;">Cohen’s d</th>
+<th style="text-align: right;">Hedges’ g</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;"><strong>0.618</strong></td>
+<td style="text-align: right;">0.495</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.572</td>
+<td style="text-align: right;">0.517</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.519</td>
+<td style="text-align: right;">0.497</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">0.501</td>
+<td style="text-align: right;">0.499</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/02-effect-sizes-wwc/fig-bias.png" class="img-fluid figure-img"></p>
+<figcaption>Cohen’s d sits above the true 0.5 at small samples; Hedges’ g tracks it.</figcaption>
+</figure>
+</div>
+<p>Three per group and uncorrected d averages 0.618, a 24% overstatement of an effect that is really 0.5. Hedges’ g sits at 0.495. By a hundred per group they shake hands. Small education studies live on the left edge of that plot, which is precisely where skipping the correction costs you.</p>
+</section>
+<section id="the-little-decisions-people-get-wrong" class="level2">
+<h2 class="anchored" data-anchor-id="the-little-decisions-people-get-wrong">The little decisions people get wrong</h2>
+<p>Which SD goes in the denominator. Pooled (both groups) is the usual choice and what the WWC convention assumes. control group only is sometimes defensible, but if you pick it without saying so, your effect size isn’t comparable to anyone else’s. State your denominator.</p>
+<p>Treating a small sample d as if it were unbiased. If n is small and you skipped the correction, your number is inflated. Use g.</p>
+<p>And comparing effect sizes across studies that standardized differently. A 0.30 on a narrow, homogeneous sample is not the same animal as a 0.30 on a broad one. Effect sizes are only comparable when the rulers are.</p>
+</section>
+<section id="reporting-it-like-you-mean-it" class="level2">
+<h2 class="anchored" data-anchor-id="reporting-it-like-you-mean-it">Reporting it like you mean it</h2>
+<p>Give the effect size with an interval, not a lonely point estimate; “g = 0.8” with no uncertainty begs to be over trusted. Tie the number to a decision, because “significant” and “meaningful” are different words. And say your choices out loud so the number can be checked.</p>
+<p>A standardized mean difference is a tiny calculation carrying a big claim. Get the denominator and the correction right, attach honest uncertainty, translate it into something a human can act on. Skip those and “significant” becomes a word that hides more than it tells.</p>
+<hr>
+<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for WWC aligned baseline equivalence and effect sizes, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>impact evaluation</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/02-effect-sizes-wwc/</guid>
+  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Somewhere right now a teacher is being handed a number that says she went from the 40th percentile to the 70th in a single year, and a district is quietly deciding what that number says about her. Maybe a bonus. Maybe a “see, the system works.”</p>
+<p>I want to talk about how little that number might actually be saying, because the people on the other end of it don’t get to see the error bars.</p>
+<section id="what-its-trying-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-its-trying-to-do">What it’s trying to do</h2>
+<p>A value added model starts from a fair idea. Predict each kid’s score from where they started and a few covariates, and credit the teacher with the part that beat the prediction. Net out the head start, reward the gain. I don’t think the goal is wrong.</p>
+<p>The problem is that the teacher’s real contribution is <em>small</em> next to everything else shoving those scores around, and the one thing the model can’t fully scrub out is the biggest one: kids are not handed to teachers at random.</p>
+</section>
+<section id="whats-actually-inside-the-score" class="level2">
+<h2 class="anchored" data-anchor-id="whats-actually-inside-the-score">What’s actually inside the score</h2>
+<p>The number says “effectiveness,” but it’s carrying a lot of passengers. Some of it is real teaching. Some of it is sorting, because if the stronger or better supported kids keep landing with certain teachers, adjusting for prior scores shrinks that bias but never kills it, and whatever you didn’t measure rides straight through. Some of it is test measurement error, which goes in one end and comes out the other as “effectiveness.” Some of it is just small samples, a teacher judged on one or two classrooms, where a couple of unusual kids swing the whole thing. And some of it is the test’s scale.</p>
+<p>Stack all of that up and the year to year stability of these scores tends to be modest, well below what a high stakes ranking quietly assumes.</p>
+</section>
+<section id="watch-it-happen" class="level2">
+<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
+<p>I gave 300 simulated teachers a fixed, unchanging true effectiveness. It does not move. The only thing that changes between year one and year two is noise: small classes, test error, the luck of the draw.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">vam1 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> mu <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> noise   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># year 1 estimate</span></span>
+<span id="cb1-2">vam2 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> mu <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> noise   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># year 2 estimate, same true mu, fresh noise</span></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cor</span>(vam1, vam2)      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># year to year reliability</span></span></code></pre></div></div>
+<p>The year to year reliability comes out at <strong>0.47</strong>. Of the teachers in the bottom quartile one year, <strong>23% land above the median the next</strong>, same people, same skill. And a representative teacher slides from the <strong>42nd to the 69th percentile</strong> between years without changing a thing.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/fig-vam-churn.png" class="img-fluid figure-img"></p>
+<figcaption>Year 1 vs year 2 percentile ranks scatter widely around the diagonal; true skill is unchanged.</figcaption>
+</figure>
+</div>
+<p>That jump from the low 40s to the high 60s, the one a district would frame as a turnaround? Pure noise. The scatter says it flatly: where a teacher ranks one year barely tells you where they’ll rank the next.</p>
+</section>
+<section id="and-then-it-gets-worse" class="level2">
+<h2 class="anchored" data-anchor-id="and-then-it-gets-worse">And then it gets worse</h2>
+<p>Once a number carries stakes, Campbell’s Law shows up: the moment a metric becomes a target, people optimize the metric instead of the thing it was supposed to stand for. Teaching to the test. Quietly steering which kids end up in your room. Narrowing what gets taught. The score stops being even the noisy proxy it started as.</p>
+</section>
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
+<p>If you’re going to use these at all: report the uncertainty, and actually look at how wide it is. Shrink the estimates (empirical Bayes pulls noisy small sample numbers toward the average, which is exactly right when most of the spread is noise). Never hang a high stakes decision on a single year. And say out loud what you’re assuming about how kids got sorted to teachers, because the entire causal story rests on it.</p>
+<p>These scores can inform. Used as a one number verdict on someone’s career, they mostly measure which children walked through the door.</p>
+<hr>
+<p><em>This is where methods and policy collide, which is the part of this work I care about most. I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>education policy</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/</guid>
+  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Your text classifier is 85% accurate. That error doesn’t vanish when you run the regression.</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/text-classifier-error/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>There’s a very specific high that hits when a classifier you’ve been wrestling with for days finally clears 85% on the held out set. It works. You run it over all fifty thousand comments, attach the predicted labels to your dataset, and move on to the analysis you actually cared about.</p>
+<p>That’s the exact moment I want to grab your arm.</p>
+<p>Because the 15% it got wrong doesn’t politely stay inside the classifier. It rides along into the regression, and it changes your answer. “Accuracy” is hiding how much.</p>
+<section id="a-predicted-label-is-a-guess-youre-treating-as-a-fact" class="level2">
+<h2 class="anchored" data-anchor-id="a-predicted-label-is-a-guess-youre-treating-as-a-fact">A predicted label is a guess you’re treating as a fact</h2>
+<p>That’s the whole problem in one sentence. You didn’t <em>observe</em> “this feedback is specific.” You <em>estimated</em> it, with a model that’s right most of the time and wrong some of the time. The minute you drop those predictions into a regression as if they were the real thing, you’ve imported the model’s mistakes without telling the regression they’re there.</p>
+<p>And the phrase “ground truth” makes it so much worse, because it’s not ground truth. It’s the classifier’s training target. In your actual analysis those labels are a noisy stand in, and calling them truth is how the error sneaks past you.</p>
+</section>
+<section id="what-the-error-does-depends-on-what-kind-it-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-error-does-depends-on-what-kind-it-is">What the error does depends on what kind it is</h2>
+<p>If the mistakes are just random (the classifier is equally clumsy everywhere), and the noisy variable is a predictor, the effect gets <strong>attenuated</strong>. Pulled toward zero. This is the part people get wrong in conversation, by the way. “It’s just noise, it averages out.” A regression coefficient on a mismeasured predictor does not average out. It shrinks.</p>
+<p>Differential error is the one that actually scares me. If the classifier is worse for some cases than others, in a way that’s tied to your outcome or your groups, the bias picks up a <em>direction</em>. You’re not just underestimating anymore. You can end up pointing the wrong way.</p>
+<p>Your setup is the textbook case: you predict “feedback specificity” from teacher comments, then relate it to student progress. Now suppose the model reads feedback from teachers of multilingual learners a little worse. That error is now braided into exactly the comparison you care about, and it doesn’t wash out. It bends the conclusion.</p>
+</section>
+<section id="watch-it-happen" class="level2">
+<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
+<p>Six thousand simulated comments. The true effect of the text feature on the outcome is 1.0. I feed two classifiers’ <em>predicted</em> labels into the same regression and treat them as truth:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># True effect of Z on Y is 1.0 (simulated).</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> Z))[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Z"</span>]         <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># if we had the true labels</span></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> Zhat_nd))        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 85% accurate, error unrelated to anything</span></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> Zhat_d))         <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 85% accurate overall, but worse for one group</span></span></code></pre></div></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Labels used</th>
+<th style="text-align: right;">Estimated effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>True labels</td>
+<td style="text-align: right;"><strong>1.00</strong></td>
+</tr>
+<tr class="even">
+<td>Predicted — nondifferential error</td>
+<td style="text-align: right;"><strong>0.68</strong></td>
+</tr>
+<tr class="odd">
+<td>Predicted — differential error</td>
+<td style="text-align: right;"><strong>0.72</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/text-classifier-error/fig-attenuation.png" class="img-fluid figure-img"></p>
+<figcaption>Both classifiers are 85% accurate, yet the estimated effect is attenuated and the bias differs.</figcaption>
+</figure>
+</div>
+<p>Sit with two things here. First: clean, random, 85%-accurate error drags a true effect of 1.0 down to 0.68. A third of your signal, gone, purely from treating guesses as data. Second, and this is the one that gets me: both classifiers report the <em>same</em> 85%. But the “differential” one is 93% accurate for one group and 78% for the other. The headline number cannot tell you which world you’re in. Only breaking accuracy out by subgroup can.</p>
+</section>
+<section id="what-to-actually-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-actually-do">What to actually do</h2>
+<p>Keep a human labeled gold set, and not just for tuning. You need it to <em>measure</em> the error so you can correct for it later. Report classifier performance broken out by the groups you’ll compare, because “85% overall” is precisely where differential error hides. And then either propagate that uncertainty into the analysis or use an estimator built for predicted labels (there’s a small but real literature on inference with machine predicted variables now). Whatever you do, stop quietly swapping predictions in for observations and calling it done.</p>
+<p>Measure your measurement. Report it by group. Let the error into the model the same way it’s already, invisibly, in your data.</p>
+<hr>
+<p><em>This exact corner, where text models meet measurement error, is what I work on. I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and I’m putting together a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if you want to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>measurement</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/text-classifier-error/</guid>
   <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>

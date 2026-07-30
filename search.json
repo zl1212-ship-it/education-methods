@@ -1,5 +1,89 @@
 [
   {
+    "objectID": "posts/matched-on-observables/index.html",
+    "href": "posts/matched-on-observables/index.html",
+    "title": "“We matched participants to similar students”: what that buys, and what it can’t",
+    "section": "",
+    "text": "For a long time, the sentence “participants were matched to similar non-participants on grades, attendance, and demographics” quietly ended my skepticism. It sounds like the problem of comparison has been handled. The groups look alike; surely the difference that remains is the program.\nThen a professor in my program asked, in the margin of something I’d written, the question I now ask about every matched study: if two students look identical in the data, why did only one of them sign up?"
+  },
+  {
+    "objectID": "posts/matched-on-observables/index.html#what-matching-actually-does",
+    "href": "posts/matched-on-observables/index.html#what-matching-actually-does",
+    "title": "“We matched participants to similar students”: what that buys, and what it can’t",
+    "section": "What matching actually does",
+    "text": "What matching actually does\nMatching does one thing, and does it honestly: it makes the comparison group resemble the participants on the variables you matched. Same prior grades, same attendance band, same school poverty level. That is real progress; an unmatched comparison would be worse. After matching, the observable excuses are gone."
+  },
+  {
+    "objectID": "posts/matched-on-observables/index.html#what-it-cannot-do",
+    "href": "posts/matched-on-observables/index.html#what-it-cannot-do",
+    "title": "“We matched participants to similar students”: what that buys, and what it can’t",
+    "section": "What it cannot do",
+    "text": "What it cannot do\nThe trouble is that the reason a student enrolls is usually not a column in the file. A tutoring program’s sign-ups differ from non-sign-ups in motivation, in whether a parent pushed, in whether a counselor happened to mention it. Matching on grades cannot touch any of that, because none of it is recorded. The technical phrase is “selection on unobservables”; the plain version is that matching removes the differences you can see, and the decision to participate is driven partly by differences you can’t.\nThere is a subtler version of the trap that took me longer to see. Match a signed-up student with low prior grades to a non-participant with the same low grades, and you may have paired the most motivated student in one group (low grades, still sought help) with an ordinary student in the other. Matching on the observable can quietly sharpen the unobservable difference, not shrink it."
+  },
+  {
+    "objectID": "posts/matched-on-observables/index.html#the-four-things-i-look-for-in-a-matched-study",
+    "href": "posts/matched-on-observables/index.html#the-four-things-i-look-for-in-a-matched-study",
+    "title": "“We matched participants to similar students”: what that buys, and what it can’t",
+    "section": "The four things I look for in a matched study",
+    "text": "The four things I look for in a matched study\nA balance table, before and after. Matching is a claim about achieved similarity, and the claim is checkable: the same baseline-equivalence table any comparison-group study owes, shown for the matched sample. No table, no claim.\nThe enrollment story. I try to write one honest sentence about how a student ended up in the program. If the sentence contains a word like “chose,” “volunteered,” or “was referred,” I ask whether two students with identical files could plausibly differ on exactly that word. Usually they could.\nWho got dropped. Matching discards participants with no good counterpart, which changes the question from “did the program work?” to “did it work for the kind of participant who has a look-alike?” A report should say how many were dropped and who they were.\nA sensitivity analysis. The best matched studies ask: how strong would a hidden difference have to be to erase this effect? Reporting that number doesn’t remove the assumption; it prices it. When it’s missing, I price it myself, pessimistically."
+  },
+  {
+    "objectID": "posts/matched-on-observables/index.html#the-right-amount-of-trust",
+    "href": "posts/matched-on-observables/index.html#the-right-amount-of-trust",
+    "title": "“We matched participants to similar students”: what that buys, and what it can’t",
+    "section": "The right amount of trust",
+    "text": "The right amount of trust\nNone of this makes matching a trick, and I say that as someone who matched on observables in a course project and felt very pleased with herself for a week. It is an honest tool for a narrower claim than the one usually attached to it, something like: among students who look alike on what we measured, participants did better. Studies that state the claim at that size, show the balance, and price the assumption are, in my experience, also the ones whose findings hold up. The reassuring sentence at the top was never the evidence. The table under it is.\nI build baselinr, a small R package for exactly that balance table (WWC-aligned, before and after matching), and am developing a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
+  },
+  {
+    "objectID": "posts/reading-evaluations/index.html",
+    "href": "posts/reading-evaluations/index.html",
+    "title": "How I read an evaluation report I’m inclined to believe",
+    "section": "",
+    "text": "The evaluation reports that fool me are never the sloppy ones. They are the ones whose conclusion I already agree with. I’m a master’s student, so I read a lot of these on assignment, and the routine below is what has survived two years of being wrong in seminar: ten questions in a set order, precisely so that my sympathy for the finding doesn’t get a vote. None of them needs software. Most can be answered from the report itself, and when one can’t, that absence is usually the answer.\n1. Compared to whom? Before any number, I look for the comparison group. “Participants improved” is not a finding; students improve on their own, programs or not. If there is no comparison group at all, I stop expecting a causal claim and read the rest as description.\n2. Were the groups similar before the program? The whole causal claim rests here, and it is checkable from one table. I wrote about what that table has to show and why a p-value is the wrong check; a report that never shows baseline equivalence is asking me to take the hardest part on faith.\n3. Who disappeared? Enrollment counts at the start, outcome counts at the end. If a quarter of the treatment group is missing from the final table, the program’s effect is now entangled with who stuck around, and I want the report to say how the leavers differed, not just how many left.\n4. Was the outcome measured the same way for both groups? Same test, same timing, same raters. A program grades its own homework more often than you’d think, sometimes literally. When groups are compared on a score, I also want to know the score means the same thing in both.\n5. How big is the effect, in units I can feel? “Significant” tells me about sample size as much as anything. I look for the effect in months of learning, points on a real test, or a standardized effect size I can compare, the way evidence clearinghouses ask for it.\n6. Were students counted as if they were independent? Twenty-five students in one classroom share a teacher, a curriculum, a snow day. Analyses that ignore this make everything look significant. The fix is standard; its absence in 2026 is informative.\n7. How many outcomes were measured, and how many reported? Ten outcomes and one star is a different story from one pre-named outcome and one star. I look for a protocol, a pre-registration, or at least a full outcome table with the nulls left in.\n8. What was controlled for, and why? More controls is not automatically better; some variables make the estimate worse when you adjust for them. I read the control list asking “is this a cause of enrollment, or a consequence of the program?”\n9. Who paid, and who analyzed? Not as an accusation, as a base rate. Evaluations commissioned by the program’s vendor come out favorable more often, and the mechanism is rarely fraud; it is which outcomes, sites, and cohorts made it into the report. Independence is a design feature like any other.\n10. What would failure have looked like? My favorite question, and the one reports answer least often. If every plausible result could be narrated as success, the evaluation was not a test. When a report states in advance what result would have counted against the program, everything else in it gets more believable."
+  },
+  {
+    "objectID": "posts/reading-evaluations/index.html#what-a-checklist-can-and-cant-do",
+    "href": "posts/reading-evaluations/index.html#what-a-checklist-can-and-cant-do",
+    "title": "How I read an evaluation report I’m inclined to believe",
+    "section": "What a checklist can and can’t do",
+    "text": "What a checklist can and can’t do\nTen questions can’t convict a report, and passing them doesn’t make a finding true. Most of them are scar tissue; I ask about attrition because I once didn’t, out loud, in front of people. This is triage: it tells me where to spend skepticism, which is always in shorter supply than I’d like, and it protects me a little from my own preferences. The reports I end up trusting most are rarely the ones with the biggest effects. They are the ones that make questions 1 through 10 easy to answer, because the authors asked themselves first.\nI build baselinr, a small R package for the baseline-equivalence table in question 2, and am developing a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
+  },
+  {
+    "objectID": "posts/02-effect-sizes-wwc/index.html",
+    "href": "posts/02-effect-sizes-wwc/index.html",
+    "title": "Effect sizes for education: what WWC actually wants",
+    "section": "",
+    "text": "“We found a significant effect.” I have a mild allergic reaction to that sentence and I’ve accepted it’s permanent.\nIt’s not that it’s wrong. It’s that it tells you almost nothing. Significant says we detected something. It says nothing about how big, which is the only thing a school board or a funder or the What Works Clearinghouse actually wants to know. That’s what an effect size is for, and in education that means a standardized mean difference, with a couple of small decisions baked in that quietly move the number."
+  },
+  {
+    "objectID": "posts/02-effect-sizes-wwc/index.html#the-thing-itself",
+    "href": "posts/02-effect-sizes-wwc/index.html#the-thing-itself",
+    "title": "Effect sizes for education: what WWC actually wants",
+    "section": "The thing itself",
+    "text": "The thing itself\nStrip it down: take the gap between the two group means, divide by a standard deviation. Now the effect is in standard deviation units, so a reading program and a math program can sit on the same ruler. Two studies with the same raw point gain can land at very different standardized effects, because the spread of scores differs. Which is the point. It’s also where the choices start to matter."
+  },
+  {
+    "objectID": "posts/02-effect-sizes-wwc/index.html#cohens-d-vs.-hedges-g",
+    "href": "posts/02-effect-sizes-wwc/index.html#cohens-d-vs.-hedges-g",
+    "title": "Effect sizes for education: what WWC actually wants",
+    "section": "Cohen’s d vs. Hedges’ g",
+    "text": "Cohen’s d vs. Hedges’ g\nCohen’s d puts the pooled within group SD in that denominator. Fine, except it has a known flaw: in small samples it’s biased upward. It overstates. And education studies are small constantly, a few classrooms, a handful of schools, so this is not a hypothetical.\nHedges’ g is just Cohen’s d times a small sample correction. When the sample is big, the correction is basically 1 and the two agree. When it’s small, the correction pulls the estimate back toward the truth. WWC reports g for exactly this reason, and once you see the size of the bias you stop arguing about it.\nHere’s the bias, simulated. True standardized effect is 0.5. I draw a pile of small studies and average each estimator:\n\n\n\nPer group n\nCohen’s d\nHedges’ g\n\n\n\n\n3\n0.618\n0.495\n\n\n5\n0.572\n0.517\n\n\n10\n0.519\n0.497\n\n\n100\n0.501\n0.499\n\n\n\n\n\n\nCohen’s d sits above the true 0.5 at small samples; Hedges’ g tracks it.\n\n\nThree per group and uncorrected d averages 0.618, a 24% overstatement of an effect that is really 0.5. Hedges’ g sits at 0.495. By a hundred per group they shake hands. Small education studies live on the left edge of that plot, which is precisely where skipping the correction costs you."
+  },
+  {
+    "objectID": "posts/02-effect-sizes-wwc/index.html#the-little-decisions-people-get-wrong",
+    "href": "posts/02-effect-sizes-wwc/index.html#the-little-decisions-people-get-wrong",
+    "title": "Effect sizes for education: what WWC actually wants",
+    "section": "The little decisions people get wrong",
+    "text": "The little decisions people get wrong\nWhich SD goes in the denominator. Pooled (both groups) is the usual choice and what the WWC convention assumes. control group only is sometimes defensible, but if you pick it without saying so, your effect size isn’t comparable to anyone else’s. State your denominator.\nTreating a small sample d as if it were unbiased. If n is small and you skipped the correction, your number is inflated. Use g.\nAnd comparing effect sizes across studies that standardized differently. A 0.30 on a narrow, homogeneous sample is not the same animal as a 0.30 on a broad one. Effect sizes are only comparable when the rulers are."
+  },
+  {
+    "objectID": "posts/02-effect-sizes-wwc/index.html#reporting-it-like-you-mean-it",
+    "href": "posts/02-effect-sizes-wwc/index.html#reporting-it-like-you-mean-it",
+    "title": "Effect sizes for education: what WWC actually wants",
+    "section": "Reporting it like you mean it",
+    "text": "Reporting it like you mean it\nGive the effect size with an interval, not a lonely point estimate; “g = 0.8” with no uncertainty begs to be over trusted. Tie the number to a decision, because “significant” and “meaningful” are different words. And say your choices out loud so the number can be checked.\nA standardized mean difference is a tiny calculation carrying a big claim. Get the denominator and the correction right, attach honest uncertainty, translate it into something a human can act on. Skip those and “significant” becomes a word that hides more than it tells.\n\nI build baselinr, a small R package for WWC aligned baseline equivalence and effect sizes, and am developing a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
+  },
+  {
     "objectID": "posts/controls-collider/index.html",
     "href": "posts/controls-collider/index.html",
     "title": "More controls ≠ less bias: the variables you should never put in your model",
@@ -40,6 +124,230 @@
     "title": "More controls ≠ less bias: the variables you should never put in your model",
     "section": "What I actually do now",
     "text": "What I actually do now\n\nSketch the DAG before I touch the model. A bad drawing on a receipt counts.\nOnly control for things measured before treatment.\nIf a variable was measured after the treatment, I treat it as off limits until the picture tells me otherwise.\nFor every control, I make myself say which of the three it is. If I can’t, it doesn’t go in.\n\nI’m not against controls. I’m anti “more controls = more rigor,” because that one’s just false, and it’s the kind of false that looks like care.\n\nI’m building baselinr, a small R package for WWC aligned baseline equivalence, and a cohort course on running education evaluations you can actually trust. subscribe via RSS if that’s your thing."
+  },
+  {
+    "objectID": "posts/composite-verdict/index.html",
+    "href": "posts/composite-verdict/index.html",
+    "title": "I ranked the same eight universities two defensible ways. The list nearly reversed.",
+    "section": "",
+    "text": "I keep telling people that a school rating depends on the weights inside the formula, and I realized recently that I had never actually watched it happen with numbers I could check. So I built the smallest real ranking I could.\nI took the eight public four-year universities in Washington, where I studied, and two numbers per school from the 2021 federal IPEDS collection. The first is the six-year graduation rate for bachelor’s students: of those who start, how many finish. The second is Pell share: what fraction of undergraduates receive a federal Pell grant, a rough marker of how many lower-income students a campus serves. Neither number is obscure and neither is controversial to care about. A public university is supposed to graduate its students, and it is supposed to be open to students without money.\nThen I did what every rating system does. I put the two on a common scale, blended them with a weight, and ranked. The only thing I varied was the weight, in five steps from all-graduation to all-Pell."
+  },
+  {
+    "objectID": "posts/composite-verdict/index.html#what-surprised-me",
+    "href": "posts/composite-verdict/index.html#what-surprised-me",
+    "title": "I ranked the same eight universities two defensible ways. The list nearly reversed.",
+    "section": "What surprised me",
+    "text": "What surprised me\nI expected some reshuffling in the middle. I did not expect the list to nearly turn over. UW Seattle is first when the weight is on graduation (84% of its students finish, the highest here) and last when the weight is on Pell share (17% of its undergraduates receive Pell, the lowest here). Evergreen State is the exact mirror: last on one end, first on the other. These aren’t two rankings of quality and its absence. They are two different questions, and each school answers one of them well.\nThe reason the reversal is so clean is worth stating: in this group of eight, the two measures are strongly negatively related. The campuses that graduate the largest share of students enroll the smallest share of Pell students. I don’t get to conclude much from eight schools about why that is, but it has an uncomfortable implication for anyone building a rating: there is no weight between these two numbers that is neutral. Every blend takes a side, quietly."
+  },
+  {
+    "objectID": "posts/composite-verdict/index.html#what-this-little-exercise-cant-say",
+    "href": "posts/composite-verdict/index.html#what-this-little-exercise-cant-say",
+    "title": "I ranked the same eight universities two defensible ways. The list nearly reversed.",
+    "section": "What this little exercise can’t say",
+    "text": "What this little exercise can’t say\nA lot, honestly. Two indicators is a cartoon; real rating systems use many, and better ones. A graduation rate reflects who enrolls at least as much as what a campus does for them. Pell share is a coarse stand-in for access. And my choices leaked in everywhere: I checked the endpoints of the figure under two other reasonable ways of scaling the numbers and they came out the same, but the 50/50 column did not. Even the scaling is a decision.\nAbove all, this is not a ranking of Washington’s universities, and none of these schools is “worst.” That is closer to being the point: any single ordered list of them would be hiding a judgment call in the weights."
+  },
+  {
+    "objectID": "posts/composite-verdict/index.html#what-i-do-differently-now",
+    "href": "posts/composite-verdict/index.html#what-i-do-differently-now",
+    "title": "I ranked the same eight universities two defensible ways. The list nearly reversed.",
+    "section": "What I do differently now",
+    "text": "What I do differently now\nWhen I see a composite rating, I try to find two things before reacting to any school’s position: what is weighted how much, and whether the publisher shows how the order moves under other defensible weightings. When that sensitivity is reported, I trust the list more, not less.\nI’m working on audits of real rating and flagging systems with public data, and I’ll write them up here as they become shareable.\nThe data (a small CSV pulled from the Urban Institute’s public IPEDS API) and the figure script (make_figure.py) are in this post’s folder; deleting the CSV and rerunning the script re-fetches the numbers.\nRelated: What a “teacher effectiveness” score actually measures (and what it doesn’t). I build baselinr and am developing a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html",
+    "href": "posts/03-measurement-before-models/index.html",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "",
+    "text": "The saddest sentence in program evaluation is “the program didn’t work,” when what actually happened was “we measured it with a broken ruler.” Those two get mixed up constantly, and the second one wears the first one’s clothes.\nHere’s the part that stings: teams will spend months on the design, the randomization, the comparison group, the matching, and then about ten minutes on the thing they actually measure. And then they’re surprised by a null result."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html#what-a-noisy-outcome-quietly-does",
+    "href": "posts/03-measurement-before-models/index.html#what-a-noisy-outcome-quietly-does",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "What a noisy outcome quietly does",
+    "text": "What a noisy outcome quietly does\nRandom measurement error in your outcome doesn’t just scatter the points around a bit. It inflates the variance of the outcome, which widens your standard errors, which costs you power. And because the standard deviation in your effect size denominator just got bigger, the standardized effect you can report shrinks. You can run a flawless design on a bad measure and find nothing, not because the program failed, but because your ruler was made of rubber.\nSo before the model, check the ruler."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html#reliability-what-one-number-hides",
+    "href": "posts/03-measurement-before-models/index.html#reliability-what-one-number-hides",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "Reliability: what one number hides",
+    "text": "Reliability: what one number hides\nReliability usually shows up as a single coefficient, Cronbach’s alpha most of the time, and gets a nod on the way to the regression. But that one number is hiding things. Alpha climbs with the number of items, not only their quality, so a long mediocre scale can post a comfortable one. It leans on the items being roughly interchangeable, and when they aren’t it can mislead in either direction (which is why a lot of measurement people reach for McDonald’s omega instead). And a high alpha is not proof your items measure one thing.\nA “respectable” reliability can also just be too low for your claim. Detecting a small effect on a moderately unreliable outcome can demand far more sample than you have. The reliability you need is a function of the effect you’re chasing, not a fixed bar you clear once and forget."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html#validity-briefly",
+    "href": "posts/03-measurement-before-models/index.html#validity-briefly",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "Validity, briefly",
+    "text": "Validity, briefly\nReliability is consistency. Validity is aboutness. A bathroom scale that reads three pounds heavy every single time is perfectly reliable and perfectly wrong. For an outcome, the evidence worth showing is whether the items cover the construct, whether the data back the dimensions you claim, and whether the measure relates to things it should and not to things it shouldn’t. You don’t need all of it for every study. You do need to stop claiming more than your evidence supports."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html#a-check-you-can-actually-run",
+    "href": "posts/03-measurement-before-models/index.html#a-check-you-can-actually-run",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "A check you can actually run",
+    "text": "A check you can actually run\nBefore you trust an outcome, look at it. On your own data, not invented numbers, look at the item behavior and an internal consistency estimate for each key construct:\n# On YOUR data. Do not report invented coefficients.\n# items &lt;- your_data[, c(\"q1\", \"q2\", \"q3\", \"q4\")]\n# psych::alpha(items)       # internal consistency + item level diagnostics\n# psych::omega(items)       # model based reliability\n# psych::fa.parallel(items) # how many dimensions are actually in there?\nRead the item level output, not just the headline. An item that barely correlates with the rest, or a “scale” that turns out to be two factors in a trench coat, will tell you more than alpha ever does alone."
+  },
+  {
+    "objectID": "posts/03-measurement-before-models/index.html#why-this-goes-before-the-impact-model",
+    "href": "posts/03-measurement-before-models/index.html#why-this-goes-before-the-impact-model",
+    "title": "Measurement before models: the check most evaluations skip",
+    "section": "Why this goes before the impact model",
+    "text": "Why this goes before the impact model\nBecause everything downstream inherits it. Here’s the same point, simulated. The program has a real effect, true standardized 0.5. The only thing I change is how reliably the outcome is measured:\n\n\n\nOutcome reliability\nObserved effect\nPower\n\n\n\n\n1.00\n0.50\n70%\n\n\n0.80\n0.45\n60%\n\n\n0.60\n0.39\n48%\n\n\n0.40\n0.31\n34%\n\n\n\n\n\n\nAs outcome reliability falls, the observed effect and the power both fall.\n\n\nSame program. Same design. Same sample. Only the ruler gets noisier, and the effect you’d report slides from 0.50 to 0.31 while your power to see anything falls from 70% to 34%. Half your ability to detect a real effect, gone, because the outcome measure was weak.\nMeasurement isn’t the boring prelude to the real analysis. On a bad measure, it is the result. Check the ruler before you trust the measurement.\n\nI build baselinr and am developing a cohort course on credible evaluation and measurement in education, where this is basically a whole week. subscribe via RSS to follow along."
+  },
+  {
+    "objectID": "posts/clustering-independence/index.html",
+    "href": "posts/clustering-independence/index.html",
+    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
+    "section": "",
+    "text": "Sixty schools, three thousand students, and a p value with more zeros after the decimal than you have ever earned honestly. It feels amazing. I’ve had that little rush, the one where you think oh, this is going in the abstract.\nI’m sorry to tell you it’s frequently a lie, and the lie is baked into the very first thing you assumed: that you have three thousand independent pieces of information.\nYou don’t."
+  },
+  {
+    "objectID": "posts/clustering-independence/index.html#why-n-3000-is-fiction",
+    "href": "posts/clustering-independence/index.html#why-n-3000-is-fiction",
+    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
+    "section": "Why “n = 3,000” is fiction",
+    "text": "Why “n = 3,000” is fiction\nKids in the same school resemble each other. Same teachers, same building, same neighborhood, same everything. So each extra student from a school you’ve already sampled tells you less than a brand new, unrelated student would. Regression assumes your rows are independent. When they’re clustered and you shrug and run it anyway, your standard errors come out too small, your test statistics too big, and out the other end pours a parade of “significant” effects that are mostly just the model fooling itself.\nHow much smaller depends on the intraclass correlation, the ICC, which is the share of the variation that lives between schools rather than within them. A little clustering barely dents you. A lot of it quietly guts your real sample size down toward the number of schools rather than the number of students."
+  },
+  {
+    "objectID": "posts/clustering-independence/index.html#the-machinery-quickly",
+    "href": "posts/clustering-independence/index.html#the-machinery-quickly",
+    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
+    "section": "The machinery, quickly",
+    "text": "The machinery, quickly\nICC measures how much students within a cluster move together. The design effect turns that into how badly your naive standard errors lie. Cluster robust standard errors and multilevel models are the two standard fixes (robust SEs patch the uncertainty; multilevel models patch it and let you study how schools differ). And if you’ve only got a handful of clusters, even robust SEs get shaky, and you reach for a wild cluster bootstrap."
+  },
+  {
+    "objectID": "posts/clustering-independence/index.html#watch-it-happen",
+    "href": "posts/clustering-independence/index.html#watch-it-happen",
+    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
+    "section": "Watch it happen",
+    "text": "Watch it happen\nThis is my favorite part, because it’s so stark. Sixty schools, fifty kids each, a school level treatment, and a true effect of exactly zero. The within school correlation gives an ICC around 0.26, a design effect of roughly 14, so those 3,000 students carry about as much information as 210.\nOne representative null study:\nm &lt;- lm(y ~ treat, data = study)        # student level, ignores clustering\nsqrt(diag(vcov(m)))[\"treat\"]                          # naive SE\nsqrt(diag(sandwich::vcovCL(m, cluster = ~school)))[\"treat\"]  # cluster robust SE\n\n\n\nStandard error\nSE\np value\n\n\n\n\nNaive (student level)\n0.043\n&lt; 0.0001\n\n\nCluster robust (school)\n0.157\n0.167\n\n\n\nSame estimate, same data. The naive version is screaming significance. The honest version shrugs, correctly, because there is nothing there.\nAnd it’s not one unlucky draw. Across 600 simulated null studies:\n\n\n\nNaive analysis calls 57% of null studies significant; cluster robust ~6%.\n\n\nThe naive analysis declares a significant effect in 57% of studies where the truth is nothing. 57 percent. The cluster robust version sits at 6%, right about the 5% you signed up for. If you ignore clustering, “p &lt; .05” doesn’t mean what you think it means. It barely means anything."
+  },
+  {
+    "objectID": "posts/clustering-independence/index.html#what-to-do",
+    "href": "posts/clustering-independence/index.html#what-to-do",
+    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
+    "section": "What to do",
+    "text": "What to do\nCluster at the level treatment was actually assigned (rolled out by school? then school, not student). Report the ICC so your reader knows how much this even matters here. Watch out when you’ve only got a few clusters. And if you genuinely care about how schools differ, not just correcting for it, go multilevel.\nBefore you celebrate a tiny p value, just ask where the rows came from. In education they’re almost always nested, which means “n” is not the number of students, and significance computed as if it were is significance you didn’t earn.\n\nI build baselinr and I’m building a cohort course on running education evaluations you can actually trust. subscribe via RSS to follow along."
+  },
+  {
+    "objectID": "work-with-me.html",
+    "href": "work-with-me.html",
+    "title": "Work with me",
+    "section": "",
+    "text": "Availability: I begin taking on engagements in December 2026. Inquiries are welcome before then; we would simply schedule the work to start after that date.\nI take on a small number of projects where the question is “did this actually work, and how do we know?” That’s exactly what this whole site is about."
+  },
+  {
+    "objectID": "work-with-me.html#what-i-help-with",
+    "href": "work-with-me.html#what-i-help-with",
+    "title": "Work with me",
+    "section": "What I help with",
+    "text": "What I help with\n\nImpact evaluation design & analysis: matching the question to a defensible design (RD, DiD, matching, RCTs), and the analysis that follows\nBaseline equivalence & WWC aligned reporting: the tables and effect sizes reviewers and funders expect (this is what baselinr automates)\nMeasurement & instrument validation: reliability, validity, measurement invariance before you compare groups\nComputational text analysis: turning open ended responses, feedback, or policy text into analysis ready data, without pretending the classifier is ground truth"
+  },
+  {
+    "objectID": "work-with-me.html#who-i-work-with",
+    "href": "work-with-me.html#who-i-work-with",
+    "title": "Work with me",
+    "section": "Who I work with",
+    "text": "Who I work with\nEducation researchers, school districts and systems, ed tech teams, nonprofits, and foundations that need an effectiveness claim to hold up, whether that’s designing an evaluation, reviewing one, or rescuing an analysis that’s gone sideways."
+  },
+  {
+    "objectID": "work-with-me.html#get-in-touch",
+    "href": "work-with-me.html#get-in-touch",
+    "title": "Work with me",
+    "section": "Get in touch",
+    "text": "Get in touch\nTell me a bit about the project and what decision it’s informing, and I’ll tell you honestly whether and how I can help.\n→ Email me\nBackground: Yuxia Liang, M.Ed. candidate in Educational Leadership & Policy, University of Washington (expected December 2026); author of the open source baselinr R package."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Methods notes for people who run or review education evaluations and care whether the conclusions hold up: baseline equivalence, measurement, effect sizes, and honest communication of uncertainty.\nWritten by Yuxia Liang, M.Ed. candidate in Educational Leadership & Policy (University of Washington, expected December 2026). Author of the open source baselinr R package for WWC aligned baseline equivalence."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Education Methods",
+    "section": "",
+    "text": "Plain, honest notes on running education evaluations that actually hold up: baseline equivalence, measurement, effect sizes, and the quiet mistakes that wreck a study. New posts every couple of weeks, get them by email:\n\n  \n  \n  Powered by Buttondown.\n\n\n\n\n\n\n\n\n\n\n“We matched participants to similar students”: what that buys, and what it can’t\n\n\nMatching makes two groups comparable on the variables in the file. The reason someone enrolled is usually not in the file. How I read matched studies now, and the four things I look for.\n\n\n\n\n\nJul 30, 2026\n\n3 min\n\n\n\n\n\n\nHow I read an evaluation report I’m inclined to believe\n\n\nTen questions I run through before trusting an education evaluation, in the order I ask them. None requires statistics beyond arithmetic; most can be answered from the report itself.\n\n\n\n\n\nJul 16, 2026\n\n4 min\n\n\n\n\n\n\nI ranked the same eight universities two defensible ways. The list nearly reversed.\n\n\nA small experiment with real federal data: blend graduation rate and Pell share into one rating for Washington’s public universities, then move the weight and watch the order.\n\n\n\n\n\nJul 2, 2026\n\n4 min\n\n\n\n\n\n\nStudents aren’t independent: the clustering mistake that makes everything look significant\n\n\nTreat clustered students as independent and your standard errors shrink, your p values glow, and your significant result is a mirage. The fix is routine.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\n\n\nMeasurement before models: the check most evaluations skip\n\n\nA noisy outcome quietly shrinks the effect you can detect. Reliability and validity aren’t box checking; they decide whether a real program looks like it worked.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nBefore you compare two groups’ survey scores, check this\n\n\nComparing latent construct means across groups assumes the scale means the same thing to both. When it doesn’t, the difference is the instrument, not the construct.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\n\n\nYour baseline table is doing more work than your p value\n\n\nBaseline equivalence carries the credibility of a whole impact evaluation, and most of us assemble it last, in a hurry. Here’s how the field actually wants it reported.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nMore controls ≠ less bias: the variables you should never put in your model\n\n\nAdding a control and watching the coefficient move feels like being careful. Sometimes you just fed your model a fresh bias.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nEffect sizes for education: what WWC actually wants\n\n\nCohen’s d, Hedges’ g, and the small sample correction. Which standardized difference to report, and why getting it lazy quietly changes your conclusion.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\n\n\nWhat a ‘teacher effectiveness’ score actually measures (and what it doesn’t)\n\n\nValue added scores are noisier and more assumption laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nYour text classifier is 85% accurate. That error doesn’t vanish when you run the regression.\n\n\nTreating predicted labels as ground truth quietly biases everything downstream. With differential error it gets worse, and the accuracy number hides all of it.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "course.html",
+    "href": "course.html",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "",
+    "text": "Status: in development. The first cohort is planned for after December 2026; dates and pricing are not set, and nothing is for sale yet. The waitlist at the bottom is the way to hear first.\nMost of what I write here comes back to the same thing: evaluations fall apart at predictable places, and the fixes aren’t fancy. This is the course version of that. Five weeks, live, in a small group, where you bring your own study (or use mine) and leave with something defensible."
+  },
+  {
+    "objectID": "course.html#who-its-for",
+    "href": "course.html#who-its-for",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "Who it’s for",
+    "text": "Who it’s for\nPeople who run or review impact studies in education and want them to hold up: applied researchers, evaluators, grad students doing quasi experimental work, ed tech analysts who have to defend an effectiveness claim. If you can run a regression in R and have a dataset you care about, you’re ready. No prior causal inference coursework assumed."
+  },
+  {
+    "objectID": "course.html#what-youll-leave-with-on-your-own-data",
+    "href": "course.html#what-youll-leave-with-on-your-own-data",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "What you’ll leave with, on your own data",
+    "text": "What you’ll leave with, on your own data\n\nA defensible evaluation question and identification strategy\nA WWC aligned baseline equivalence table (and the reasoning behind each covariate’s category)\nA measurement check on a key construct\nA reproducible script plus a short memo a decision maker will actually trust"
+  },
+  {
+    "objectID": "course.html#the-five-weeks",
+    "href": "course.html#the-five-weeks",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "The five weeks",
+    "text": "The five weeks\n\nFrom question to design: estimands, the menu of designs, what each assumes\nBaseline equivalence done right: standardized differences, the WWC thresholds, what “satisfied with adjustment” really commits you to (hands on with baselinr)\nMeasurement before models: reliability and validity, and why a noisy outcome quietly kills your effect\nEstimation & honest effects: effect sizes, uncertainty, “significant” vs “meaningful”\nCommunicating credibly + capstone: turning analysis into a memo, plus your own mini evaluation\n\nAbout 4 to 6 hours a week, including a weekly deliverable. Small cohort, live sessions (recorded), asynchronous work blocks."
+  },
+  {
+    "objectID": "course.html#instructor",
+    "href": "course.html#instructor",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "Instructor",
+    "text": "Instructor\nYuxia Liang. M.Ed. candidate in Educational Leadership & Policy, University of Washington (expected December 2026). I work on impact evaluation, measurement/psychometrics, and computational text analysis, and I build the open source baselinr R package the course uses."
+  },
+  {
+    "objectID": "course.html#join-the-waitlist",
+    "href": "course.html#join-the-waitlist",
+    "title": "The course: credible impact evaluation & measurement",
+    "section": "Join the waitlist",
+    "text": "Join the waitlist\nThe first cohort and pricing are still being set, and waitlist members hear first (and get founding cohort terms). Drop your email. No spam, no commitment.\n\n  \n  \n  Powered by Buttondown."
+  },
+  {
+    "objectID": "posts/measurement-invariance/index.html",
+    "href": "posts/measurement-invariance/index.html",
+    "title": "Before you compare two groups’ survey scores, check this",
+    "section": "",
+    "text": "Here’s a sentence that should make you flinch: “Group A scored higher on the belonging scale, so Group A feels more like they belong.”\nI have a soft spot for this trap, mostly because I’ve walked into it myself. It sounds airtight. Five items, two groups, one mean is higher, write it up. But there’s a premise buried in there that nobody says out loud, and the whole conclusion is sitting on top of it.\nThe premise is that the scale means the same thing to both groups."
+  },
+  {
+    "objectID": "posts/measurement-invariance/index.html#the-lens-thing",
+    "href": "posts/measurement-invariance/index.html#the-lens-thing",
+    "title": "Before you compare two groups’ survey scores, check this",
+    "section": "The lens thing",
+    "text": "The lens thing\nI think of a scale as a lens you look at a construct through. Comparing two groups’ scores assumes they’re looking through the same lens. If the lenses are ground differently, then comparing what each group “sees” tells you about the lenses, not the thing you were trying to look at. The technical name for “same lens” is measurement invariance, and it is not a given. It’s a thing you check."
+  },
+  {
+    "objectID": "posts/measurement-invariance/index.html#how-much-youre-allowed-to-say",
+    "href": "posts/measurement-invariance/index.html#how-much-youre-allowed-to-say",
+    "title": "Before you compare two groups’ survey scores, check this",
+    "section": "How much you’re allowed to say",
+    "text": "How much you’re allowed to say\nInvariance comes in levels, and each one buys you a different comparison. Roughly: if the same items load on the same factor in both groups (configural), you’ve got the basic shape. If the loadings are equal too (metric), you can start comparing relationships across groups. And only if the intercepts are also equal (scalar) are you actually allowed to compare means.\nThat last one is the level your group comparison quietly assumed it had. You test for it with a multigroup CFA. And when a single item behaves differently across groups, that’s DIF, differential item functioning, which is a fancy way of saying the lens has a chip in it right there."
+  },
+  {
+    "objectID": "posts/measurement-invariance/index.html#watch-it-happen",
+    "href": "posts/measurement-invariance/index.html#watch-it-happen",
+    "title": "Before you compare two groups’ survey scores, check this",
+    "section": "Watch it happen",
+    "text": "Watch it happen\nTwo groups, a 5-item engagement scale, and here’s the thing: I built them to have identical true engagement. Same distribution, no real difference. Then I made one item (item 5) read systematically lower for group B at the same level of engagement. Textbook DIF. Then I just… compared the groups, the way anyone would, with a standardized mean difference:\nlibrary(baselinr)\nhedges_g(theta, group)        # the true latent difference\nhedges_g(scale_full, group)   # observed, all 5 items\nhedges_g(scale_inv, group)    # observed, dropping the one DIF item\n\n\n\nWhat’s compared\nHedges’ g\n\n\n\n\nTrue latent engagement\n−0.03 (there is no real difference)\n\n\nObserved 5-item scale\n−0.25\n\n\nScale without the DIF item\n−0.02\n\n\n\n\n\n\nPer item group difference: items 1–4 are flat, item 5 carries the whole gap.\n\n\nThe groups are equal. I promise, I made them that way. And the full scale still reports g = −0.25, which most people would write up as “Group B is less engaged.” The figure shows the crime scene: items 1 through 4 are flat, and item 5 is doing all of the work, off by −1.22 on its own. Pull that one item and the difference evaporates to −0.02.\nNothing about engagement happened here. The ruler happened."
+  },
+  {
+    "objectID": "posts/measurement-invariance/index.html#what-to-do",
+    "href": "posts/measurement-invariance/index.html#what-to-do",
+    "title": "Before you compare two groups’ survey scores, check this",
+    "section": "What to do",
+    "text": "What to do\nTest invariance before you compare means, every time you’re comparing a latent thing across groups. If it fails, don’t throw the whole comparison out, go find the items that broke (the DIF ones). And then report partial invariance honestly, anchored on the items that held. It’s less clean than a single triumphant p value. It’s also the difference between a finding about students and a finding about your questionnaire.\n\nMeasurement is the thing I get genuinely nerdy about. I build baselinr and I’m building a cohort course on credible evaluation and measurement in education. subscribe via RSS if you want in."
   },
   {
     "objectID": "posts/01-baseline-table/index.html",
@@ -117,279 +425,6 @@
     "title": "What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)",
     "section": "What to do",
     "text": "What to do\nIf you’re going to use these at all: report the uncertainty, and actually look at how wide it is. Shrink the estimates (empirical Bayes pulls noisy small sample numbers toward the average, which is exactly right when most of the spread is noise). Never hang a high stakes decision on a single year. And say out loud what you’re assuming about how kids got sorted to teachers, because the entire causal story rests on it.\nThese scores can inform. Used as a one number verdict on someone’s career, they mostly measure which children walked through the door.\n\nThis is where methods and policy collide, which is the part of this work I care about most. I build baselinr and a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
-  },
-  {
-    "objectID": "posts/clustering-independence/index.html",
-    "href": "posts/clustering-independence/index.html",
-    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
-    "section": "",
-    "text": "Sixty schools, three thousand students, and a p value with more zeros after the decimal than you have ever earned honestly. It feels amazing. I’ve had that little rush, the one where you think oh, this is going in the abstract.\nI’m sorry to tell you it’s frequently a lie, and the lie is baked into the very first thing you assumed: that you have three thousand independent pieces of information.\nYou don’t."
-  },
-  {
-    "objectID": "posts/clustering-independence/index.html#why-n-3000-is-fiction",
-    "href": "posts/clustering-independence/index.html#why-n-3000-is-fiction",
-    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
-    "section": "Why “n = 3,000” is fiction",
-    "text": "Why “n = 3,000” is fiction\nKids in the same school resemble each other. Same teachers, same building, same neighborhood, same everything. So each extra student from a school you’ve already sampled tells you less than a brand new, unrelated student would. Regression assumes your rows are independent. When they’re clustered and you shrug and run it anyway, your standard errors come out too small, your test statistics too big, and out the other end pours a parade of “significant” effects that are mostly just the model fooling itself.\nHow much smaller depends on the intraclass correlation, the ICC, which is the share of the variation that lives between schools rather than within them. A little clustering barely dents you. A lot of it quietly guts your real sample size down toward the number of schools rather than the number of students."
-  },
-  {
-    "objectID": "posts/clustering-independence/index.html#the-machinery-quickly",
-    "href": "posts/clustering-independence/index.html#the-machinery-quickly",
-    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
-    "section": "The machinery, quickly",
-    "text": "The machinery, quickly\nICC measures how much students within a cluster move together. The design effect turns that into how badly your naive standard errors lie. Cluster robust standard errors and multilevel models are the two standard fixes (robust SEs patch the uncertainty; multilevel models patch it and let you study how schools differ). And if you’ve only got a handful of clusters, even robust SEs get shaky, and you reach for a wild cluster bootstrap."
-  },
-  {
-    "objectID": "posts/clustering-independence/index.html#watch-it-happen",
-    "href": "posts/clustering-independence/index.html#watch-it-happen",
-    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
-    "section": "Watch it happen",
-    "text": "Watch it happen\nThis is my favorite part, because it’s so stark. Sixty schools, fifty kids each, a school level treatment, and a true effect of exactly zero. The within school correlation gives an ICC around 0.26, a design effect of roughly 14, so those 3,000 students carry about as much information as 210.\nOne representative null study:\nm &lt;- lm(y ~ treat, data = study)        # student level, ignores clustering\nsqrt(diag(vcov(m)))[\"treat\"]                          # naive SE\nsqrt(diag(sandwich::vcovCL(m, cluster = ~school)))[\"treat\"]  # cluster robust SE\n\n\n\nStandard error\nSE\np value\n\n\n\n\nNaive (student level)\n0.043\n&lt; 0.0001\n\n\nCluster robust (school)\n0.157\n0.167\n\n\n\nSame estimate, same data. The naive version is screaming significance. The honest version shrugs, correctly, because there is nothing there.\nAnd it’s not one unlucky draw. Across 600 simulated null studies:\n\n\n\nNaive analysis calls 57% of null studies significant; cluster robust ~6%.\n\n\nThe naive analysis declares a significant effect in 57% of studies where the truth is nothing. 57 percent. The cluster robust version sits at 6%, right about the 5% you signed up for. If you ignore clustering, “p &lt; .05” doesn’t mean what you think it means. It barely means anything."
-  },
-  {
-    "objectID": "posts/clustering-independence/index.html#what-to-do",
-    "href": "posts/clustering-independence/index.html#what-to-do",
-    "title": "Students aren’t independent: the clustering mistake that makes everything look significant",
-    "section": "What to do",
-    "text": "What to do\nCluster at the level treatment was actually assigned (rolled out by school? then school, not student). Report the ICC so your reader knows how much this even matters here. Watch out when you’ve only got a few clusters. And if you genuinely care about how schools differ, not just correcting for it, go multilevel.\nBefore you celebrate a tiny p value, just ask where the rows came from. In education they’re almost always nested, which means “n” is not the number of students, and significance computed as if it were is significance you didn’t earn.\n\nI build baselinr and I’m building a cohort course on running education evaluations you can actually trust. subscribe via RSS to follow along."
-  },
-  {
-    "objectID": "posts/reading-evaluations/index.html",
-    "href": "posts/reading-evaluations/index.html",
-    "title": "How I read an evaluation report I’m inclined to believe",
-    "section": "",
-    "text": "The evaluation reports that fool me are never the sloppy ones. They are the ones whose conclusion I already agree with. I’m a master’s student, so I read a lot of these on assignment, and the routine below is what has survived two years of being wrong in seminar: ten questions in a set order, precisely so that my sympathy for the finding doesn’t get a vote. None of them needs software. Most can be answered from the report itself, and when one can’t, that absence is usually the answer.\n1. Compared to whom? Before any number, I look for the comparison group. “Participants improved” is not a finding; students improve on their own, programs or not. If there is no comparison group at all, I stop expecting a causal claim and read the rest as description.\n2. Were the groups similar before the program? The whole causal claim rests here, and it is checkable from one table. I wrote about what that table has to show and why a p-value is the wrong check; a report that never shows baseline equivalence is asking me to take the hardest part on faith.\n3. Who disappeared? Enrollment counts at the start, outcome counts at the end. If a quarter of the treatment group is missing from the final table, the program’s effect is now entangled with who stuck around, and I want the report to say how the leavers differed, not just how many left.\n4. Was the outcome measured the same way for both groups? Same test, same timing, same raters. A program grades its own homework more often than you’d think, sometimes literally. When groups are compared on a score, I also want to know the score means the same thing in both.\n5. How big is the effect, in units I can feel? “Significant” tells me about sample size as much as anything. I look for the effect in months of learning, points on a real test, or a standardized effect size I can compare, the way evidence clearinghouses ask for it.\n6. Were students counted as if they were independent? Twenty-five students in one classroom share a teacher, a curriculum, a snow day. Analyses that ignore this make everything look significant. The fix is standard; its absence in 2026 is informative.\n7. How many outcomes were measured, and how many reported? Ten outcomes and one star is a different story from one pre-named outcome and one star. I look for a protocol, a pre-registration, or at least a full outcome table with the nulls left in.\n8. What was controlled for, and why? More controls is not automatically better; some variables make the estimate worse when you adjust for them. I read the control list asking “is this a cause of enrollment, or a consequence of the program?”\n9. Who paid, and who analyzed? Not as an accusation, as a base rate. Evaluations commissioned by the program’s vendor come out favorable more often, and the mechanism is rarely fraud; it is which outcomes, sites, and cohorts made it into the report. Independence is a design feature like any other.\n10. What would failure have looked like? My favorite question, and the one reports answer least often. If every plausible result could be narrated as success, the evaluation was not a test. When a report states in advance what result would have counted against the program, everything else in it gets more believable."
-  },
-  {
-    "objectID": "posts/reading-evaluations/index.html#what-a-checklist-can-and-cant-do",
-    "href": "posts/reading-evaluations/index.html#what-a-checklist-can-and-cant-do",
-    "title": "How I read an evaluation report I’m inclined to believe",
-    "section": "What a checklist can and can’t do",
-    "text": "What a checklist can and can’t do\nTen questions can’t convict a report, and passing them doesn’t make a finding true. Most of them are scar tissue; I ask about attrition because I once didn’t, out loud, in front of people. This is triage: it tells me where to spend skepticism, which is always in shorter supply than I’d like, and it protects me a little from my own preferences. The reports I end up trusting most are rarely the ones with the biggest effects. They are the ones that make questions 1 through 10 easy to answer, because the authors asked themselves first.\nI build baselinr, a small R package for the baseline-equivalence table in question 2, and am developing a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
-  },
-  {
-    "objectID": "work-with-me.html",
-    "href": "work-with-me.html",
-    "title": "Work with me",
-    "section": "",
-    "text": "Availability: I begin taking on engagements in December 2026. Inquiries are welcome before then; we would simply schedule the work to start after that date.\nI take on a small number of projects where the question is “did this actually work, and how do we know?” That’s exactly what this whole site is about."
-  },
-  {
-    "objectID": "work-with-me.html#what-i-help-with",
-    "href": "work-with-me.html#what-i-help-with",
-    "title": "Work with me",
-    "section": "What I help with",
-    "text": "What I help with\n\nImpact evaluation design & analysis: matching the question to a defensible design (RD, DiD, matching, RCTs), and the analysis that follows\nBaseline equivalence & WWC aligned reporting: the tables and effect sizes reviewers and funders expect (this is what baselinr automates)\nMeasurement & instrument validation: reliability, validity, measurement invariance before you compare groups\nComputational text analysis: turning open ended responses, feedback, or policy text into analysis ready data, without pretending the classifier is ground truth"
-  },
-  {
-    "objectID": "work-with-me.html#who-i-work-with",
-    "href": "work-with-me.html#who-i-work-with",
-    "title": "Work with me",
-    "section": "Who I work with",
-    "text": "Who I work with\nEducation researchers, school districts and systems, ed tech teams, nonprofits, and foundations that need an effectiveness claim to hold up, whether that’s designing an evaluation, reviewing one, or rescuing an analysis that’s gone sideways."
-  },
-  {
-    "objectID": "work-with-me.html#get-in-touch",
-    "href": "work-with-me.html#get-in-touch",
-    "title": "Work with me",
-    "section": "Get in touch",
-    "text": "Get in touch\nTell me a bit about the project and what decision it’s informing, and I’ll tell you honestly whether and how I can help.\n→ Email me\nBackground: Yuxia Liang, M.Ed. candidate in Educational Leadership & Policy, University of Washington (expected December 2026); author of the open source baselinr R package."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Methods notes for people who run or review education evaluations and care whether the conclusions hold up: baseline equivalence, measurement, effect sizes, and honest communication of uncertainty.\nWritten by Yuxia Liang, M.Ed. candidate in Educational Leadership & Policy (University of Washington, expected December 2026). Author of the open source baselinr R package for WWC aligned baseline equivalence."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Education Methods",
-    "section": "",
-    "text": "Plain, honest notes on running education evaluations that actually hold up: baseline equivalence, measurement, effect sizes, and the quiet mistakes that wreck a study. New posts every couple of weeks, get them by email:\n\n  \n  \n  Powered by Buttondown.\n\n\n\n\n\n\n\n\n\n\nHow I read an evaluation report I’m inclined to believe\n\n\nTen questions I run through before trusting an education evaluation, in the order I ask them. None requires statistics beyond arithmetic; most can be answered from the report itself.\n\n\n\n\n\nJul 16, 2026\n\n4 min\n\n\n\n\n\n\nI ranked the same eight universities two defensible ways. The list nearly reversed.\n\n\nA small experiment with real federal data: blend graduation rate and Pell share into one rating for Washington’s public universities, then move the weight and watch the order.\n\n\n\n\n\nJul 2, 2026\n\n4 min\n\n\n\n\n\n\nEffect sizes for education: what WWC actually wants\n\n\nCohen’s d, Hedges’ g, and the small sample correction. Which standardized difference to report, and why getting it lazy quietly changes your conclusion.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\n\n\nStudents aren’t independent: the clustering mistake that makes everything look significant\n\n\nTreat clustered students as independent and your standard errors shrink, your p values glow, and your significant result is a mirage. The fix is routine.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\n\n\nMeasurement before models: the check most evaluations skip\n\n\nA noisy outcome quietly shrinks the effect you can detect. Reliability and validity aren’t box checking; they decide whether a real program looks like it worked.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nWhat a ‘teacher effectiveness’ score actually measures (and what it doesn’t)\n\n\nValue added scores are noisier and more assumption laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nBefore you compare two groups’ survey scores, check this\n\n\nComparing latent construct means across groups assumes the scale means the same thing to both. When it doesn’t, the difference is the instrument, not the construct.\n\n\n\n\n\nJun 24, 2026\n\n3 min\n\n\n\n\n\n\nYour baseline table is doing more work than your p value\n\n\nBaseline equivalence carries the credibility of a whole impact evaluation, and most of us assemble it last, in a hurry. Here’s how the field actually wants it reported.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nYour text classifier is 85% accurate. That error doesn’t vanish when you run the regression.\n\n\nTreating predicted labels as ground truth quietly biases everything downstream. With differential error it gets worse, and the accuracy number hides all of it.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\n\n\nMore controls ≠ less bias: the variables you should never put in your model\n\n\nAdding a control and watching the coefficient move feels like being careful. Sometimes you just fed your model a fresh bias.\n\n\n\n\n\nJun 24, 2026\n\n4 min\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "course.html",
-    "href": "course.html",
-    "title": "The course: credible impact evaluation & measurement",
-    "section": "",
-    "text": "Status: in development. The first cohort is planned for after December 2026; dates and pricing are not set, and nothing is for sale yet. The waitlist at the bottom is the way to hear first.\nMost of what I write here comes back to the same thing: evaluations fall apart at predictable places, and the fixes aren’t fancy. This is the course version of that. Five weeks, live, in a small group, where you bring your own study (or use mine) and leave with something defensible."
-  },
-  {
-    "objectID": "course.html#who-its-for",
-    "href": "course.html#who-its-for",
-    "title": "The course: credible impact evaluation & measurement",
-    "section": "Who it’s for",
-    "text": "Who it’s for\nPeople who run or review impact studies in education and want them to hold up: applied researchers, evaluators, grad students doing quasi experimental work, ed tech analysts who have to defend an effectiveness claim. If you can run a regression in R and have a dataset you care about, you’re ready. No prior causal inference coursework assumed."
-  },
-  {
-    "objectID": "course.html#what-youll-leave-with-on-your-own-data",
-    "href": "course.html#what-youll-leave-with-on-your-own-data",
-    "title": "The course: credible impact evaluation & measurement",
-    "section": "What you’ll leave with, on your own data",
-    "text": "What you’ll leave with, on your own data\n\nA defensible evaluation question and identification strategy\nA WWC aligned baseline equivalence table (and the reasoning behind each covariate’s category)\nA measurement check on a key construct\nA reproducible script plus a short memo a decision maker will actually trust"
-  },
-  {
-    "objectID": "course.html#the-five-weeks",
-    "href": "course.html#the-five-weeks",
-    "title": "The course: credible impact evaluation & measurement",
-    "section": "The five weeks",
-    "text": "The five weeks\n\nFrom question to design: estimands, the menu of designs, what each assumes\nBaseline equivalence done right: standardized differences, the WWC thresholds, what “satisfied with adjustment” really commits you to (hands on with baselinr)\nMeasurement before models: reliability and validity, and why a noisy outcome quietly kills your effect\nEstimation & honest effects: effect sizes, uncertainty, “significant” vs “meaningful”\nCommunicating credibly + capstone: turning analysis into a memo, plus your own mini evaluation\n\nAbout 4 to 6 hours a week, including a weekly deliverable. Small cohort, live sessions (recorded), asynchronous work blocks."
-  },
-  {
-    "objectID": "course.html#instructor",
-    "href": "course.html#instructor",
-    "title": "The course: credible impact evaluation & measurement",
-    "section": "Instructor",
-    "text": "Instructor\nYuxia Liang. M.Ed. candidate in Educational Leadership & Policy, University of Washington (expected December 2026). I work on impact evaluation, measurement/psychometrics, and computational text analysis, and I build the open source baselinr R package the course uses."
-  },
-  {
-    "objectID": "course.html#join-the-waitlist",
-    "href": "course.html#join-the-waitlist",
-    "title": "The course: credible impact evaluation & measurement",
-    "section": "Join the waitlist",
-    "text": "Join the waitlist\nThe first cohort and pricing are still being set, and waitlist members hear first (and get founding cohort terms). Drop your email. No spam, no commitment.\n\n  \n  \n  Powered by Buttondown."
-  },
-  {
-    "objectID": "posts/02-effect-sizes-wwc/index.html",
-    "href": "posts/02-effect-sizes-wwc/index.html",
-    "title": "Effect sizes for education: what WWC actually wants",
-    "section": "",
-    "text": "“We found a significant effect.” I have a mild allergic reaction to that sentence and I’ve accepted it’s permanent.\nIt’s not that it’s wrong. It’s that it tells you almost nothing. Significant says we detected something. It says nothing about how big, which is the only thing a school board or a funder or the What Works Clearinghouse actually wants to know. That’s what an effect size is for, and in education that means a standardized mean difference, with a couple of small decisions baked in that quietly move the number."
-  },
-  {
-    "objectID": "posts/02-effect-sizes-wwc/index.html#the-thing-itself",
-    "href": "posts/02-effect-sizes-wwc/index.html#the-thing-itself",
-    "title": "Effect sizes for education: what WWC actually wants",
-    "section": "The thing itself",
-    "text": "The thing itself\nStrip it down: take the gap between the two group means, divide by a standard deviation. Now the effect is in standard deviation units, so a reading program and a math program can sit on the same ruler. Two studies with the same raw point gain can land at very different standardized effects, because the spread of scores differs. Which is the point. It’s also where the choices start to matter."
-  },
-  {
-    "objectID": "posts/02-effect-sizes-wwc/index.html#cohens-d-vs.-hedges-g",
-    "href": "posts/02-effect-sizes-wwc/index.html#cohens-d-vs.-hedges-g",
-    "title": "Effect sizes for education: what WWC actually wants",
-    "section": "Cohen’s d vs. Hedges’ g",
-    "text": "Cohen’s d vs. Hedges’ g\nCohen’s d puts the pooled within group SD in that denominator. Fine, except it has a known flaw: in small samples it’s biased upward. It overstates. And education studies are small constantly, a few classrooms, a handful of schools, so this is not a hypothetical.\nHedges’ g is just Cohen’s d times a small sample correction. When the sample is big, the correction is basically 1 and the two agree. When it’s small, the correction pulls the estimate back toward the truth. WWC reports g for exactly this reason, and once you see the size of the bias you stop arguing about it.\nHere’s the bias, simulated. True standardized effect is 0.5. I draw a pile of small studies and average each estimator:\n\n\n\nPer group n\nCohen’s d\nHedges’ g\n\n\n\n\n3\n0.618\n0.495\n\n\n5\n0.572\n0.517\n\n\n10\n0.519\n0.497\n\n\n100\n0.501\n0.499\n\n\n\n\n\n\nCohen’s d sits above the true 0.5 at small samples; Hedges’ g tracks it.\n\n\nThree per group and uncorrected d averages 0.618, a 24% overstatement of an effect that is really 0.5. Hedges’ g sits at 0.495. By a hundred per group they shake hands. Small education studies live on the left edge of that plot, which is precisely where skipping the correction costs you."
-  },
-  {
-    "objectID": "posts/02-effect-sizes-wwc/index.html#the-little-decisions-people-get-wrong",
-    "href": "posts/02-effect-sizes-wwc/index.html#the-little-decisions-people-get-wrong",
-    "title": "Effect sizes for education: what WWC actually wants",
-    "section": "The little decisions people get wrong",
-    "text": "The little decisions people get wrong\nWhich SD goes in the denominator. Pooled (both groups) is the usual choice and what the WWC convention assumes. control group only is sometimes defensible, but if you pick it without saying so, your effect size isn’t comparable to anyone else’s. State your denominator.\nTreating a small sample d as if it were unbiased. If n is small and you skipped the correction, your number is inflated. Use g.\nAnd comparing effect sizes across studies that standardized differently. A 0.30 on a narrow, homogeneous sample is not the same animal as a 0.30 on a broad one. Effect sizes are only comparable when the rulers are."
-  },
-  {
-    "objectID": "posts/02-effect-sizes-wwc/index.html#reporting-it-like-you-mean-it",
-    "href": "posts/02-effect-sizes-wwc/index.html#reporting-it-like-you-mean-it",
-    "title": "Effect sizes for education: what WWC actually wants",
-    "section": "Reporting it like you mean it",
-    "text": "Reporting it like you mean it\nGive the effect size with an interval, not a lonely point estimate; “g = 0.8” with no uncertainty begs to be over trusted. Tie the number to a decision, because “significant” and “meaningful” are different words. And say your choices out loud so the number can be checked.\nA standardized mean difference is a tiny calculation carrying a big claim. Get the denominator and the correction right, attach honest uncertainty, translate it into something a human can act on. Skip those and “significant” becomes a word that hides more than it tells.\n\nI build baselinr, a small R package for WWC aligned baseline equivalence and effect sizes, and am developing a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
-  },
-  {
-    "objectID": "posts/composite-verdict/index.html",
-    "href": "posts/composite-verdict/index.html",
-    "title": "I ranked the same eight universities two defensible ways. The list nearly reversed.",
-    "section": "",
-    "text": "I keep telling people that a school rating depends on the weights inside the formula, and I realized recently that I had never actually watched it happen with numbers I could check. So I built the smallest real ranking I could.\nI took the eight public four-year universities in Washington, where I studied, and two numbers per school from the 2021 federal IPEDS collection. The first is the six-year graduation rate for bachelor’s students: of those who start, how many finish. The second is Pell share: what fraction of undergraduates receive a federal Pell grant, a rough marker of how many lower-income students a campus serves. Neither number is obscure and neither is controversial to care about. A public university is supposed to graduate its students, and it is supposed to be open to students without money.\nThen I did what every rating system does. I put the two on a common scale, blended them with a weight, and ranked. The only thing I varied was the weight, in five steps from all-graduation to all-Pell."
-  },
-  {
-    "objectID": "posts/composite-verdict/index.html#what-surprised-me",
-    "href": "posts/composite-verdict/index.html#what-surprised-me",
-    "title": "I ranked the same eight universities two defensible ways. The list nearly reversed.",
-    "section": "What surprised me",
-    "text": "What surprised me\nI expected some reshuffling in the middle. I did not expect the list to nearly turn over. UW Seattle is first when the weight is on graduation (84% of its students finish, the highest here) and last when the weight is on Pell share (17% of its undergraduates receive Pell, the lowest here). Evergreen State is the exact mirror: last on one end, first on the other. These aren’t two rankings of quality and its absence. They are two different questions, and each school answers one of them well.\nThe reason the reversal is so clean is worth stating: in this group of eight, the two measures are strongly negatively related. The campuses that graduate the largest share of students enroll the smallest share of Pell students. I don’t get to conclude much from eight schools about why that is, but it has an uncomfortable implication for anyone building a rating: there is no weight between these two numbers that is neutral. Every blend takes a side, quietly."
-  },
-  {
-    "objectID": "posts/composite-verdict/index.html#what-this-little-exercise-cant-say",
-    "href": "posts/composite-verdict/index.html#what-this-little-exercise-cant-say",
-    "title": "I ranked the same eight universities two defensible ways. The list nearly reversed.",
-    "section": "What this little exercise can’t say",
-    "text": "What this little exercise can’t say\nA lot, honestly. Two indicators is a cartoon; real rating systems use many, and better ones. A graduation rate reflects who enrolls at least as much as what a campus does for them. Pell share is a coarse stand-in for access. And my choices leaked in everywhere: I checked the endpoints of the figure under two other reasonable ways of scaling the numbers and they came out the same, but the 50/50 column did not. Even the scaling is a decision.\nAbove all, this is not a ranking of Washington’s universities, and none of these schools is “worst.” That is closer to being the point: any single ordered list of them would be hiding a judgment call in the weights."
-  },
-  {
-    "objectID": "posts/composite-verdict/index.html#what-i-do-differently-now",
-    "href": "posts/composite-verdict/index.html#what-i-do-differently-now",
-    "title": "I ranked the same eight universities two defensible ways. The list nearly reversed.",
-    "section": "What I do differently now",
-    "text": "What I do differently now\nWhen I see a composite rating, I try to find two things before reacting to any school’s position: what is weighted how much, and whether the publisher shows how the order moves under other defensible weightings. When that sensitivity is reported, I trust the list more, not less.\nI’m working on audits of real rating and flagging systems with public data, and I’ll write them up here as they become shareable.\nThe data (a small CSV pulled from the Urban Institute’s public IPEDS API) and the figure script (make_figure.py) are in this post’s folder; deleting the CSV and rerunning the script re-fetches the numbers.\nRelated: What a “teacher effectiveness” score actually measures (and what it doesn’t). I build baselinr and am developing a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
-  },
-  {
-    "objectID": "posts/03-measurement-before-models/index.html",
-    "href": "posts/03-measurement-before-models/index.html",
-    "title": "Measurement before models: the check most evaluations skip",
-    "section": "",
-    "text": "The saddest sentence in program evaluation is “the program didn’t work,” when what actually happened was “we measured it with a broken ruler.” Those two get mixed up constantly, and the second one wears the first one’s clothes.\nHere’s the part that stings: teams will spend months on the design, the randomization, the comparison group, the matching, and then about ten minutes on the thing they actually measure. And then they’re surprised by a null result."
-  },
-  {
-    "objectID": "posts/03-measurement-before-models/index.html#what-a-noisy-outcome-quietly-does",
-    "href": "posts/03-measurement-before-models/index.html#what-a-noisy-outcome-quietly-does",
-    "title": "Measurement before models: the check most evaluations skip",
-    "section": "What a noisy outcome quietly does",
-    "text": "What a noisy outcome quietly does\nRandom measurement error in your outcome doesn’t just scatter the points around a bit. It inflates the variance of the outcome, which widens your standard errors, which costs you power. And because the standard deviation in your effect size denominator just got bigger, the standardized effect you can report shrinks. You can run a flawless design on a bad measure and find nothing, not because the program failed, but because your ruler was made of rubber.\nSo before the model, check the ruler."
-  },
-  {
-    "objectID": "posts/03-measurement-before-models/index.html#reliability-what-one-number-hides",
-    "href": "posts/03-measurement-before-models/index.html#reliability-what-one-number-hides",
-    "title": "Measurement before models: the check most evaluations skip",
-    "section": "Reliability: what one number hides",
-    "text": "Reliability: what one number hides\nReliability usually shows up as a single coefficient, Cronbach’s alpha most of the time, and gets a nod on the way to the regression. But that one number is hiding things. Alpha climbs with the number of items, not only their quality, so a long mediocre scale can post a comfortable one. It leans on the items being roughly interchangeable, and when they aren’t it can mislead in either direction (which is why a lot of measurement people reach for McDonald’s omega instead). And a high alpha is not proof your items measure one thing.\nA “respectable” reliability can also just be too low for your claim. Detecting a small effect on a moderately unreliable outcome can demand far more sample than you have. The reliability you need is a function of the effect you’re chasing, not a fixed bar you clear once and forget."
-  },
-  {
-    "objectID": "posts/03-measurement-before-models/index.html#validity-briefly",
-    "href": "posts/03-measurement-before-models/index.html#validity-briefly",
-    "title": "Measurement before models: the check most evaluations skip",
-    "section": "Validity, briefly",
-    "text": "Validity, briefly\nReliability is consistency. Validity is aboutness. A bathroom scale that reads three pounds heavy every single time is perfectly reliable and perfectly wrong. For an outcome, the evidence worth showing is whether the items cover the construct, whether the data back the dimensions you claim, and whether the measure relates to things it should and not to things it shouldn’t. You don’t need all of it for every study. You do need to stop claiming more than your evidence supports."
-  },
-  {
-    "objectID": "posts/03-measurement-before-models/index.html#a-check-you-can-actually-run",
-    "href": "posts/03-measurement-before-models/index.html#a-check-you-can-actually-run",
-    "title": "Measurement before models: the check most evaluations skip",
-    "section": "A check you can actually run",
-    "text": "A check you can actually run\nBefore you trust an outcome, look at it. On your own data, not invented numbers, look at the item behavior and an internal consistency estimate for each key construct:\n# On YOUR data. Do not report invented coefficients.\n# items &lt;- your_data[, c(\"q1\", \"q2\", \"q3\", \"q4\")]\n# psych::alpha(items)       # internal consistency + item level diagnostics\n# psych::omega(items)       # model based reliability\n# psych::fa.parallel(items) # how many dimensions are actually in there?\nRead the item level output, not just the headline. An item that barely correlates with the rest, or a “scale” that turns out to be two factors in a trench coat, will tell you more than alpha ever does alone."
-  },
-  {
-    "objectID": "posts/03-measurement-before-models/index.html#why-this-goes-before-the-impact-model",
-    "href": "posts/03-measurement-before-models/index.html#why-this-goes-before-the-impact-model",
-    "title": "Measurement before models: the check most evaluations skip",
-    "section": "Why this goes before the impact model",
-    "text": "Why this goes before the impact model\nBecause everything downstream inherits it. Here’s the same point, simulated. The program has a real effect, true standardized 0.5. The only thing I change is how reliably the outcome is measured:\n\n\n\nOutcome reliability\nObserved effect\nPower\n\n\n\n\n1.00\n0.50\n70%\n\n\n0.80\n0.45\n60%\n\n\n0.60\n0.39\n48%\n\n\n0.40\n0.31\n34%\n\n\n\n\n\n\nAs outcome reliability falls, the observed effect and the power both fall.\n\n\nSame program. Same design. Same sample. Only the ruler gets noisier, and the effect you’d report slides from 0.50 to 0.31 while your power to see anything falls from 70% to 34%. Half your ability to detect a real effect, gone, because the outcome measure was weak.\nMeasurement isn’t the boring prelude to the real analysis. On a bad measure, it is the result. Check the ruler before you trust the measurement.\n\nI build baselinr and am developing a cohort course on credible evaluation and measurement in education, where this is basically a whole week. subscribe via RSS to follow along."
-  },
-  {
-    "objectID": "posts/measurement-invariance/index.html",
-    "href": "posts/measurement-invariance/index.html",
-    "title": "Before you compare two groups’ survey scores, check this",
-    "section": "",
-    "text": "Here’s a sentence that should make you flinch: “Group A scored higher on the belonging scale, so Group A feels more like they belong.”\nI have a soft spot for this trap, mostly because I’ve walked into it myself. It sounds airtight. Five items, two groups, one mean is higher, write it up. But there’s a premise buried in there that nobody says out loud, and the whole conclusion is sitting on top of it.\nThe premise is that the scale means the same thing to both groups."
-  },
-  {
-    "objectID": "posts/measurement-invariance/index.html#the-lens-thing",
-    "href": "posts/measurement-invariance/index.html#the-lens-thing",
-    "title": "Before you compare two groups’ survey scores, check this",
-    "section": "The lens thing",
-    "text": "The lens thing\nI think of a scale as a lens you look at a construct through. Comparing two groups’ scores assumes they’re looking through the same lens. If the lenses are ground differently, then comparing what each group “sees” tells you about the lenses, not the thing you were trying to look at. The technical name for “same lens” is measurement invariance, and it is not a given. It’s a thing you check."
-  },
-  {
-    "objectID": "posts/measurement-invariance/index.html#how-much-youre-allowed-to-say",
-    "href": "posts/measurement-invariance/index.html#how-much-youre-allowed-to-say",
-    "title": "Before you compare two groups’ survey scores, check this",
-    "section": "How much you’re allowed to say",
-    "text": "How much you’re allowed to say\nInvariance comes in levels, and each one buys you a different comparison. Roughly: if the same items load on the same factor in both groups (configural), you’ve got the basic shape. If the loadings are equal too (metric), you can start comparing relationships across groups. And only if the intercepts are also equal (scalar) are you actually allowed to compare means.\nThat last one is the level your group comparison quietly assumed it had. You test for it with a multigroup CFA. And when a single item behaves differently across groups, that’s DIF, differential item functioning, which is a fancy way of saying the lens has a chip in it right there."
-  },
-  {
-    "objectID": "posts/measurement-invariance/index.html#watch-it-happen",
-    "href": "posts/measurement-invariance/index.html#watch-it-happen",
-    "title": "Before you compare two groups’ survey scores, check this",
-    "section": "Watch it happen",
-    "text": "Watch it happen\nTwo groups, a 5-item engagement scale, and here’s the thing: I built them to have identical true engagement. Same distribution, no real difference. Then I made one item (item 5) read systematically lower for group B at the same level of engagement. Textbook DIF. Then I just… compared the groups, the way anyone would, with a standardized mean difference:\nlibrary(baselinr)\nhedges_g(theta, group)        # the true latent difference\nhedges_g(scale_full, group)   # observed, all 5 items\nhedges_g(scale_inv, group)    # observed, dropping the one DIF item\n\n\n\nWhat’s compared\nHedges’ g\n\n\n\n\nTrue latent engagement\n−0.03 (there is no real difference)\n\n\nObserved 5-item scale\n−0.25\n\n\nScale without the DIF item\n−0.02\n\n\n\n\n\n\nPer item group difference: items 1–4 are flat, item 5 carries the whole gap.\n\n\nThe groups are equal. I promise, I made them that way. And the full scale still reports g = −0.25, which most people would write up as “Group B is less engaged.” The figure shows the crime scene: items 1 through 4 are flat, and item 5 is doing all of the work, off by −1.22 on its own. Pull that one item and the difference evaporates to −0.02.\nNothing about engagement happened here. The ruler happened."
-  },
-  {
-    "objectID": "posts/measurement-invariance/index.html#what-to-do",
-    "href": "posts/measurement-invariance/index.html#what-to-do",
-    "title": "Before you compare two groups’ survey scores, check this",
-    "section": "What to do",
-    "text": "What to do\nTest invariance before you compare means, every time you’re comparing a latent thing across groups. If it fails, don’t throw the whole comparison out, go find the items that broke (the DIF ones). And then report partial invariance honestly, anchored on the items that held. It’s less clean than a single triumphant p value. It’s also the difference between a finding about students and a finding about your questionnaire.\n\nMeasurement is the thing I get genuinely nerdy about. I build baselinr and I’m building a cohort course on credible evaluation and measurement in education. subscribe via RSS if you want in."
   },
   {
     "objectID": "posts/text-classifier-error/index.html",

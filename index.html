@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -41,10 +44,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-20bab2b58192ebcdf7b86101a1c208b2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3d1b6502958a38d6b4d29f0899443d12.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -103,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -177,7 +180,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="YXVkaXQlMjBmaW5kaW5ncw==">audit findings <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2F1c2FsJTIwaW5mZXJlbmNl">causal inference <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZWR1Y2F0aW9uJTIwcG9saWN5">education policy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW1wYWN0JTIwZXZhbHVhdGlvbg==">impact evaluation <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bWVhc3VyZW1lbnQ=">measurement <span class="quarto-category-count">(3)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="YXVkaXQlMjBmaW5kaW5ncw==">audit findings <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2F1c2FsJTIwaW5mZXJlbmNl">causal inference <span class="quarto-category-count">(2)</span></div><div class="category" data-category="ZWR1Y2F0aW9uJTIwcG9saWN5">education policy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW1wYWN0JTIwZXZhbHVhdGlvbg==">impact evaluation <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bWVhc3VyZW1lbnQ=">measurement <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -213,7 +216,25 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbg==" data-listing-date-sort="1784160000000" data-listing-file-modified-sort="1784237639323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="641">
+<div class="quarto-post image-right" data-index="0" data-categories="Y2F1c2FsJTIwaW5mZXJlbmNl" data-listing-date-sort="1785369600000" data-listing-file-modified-sort="1785453196906" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="547">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/matched-on-observables/index.html" class="no-external">“We matched participants to similar students”: what that buys, and what it can’t</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/matched-on-observables/index.html" class="no-external">
+<p>Matching makes two groups comparable on the variables in the file. The reason someone enrolled is usually not in the file. How I read matched studies now, and the four things I look for.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/matched-on-observables/index.html" class="no-external">
+<div class="listing-date">
+Jul 30, 2026
+</div>
+<div class="listing-reading-time">3 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbg==" data-listing-date-sort="1784160000000" data-listing-file-modified-sort="1785453196870" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="641">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/reading-evaluations/index.html" class="no-external">How I read an evaluation report I’m inclined to believe</a>
@@ -231,7 +252,7 @@ Jul 16, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="YXVkaXQlMjBmaW5kaW5ncw==" data-listing-date-sort="1782950400000" data-listing-file-modified-sort="1784237639253" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="631">
+<div class="quarto-post image-right" data-index="2" data-categories="YXVkaXQlMjBmaW5kaW5ncw==" data-listing-date-sort="1782950400000" data-listing-file-modified-sort="1785453196869" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="631">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/composite-verdict/index.html" class="no-external">I ranked the same eight universities two defensible ways. The list nearly reversed.</a>
@@ -249,25 +270,7 @@ Jul 2, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbg==" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1784237639251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="587">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/02-effect-sizes-wwc/index.html" class="no-external">Effect sizes for education: what WWC actually wants</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/02-effect-sizes-wwc/index.html" class="no-external">
-<p>Cohen’s d, Hedges’ g, and the small sample correction. Which standardized difference to report, and why getting it lazy quietly changes your conclusion.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/02-effect-sizes-wwc/index.html" class="no-external">
-<div class="listing-date">
-Jun 24, 2026
-</div>
-<div class="listing-reading-time">3 min</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbg==" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1784237639252" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="591">
+<div class="quarto-post image-right" data-index="3" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbg==" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1785453196868" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="591">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/clustering-independence/index.html" class="no-external">Students aren’t independent: the clustering mistake that makes everything look significant</a>
@@ -285,7 +288,7 @@ Jun 24, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="bWVhc3VyZW1lbnQ=" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1784237639251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="650">
+<div class="quarto-post image-right" data-index="4" data-categories="bWVhc3VyZW1lbnQ=" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1785453196868" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="650">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/03-measurement-before-models/index.html" class="no-external">Measurement before models: the check most evaluations skip</a>
@@ -303,25 +306,7 @@ Jun 24, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="ZWR1Y2F0aW9uJTIwcG9saWN5" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1784237639257" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="631">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/value-added-scores/index.html" class="no-external">What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/value-added-scores/index.html" class="no-external">
-<p>Value added scores are noisier and more assumption laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/value-added-scores/index.html" class="no-external">
-<div class="listing-date">
-Jun 24, 2026
-</div>
-<div class="listing-reading-time">4 min</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="bWVhc3VyZW1lbnQ=" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1784237639255" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="556">
+<div class="quarto-post image-right" data-index="5" data-categories="bWVhc3VyZW1lbnQ=" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1785453196870" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="556">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/measurement-invariance/index.html" class="no-external">Before you compare two groups’ survey scores, check this</a>
@@ -339,7 +324,7 @@ Jun 24, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbg==" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1784237639250" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="733">
+<div class="quarto-post image-right" data-index="6" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbg==" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1785453196867" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="733">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/01-baseline-table/index.html" class="no-external">Your baseline table is doing more work than your p value</a>
@@ -357,25 +342,7 @@ Jun 24, 2026
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="bWVhc3VyZW1lbnQ=" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1784237639257" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="675">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/text-classifier-error/index.html" class="no-external">Your text classifier is 85% accurate. That error doesn’t vanish when you run the regression.</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/text-classifier-error/index.html" class="no-external">
-<p>Treating predicted labels as ground truth quietly biases everything downstream. With differential error it gets worse, and the accuracy number hides all of it.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/text-classifier-error/index.html" class="no-external">
-<div class="listing-date">
-Jun 24, 2026
-</div>
-<div class="listing-reading-time">4 min</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="Y2F1c2FsJTIwaW5mZXJlbmNl" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1784237639254" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="703">
+<div class="quarto-post image-right" data-index="7" data-categories="Y2F1c2FsJTIwaW5mZXJlbmNl" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1785453196870" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="703">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="./posts/controls-collider/index.html" class="no-external">More controls ≠ less bias: the variables you should never put in your model</a>
@@ -386,6 +353,60 @@ Jun 24, 2026
 </div>
 <div class="metadata">
 <a href="./posts/controls-collider/index.html" class="no-external">
+<div class="listing-date">
+Jun 24, 2026
+</div>
+<div class="listing-reading-time">4 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="aW1wYWN0JTIwZXZhbHVhdGlvbg==" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1785453196868" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="587">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/02-effect-sizes-wwc/index.html" class="no-external">Effect sizes for education: what WWC actually wants</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/02-effect-sizes-wwc/index.html" class="no-external">
+<p>Cohen’s d, Hedges’ g, and the small sample correction. Which standardized difference to report, and why getting it lazy quietly changes your conclusion.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/02-effect-sizes-wwc/index.html" class="no-external">
+<div class="listing-date">
+Jun 24, 2026
+</div>
+<div class="listing-reading-time">3 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="ZWR1Y2F0aW9uJTIwcG9saWN5" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1785453196872" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="631">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/value-added-scores/index.html" class="no-external">What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/value-added-scores/index.html" class="no-external">
+<p>Value added scores are noisier and more assumption laden than the tidy percentile suggests. They blend real teaching with sorting, test error, and plain luck.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/value-added-scores/index.html" class="no-external">
+<div class="listing-date">
+Jun 24, 2026
+</div>
+<div class="listing-reading-time">4 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-categories="bWVhc3VyZW1lbnQ=" data-listing-date-sort="1782259200000" data-listing-file-modified-sort="1785453196871" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="675">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/text-classifier-error/index.html" class="no-external">Your text classifier is 85% accurate. That error doesn’t vanish when you run the regression.</a>
+</h3>
+<div class="delink listing-description"><a href="./posts/text-classifier-error/index.html" class="no-external">
+<p>Treating predicted labels as ground truth quietly biases everything downstream. With differential error it gets worse, and the accuracy number hides all of it.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./posts/text-classifier-error/index.html" class="no-external">
 <div class="listing-date">
 Jun 24, 2026
 </div>
