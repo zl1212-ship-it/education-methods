@@ -10,7 +10,50 @@
 <atom:link href="https://zl1212-ship-it.github.io/education-methods/index.xml" rel="self" type="application/rss+xml"/>
 <description>Plain, honest notes on credible impact evaluation and measurement in education.</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Thu, 30 Jul 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 13 Aug 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>The evaluation came back null. Now what?</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/null-results/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Here is the most useful fact I know about education evaluations. In 2019, two researchers collected 141 large randomized trials commissioned by the two most serious funders of education evidence in the US and the UK, covering 1.2 million students. The average effect across all of them was <a href="https://journals.sagepub.com/doi/10.3102/0013189X19832850">0.06 standard deviations</a>, roughly nothing, and the confidence intervals were so wide (0.30 standard deviations on average) that many trials couldn’t distinguish “small effect” from “no effect” at all.</p>
+<p>So when your evaluation comes back null, the first thing to know is that you are holding the <em>normal</em> result. I find this fact genuinely comforting, the way weather statistics are comforting when your picnic gets rained out in Seattle. The question is not how to apologize for it. The question is what kind of null you have, and I work through that in a fixed order.</p>
+<section id="first-is-the-null-informative-or-just-imprecise" class="level2">
+<h2 class="anchored" data-anchor-id="first-is-the-null-informative-or-just-imprecise">First: is the null informative, or just imprecise?</h2>
+<p>“No detectable effect” covers two different findings. A tight confidence interval around zero says something real: effects big enough to care about probably aren’t there. A wide interval mostly says the study couldn’t answer the question, which is what happened in many of those 141 trials. The way to tell them apart is to <a href="../../posts/02-effect-sizes-wwc/">translate the interval into units a reader can feel</a>: “we can rule out gains larger than a month of learning” and “we can’t rule out anything between harm and half a year of gains” deserve opposite reactions.</p>
+</section>
+<section id="second-could-the-study-have-hidden-a-real-effect" class="level2">
+<h2 class="anchored" data-anchor-id="second-could-the-study-have-hidden-a-real-effect">Second: could the study have hidden a real effect?</h2>
+<p>Before concluding the program failed, I check whether the design could have produced a null even if the program worked.</p>
+<ul>
+<li><strong>The outcome couldn’t see the change.</strong> An unreliable or off-target measure shrinks every effect toward zero, which is why I check <a href="../../posts/03-measurement-before-models/">measurement before models</a>, and why an outcome that was itself <a href="../../posts/text-classifier-error/">machine-classified with error</a> attenuates further.</li>
+<li><strong>The score doesn’t mean the same thing in both groups.</strong> A null gap on a scale that <a href="../../posts/measurement-invariance/">functions differently across groups</a> is not evidence of equality, in either direction.</li>
+<li><strong>The groups weren’t comparable to start.</strong> If <a href="../../posts/01-baseline-table/">baseline equivalence</a> failed, a real gain in one group can be canceled by a head start in the other. The same worry applies to <a href="../../posts/matched-on-observables/">matched comparisons</a>, where the invisible reasons people enrolled can mask or mimic effects.</li>
+<li><strong>The outcome was aggregated away.</strong> Composites hide movement; <a href="../../posts/value-added-scores/">what a summary score actually captures</a> and <a href="../../posts/composite-verdict/">how the weights were set</a> both decide whether a real change surfaces.</li>
+</ul>
+</section>
+<section id="third-is-the-null-the-honest-number-at-last" class="level2">
+<h2 class="anchored" data-anchor-id="third-is-the-null-the-honest-number-at-last">Third: is the null the honest number, at last?</h2>
+<p>The mirror image matters just as much. Analyses that <a href="../../posts/clustering-independence/">treat clustered students as independent</a> produce stars out of noise, and <a href="../../posts/controls-collider/">piling on control variables</a> can manufacture effects as easily as destroy them. Sometimes a well-analyzed null is not the study failing; it is the first analysis in the room that stopped flattering the program.</p>
+</section>
+<section id="then-write-it-like-a-result-because-it-is-one" class="level2">
+<h2 class="anchored" data-anchor-id="then-write-it-like-a-result-because-it-is-one">Then write it like a result, because it is one</h2>
+<p>Lead with the finding, in the first paragraph, in plain words. State what the interval rules out, not just the p-value. Point to what success was defined as in advance, if anything was, since a null against a pre-named target is a result while a null against nothing is an anecdote. Keep subgroup patterns, labeled as exploratory, for the next study to test. And separate the two sentences a decision-maker actually needs: “it probably doesn’t work” and “we couldn’t tell,” one of which should appear, alone, in your summary. If you want to see these habits from the reader’s side, they are <a href="../../posts/reading-evaluations/">questions seven and ten on my checklist</a>.</p>
+<p>I’m still in grad school; nobody has yet paid me to deliver bad news to a funder, and I don’t imagine the room feels like a statistics seminar. But a clean null saves someone real money, usually the district about to scale the program. And it compounds: people who watch you report a null clearly will believe your positive finding next year at face value. In a field where the average large trial finds 0.06 standard deviations, the evaluators who can say “nothing happened” gracefully are not the failures. They are the ones telling the truth at the base rate.</p>
+<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>impact evaluation</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/null-results/</guid>
+  <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>“We matched participants to similar students”: what that buys, and what it can’t</title>
   <dc:creator>Yuxia Liang</dc:creator>
