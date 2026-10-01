@@ -221,7 +221,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Methods notes for people who run or review education evaluations and care whether the conclusions hold up: baseline equivalence, measurement, effect sizes, and honest communication of uncertainty.\nWritten by Yuxia Liang, M.Ed. candidate in Educational Leadership & Policy (University of Washington, expected December 2026). Author of the open source baselinr R package for WWC aligned baseline equivalence."
+    "text": "Methods notes for people who run or review education evaluations and care whether the conclusions hold up: baseline equivalence, measurement, effect sizes, and honest communication of uncertainty.\nWritten by Yuxia Liang, M.Ed. candidate in Educational Leadership & Policy (University of Washington, expected December 2026). Author of the open source baselinr R package for WWC-aligned baseline equivalence."
   },
   {
     "objectID": "about.html#publications",
@@ -277,7 +277,7 @@
     "href": "posts/controls-collider/index.html#what-i-actually-do-now",
     "title": "More controls ≠ less bias: the variables you should never put in your model",
     "section": "What I actually do now",
-    "text": "What I actually do now\n\nSketch the DAG before I touch the model. A bad drawing on a receipt counts.\nOnly control for things measured before treatment.\nIf a variable was measured after the treatment, I treat it as off limits until the picture tells me otherwise.\nFor every control, I make myself say which of the three it is. If I can’t, it doesn’t go in.\n\nI’m not against controls. I’m anti “more controls = more rigor,” because that one’s just false, and it’s the kind of false that looks like care.\n\nI’m building baselinr, a small R package for WWC aligned baseline equivalence, and a cohort course on running education evaluations you can actually trust. subscribe via RSS if that’s your thing."
+    "text": "What I actually do now\n\nSketch the DAG before I touch the model. A bad drawing on a receipt counts.\nOnly control for things measured before treatment.\nIf a variable was measured after the treatment, I treat it as off limits until the picture tells me otherwise.\nFor every control, I make myself say which of the three it is. If I can’t, it doesn’t go in.\n\nI’m not against controls. I’m anti “more controls = more rigor,” because that one’s just false, and it’s the kind of false that looks like care.\n\nI’m building baselinr, a small R package for WWC-aligned baseline equivalence, and a cohort course on running education evaluations you can actually trust. subscribe via RSS if that’s your thing."
   },
   {
     "objectID": "posts/03-measurement-before-models/index.html",
@@ -354,7 +354,7 @@
     "href": "posts/02-effect-sizes-wwc/index.html#reporting-it-like-you-mean-it",
     "title": "Effect sizes for education: what WWC actually wants",
     "section": "Reporting it like you mean it",
-    "text": "Reporting it like you mean it\nGive the effect size with an interval, not a lonely point estimate; “g = 0.8” with no uncertainty begs to be over trusted. Tie the number to a decision, because “significant” and “meaningful” are different words. And say your choices out loud so the number can be checked.\nA standardized mean difference is a tiny calculation carrying a big claim. Get the denominator and the correction right, attach honest uncertainty, translate it into something a human can act on. Skip those and “significant” becomes a word that hides more than it tells.\n\nI build baselinr, a small R package for WWC aligned baseline equivalence and effect sizes, and am developing a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
+    "text": "Reporting it like you mean it\nGive the effect size with an interval, not a lonely point estimate; “g = 0.8” with no uncertainty begs to be over trusted. Tie the number to a decision, because “significant” and “meaningful” are different words. And say your choices out loud so the number can be checked.\nA standardized mean difference is a tiny calculation carrying a big claim. Get the denominator and the correction right, attach honest uncertainty, translate it into something a human can act on. Skip those and “significant” becomes a word that hides more than it tells.\n\nI build baselinr, a small R package for WWC-aligned baseline equivalence and effect sizes, and am developing a cohort course on credible evaluation and measurement in education. subscribe via RSS to follow along."
   },
   {
     "objectID": "posts/null-results/index.html",
