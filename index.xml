@@ -10,7 +10,49 @@
 <atom:link href="https://zl1212-ship-it.github.io/education-methods/index.xml" rel="self" type="application/rss+xml"/>
 <description>Plain, honest notes on credible impact evaluation and measurement in education.</description>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Thu, 24 Sep 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 01 Oct 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>If colleges were employers, two-thirds of those we can audit would fail the government’s own fairness test</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/four-fifths/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Since the 1970s, U.S. employment law has used a simple screen for hiring discrimination called the four-fifths rule: if one group’s selection rate is less than 80% of the highest group’s rate, the process is flagged for scrutiny. A flag is not a finding of discrimination. The bar is deliberately low, closer to a smoke alarm than to a verdict.</p>
+<p>I applied that same arithmetic to college completion, using public federal graduation data. For every institution with large enough cohorts to audit (at least 30 students in each group), I divided the share of Black students who complete within 150% of normal time by the share of White students who do at the same institution. In 2022, <strong>66% of the 1,518 auditable institutions fall below the four-fifths line for Black students.</strong> The median institution completes Black students at 70% of its White completion rate. This is not one bad year: the failure share sits between 61% and 66% in every year from 2018 to 2022.</p>
+<section id="what-the-flag-does-and-does-not-mean" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-flag-does-and-does-not-mean">What the flag does and does not mean</h2>
+<p>I want to be careful about what this number means, because the temptation to overread it is strong. An institution below the line has not been shown to discriminate. Completion gaps carry everything students bring with them, from prior schooling to money to the hours they can give to coursework. The four-fifths rule was built for hiring decisions, and lifting a threshold out of employment law and dropping it onto a multi-year educational process is the kind of move fairness researchers call a portability trap (<a href="https://doi.org/10.1145/3287560.3287598">Selbst and colleagues, 2019</a>).</p>
+<p>What the rule offers is different: a common, transparent trigger. In hiring, a number like this obliges someone to look. In higher education it obliges no one to do anything. That asymmetry is what stayed with me while I was writing the paper.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/four-fifths/fig-four-fifths.png" class="img-fluid figure-img"></p>
+<figcaption>Each institution’s ratio of Black to White completion rates in 2022. The dashed line is the 0.80 threshold employment law uses; the dotted line is parity. Four institutions with ratios above 1.6 are drawn at 1.6.</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-the-distribution-says" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-distribution-says">What the distribution says</h2>
+<p>The distribution tells me more than the headline share does. Most institutions are not sitting just under the line: the median is 0.70, a fifth of auditable institutions are below 0.50, and fewer than 7% complete Black students at or above their White rate. The result also survives the checks I could throw at it, including a stricter reference group, an absolute-gap measure instead of a ratio, and different cohort minimums. Some of the concentration in low-completion institutions turns out to be partly a ratio artifact, and the paper says so. The national pattern does not go away.</p>
+</section>
+<section id="why-borrow-a-hiring-rule-at-all" class="level2">
+<h2 class="anchored" data-anchor-id="why-borrow-a-hiring-rule-at-all">Why borrow a hiring rule at all</h2>
+<p>Partly because higher education has no agreed threshold of its own. Completion gaps are reported in many dashboards and cut many ways, and none of them comes with a line that says this one warrants a closer look. Employment law adopted a crude but usable line fifty years ago. Borrowing it does not settle what a college owes its students. What it gave me was a single number that shows how this landscape would look if the standard we already apply to hiring applied here too.</p>
+<p>The audit is descriptive, not causal, and the data are public: IPEDS graduation rates, 2018 through 2022, via the Urban Institute Education Data Portal.</p>
+<p>The full paper: Liang, Y. (2026). A national disparate-impact audit of college completion equity. <em>Educational Policy</em>. Advance online publication. <a href="https://doi.org/10.1177/08959048261489777">https://doi.org/10.1177/08959048261489777</a></p>
+<p><em>Data: IPEDS 150%-time graduation rates, 2018 to 2022, via the Urban Institute Education Data Portal; cohorts of at least 30 in each group. The article’s data availability statement points to the full replication materials.</em></p>
+<p><em>Related, on how the choice of gap measure changes what you see: <a href="../../posts/02-effect-sizes-wwc/">Effect sizes for education: what WWC actually wants</a>. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">Subscribe via RSS</a> to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>audit findings</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/four-fifths/</guid>
+  <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>The students who disappeared are the finding</title>
   <dc:creator>Yuxia Liang</dc:creator>
@@ -263,6 +305,7 @@
 <h2 class="anchored" data-anchor-id="what-i-do-differently-now">What I do differently now</h2>
 <p>When I see a composite rating, I try to find two things before reacting to any school’s position: what is weighted how much, and whether the publisher shows how the order moves under other defensible weightings. When that sensitivity is reported, I trust the list more, not less.</p>
 <p>I’m working on audits of real rating and flagging systems with public data, and I’ll write them up here as they become shareable.</p>
+<p><em>Update, October 2026: the first of these is out. <a href="../../posts/four-fifths/">If colleges were employers, two-thirds of those we can audit would fail the government’s own fairness test</a>.</em></p>
 <p><em>The data (a <a href="wa_publics_2021.csv">small CSV</a> pulled from the Urban Institute’s public IPEDS API) and the figure script (<a href="make_figure.py"><code>make_figure.py</code></a>) are in this post’s folder; deleting the CSV and rerunning the script re-fetches the numbers.</em></p>
 <p><em>Related: <a href="../../posts/value-added-scores/">What a “teacher effectiveness” score actually measures (and what it doesn’t)</a>. I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
