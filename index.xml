@@ -9,7 +9,7 @@
 <link>https://zl1212-ship-it.github.io/education-methods/</link>
 <atom:link href="https://zl1212-ship-it.github.io/education-methods/index.xml" rel="self" type="application/rss+xml"/>
 <description>Plain, honest notes on credible impact evaluation and measurement in education.</description>
-<generator>quarto-1.10.18</generator>
+<generator>quarto-1.10.19</generator>
 <lastBuildDate>Thu, 01 Oct 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>If colleges were employers, two-thirds of those we can audit would fail the government’s own fairness test</title>
@@ -42,6 +42,7 @@
 <p>Partly because higher education has no agreed threshold of its own. Completion gaps are reported in many dashboards and cut many ways, and none of them comes with a line that says this one warrants a closer look. Employment law adopted a crude but usable line fifty years ago. Borrowing it does not settle what a college owes its students. What it gave me was a single number that shows how this landscape would look if the standard we already apply to hiring applied here too.</p>
 <p>The audit is descriptive, not causal, and the data are public: IPEDS graduation rates, 2018 through 2022, via the Urban Institute Education Data Portal.</p>
 <p>The full paper: Liang, Y. (2026). A national disparate-impact audit of college completion equity. <em>Educational Policy</em>. Advance online publication. <a href="https://doi.org/10.1177/08959048261489777">https://doi.org/10.1177/08959048261489777</a></p>
+<p>Free accepted manuscript: <a href="https://doi.org/10.35542/osf.io/p2dvf_v1">https://doi.org/10.35542/osf.io/p2dvf_v1</a></p>
 <p><em>Data: IPEDS 150%-time graduation rates, 2018 to 2022, via the Urban Institute Education Data Portal; cohorts of at least 30 in each group. The article’s data availability statement points to the full replication materials.</em></p>
 <p><em>Related, on how the choice of gap measure changes what you see: <a href="../../posts/02-effect-sizes-wwc/">Effect sizes for education: what WWC actually wants</a>. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">Subscribe via RSS</a> to follow along.</em></p>
 
