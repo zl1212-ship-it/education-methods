@@ -256,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="doing-it-without-a-spreadsheet" class="level2">
 <h2 class="anchored" data-anchor-id="doing-it-without-a-spreadsheet">Doing it without a spreadsheet</h2>
-<p>Here it is on a simulated tutoring evaluation, 400 students, data I bundled into <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> just for this. One call, whole table:</p>
+<p>Here it is on a simulated tutoring evaluation, 400 students, data I bundled into <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> just for this. One call, whole table:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(baselinr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(tutoring)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -350,7 +350,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>“Satisfied with adjustment” is not a passing grade. It’s a promise. It says: these groups are close enough, <em>as long as</em> I actually control for this covariate in the impact model. And it is genuinely common to see a baseline table that files a covariate under “satisfied with adjustment” and then an impact model that never adjusts for it. The table says one thing, the model does another, and a careful reader catches it instantly. If a covariate lands in the middle band, it has to show up in the model. Every time.</p>
 <p>Treat the baseline table like the load bearing wall it is, not the trim you tack on at the end. Get it right and everything downstream has something solid to stand on. Get it wrong and your fanciest model is just measuring the head start.</p>
 <hr>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package that produces these tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package that produces these tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>

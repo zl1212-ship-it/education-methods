@@ -63,7 +63,7 @@
 
 
 
-<p>Somewhere in my first year of grad school, “attrition” stopped being a vocabulary word for me. We were picking apart an evaluation in seminar, the kind with a healthy gain for the program group, and a classmate flipped back to the sample table and asked why one group had shrunk by a tenth and the other by a quarter before the outcome test. The gain was computed on whoever remained. Nothing about the arithmetic was wrong. The question, which took our class a whole hour to put into words, is what the arithmetic was still measuring.</p>
+<p>Take an evaluation with a healthy gain for the program group, and flip back to the sample table. One group shrank by a tenth and the other by a quarter before the outcome test, and the gain was computed on whoever remained. Nothing about the arithmetic is wrong. The question, which took me a long time to put into words, is what the arithmetic is still measuring.</p>
 <section id="a-trial-is-only-randomized-on-day-one" class="level2">
 <h2 class="anchored" data-anchor-id="a-trial-is-only-randomized-on-day-one">A trial is only randomized on day one</h2>
 <p>Random assignment buys you two groups that are alike, once, at the start. Every departure after that is chosen, by a family that moved, a student who stopped coming, a school that quit the study, and chosen departures re-sort the groups. If the program’s strugglers give up on the study while the control group’s strugglers have nothing to give up on, the surviving program group is now selected for persistence in a way its comparison is not. This is <a href="../../posts/matched-on-observables/">the enrollment problem</a> sneaking back in through the exit door, after randomization was supposed to have solved it.</p>
@@ -77,12 +77,12 @@
 <section id="what-the-careful-ones-show" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-careful-ones-show">What the careful ones show</h2>
 <p>Three things, none of them exotic. A flow diagram: how many were assigned, served, measured, in each group, so the reader isn’t reconstructing it from footnotes. A leavers-versus-stayers comparison: <a href="../../posts/01-baseline-table/">the same baseline table</a> the study already built, rerun on who dropped out, so you can see whether the missing tenth was the struggling tenth. And an analysis that keeps everyone assigned in the group they were assigned to, with a sensitivity check that asks how bad the missing outcomes would have to be to change the conclusion.</p>
-<p>When a report instead analyzes “completers,” praises their gains, and moves on, <a href="../../posts/reading-evaluations/">question three of my reading checklist</a> has been answered, just not in words. I say this with sympathy; the first analysis I ever ran on my own course-project data was a completers analysis, because it was the easy query to write. Nobody warns you that the easy query has a worldview.</p>
+<p>When a report instead analyzes “completers,” praises their gains, and moves on, <a href="../../posts/reading-evaluations/">question three of my reading checklist</a> has been answered, just not in words. I say this with sympathy; a completers analysis is usually the easiest query to write, and it is easy to forget that it answers a different question.</p>
 </section>
 <section id="the-thirty-second-version" class="level2">
 <h2 class="anchored" data-anchor-id="the-thirty-second-version">The thirty-second version</h2>
 <p>Find the number randomized and the number analyzed, per group; the distance between them is where the story lives. Ask whether the leavers looked like the stayers at baseline. And check whether the headline number is about everyone who started or only those who finished, because “the program worked for the students who stayed” is sometimes the program’s success and sometimes its selection mechanism, and the report’s job is to help you tell which.</p>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables, including the leavers-versus-stayers kind, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables, including the leavers-versus-stayers kind, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>
@@ -121,7 +121,7 @@
 <h2 class="anchored" data-anchor-id="how-i-use-one-when-reading">How I use one when reading</h2>
 <p>Three steps, thirty seconds each. Find the registration link (its absence is itself information). Check the date against when outcome data could first have been seen. Compare the registered primary outcome to the one in the abstract. When all three line up, most of the darker explanations for a striking result are simply off the table, and I can spend my skepticism on the design instead.</p>
 <p>For anyone running an evaluation this year, from a grad student with her first studies still ahead of her: the two hours it takes are the cheapest credibility you will ever buy. You are not tying your hands. You are making it possible, later, for people like me to believe you.</p>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>
@@ -141,15 +141,15 @@
 
 
 <p>Education runs on cutoffs. Score below this line and you’re assigned to remediation; above that one and you win the scholarship; the class splits in two when enrollment crosses forty. Every one of those lines quietly mass-produces something precious: pairs of students who are nearly identical, one point apart, treated completely differently.</p>
-<p>The first time a professor drew this on the whiteboard, outcome on one axis and a break at the cutoff line, it looked like a card trick, and I spent the rest of the class hunting for the catch. That is the whole idea of regression discontinuity, and it has been since <a href="https://doi.org/10.1037/h0044319">two psychologists noticed it in 1960</a> while studying National Merit awards. Students at 79 and 81 points didn’t choose their side of the line the way program volunteers <a href="../../posts/matched-on-observables/">choose to enroll</a>; the cutoff chose for them. Right at the line, assignment is close to a coin flip, and a jump in outcomes right there is about as believable as quasi-experimental evidence gets. Evidence clearinghouses agree: it is one of the few designs the What Works Clearinghouse will rate as highly as a randomized trial, when it is done well.</p>
+<p>Drawn as a picture, outcome on one axis and a break at the cutoff line, it looks like a card trick, and my first instinct was to hunt for the catch. That is the whole idea of regression discontinuity, and it has been since <a href="https://doi.org/10.1037/h0044319">two psychologists noticed it in 1960</a> while studying National Merit awards. Students at 79 and 81 points didn’t choose their side of the line the way program volunteers <a href="../../posts/matched-on-observables/">choose to enroll</a>; the cutoff chose for them. Right at the line, assignment is close to a coin flip, and a jump in outcomes right there is about as believable as quasi-experimental evidence gets. Evidence clearinghouses agree: it is one of the few designs the What Works Clearinghouse will rate as highly as a randomized trial, when it is done well.</p>
 <p>“When it is done well” is carrying weight in that sentence. Here is what I check, in order, when a report says “we used a regression discontinuity.”</p>
 <p><strong>Can anyone nudge themselves across the line?</strong> The design dies quietly if people can sort. If students can retake the test, if teachers round a 59 up to a 60, if families know the threshold in advance, then the two sides of the cutoff are no longer alike; the strivers have bunched up on the winning side. There is a standard check, plotting the density of scores around the cutoff to look for suspicious pile-ups, and a report that doesn’t show it is skipping the design’s load-bearing wall.</p>
 <p><strong>Does anything else change at the same line?</strong> Cutoffs are administratively convenient, so programs stack onto them. If the same score that assigns tutoring also triggers a parent letter and a schedule change, the jump you see is the bundle, not the tutoring.</p>
 <p><strong>Can I see the jump?</strong> The great virtue of this design is that the evidence is a picture: outcome on the y-axis, running score on the x-axis, a visible break at the line. When a paper reports a discontinuity but shows no scatter plot, or the plotted jump is invisible without the fitted lines to guide your eye, my confidence drops accordingly.</p>
 <p><strong>Does the effect survive the bandwidth?</strong> The analyst chooses how wide a window around the cutoff to use. Narrow windows compare the most similar students but leave few of them; wide ones buy sample size with comparability. An honest report shows the estimate across several windows. An effect that appears at exactly one bandwidth was found, not estimated.</p>
 <p><strong>Who is the effect about?</strong> This is the design’s built-in modesty, and it gets lost in summaries. A discontinuity estimates the effect <em>for students near the cutoff</em>. What remediation does for a student one point below the line may say little about what it does for a student thirty points below, who is the student the policy debate is usually about. The design answers a narrow question extremely well, and the fine print is the word “narrow.”</p>
-<p>The catch I was hunting for in class turned out to be real, and it is the list above; the design is only as magic as its checks. None of them needs software; they need the report to have shown its work, which is the same standard as <a href="../../posts/reading-evaluations/">the rest of my reading checklist</a>. A discontinuity study that shows the density check, the raw picture, and the bandwidth sweep has done something genuinely close to an experiment, without anyone having to randomize a child. One that shows a coefficient and a citation has shown me a line in a table.</p>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p>The catch I was hunting for turned out to be real, and it is the list above; the design is only as magic as its checks. None of them needs software; they need the report to have shown its work, which is the same standard as <a href="../../posts/reading-evaluations/">the rest of my reading checklist</a>. A discontinuity study that shows the density check, the raw picture, and the bandwidth sweep has done something genuinely close to an experiment, without anyone having to randomize a child. One that shows a coefficient and a citation has shown me a line in a table.</p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 
@@ -191,7 +191,7 @@
 <h2 class="anchored" data-anchor-id="then-write-it-like-a-result-because-it-is-one">Then write it like a result, because it is one</h2>
 <p>Lead with the finding, in the first paragraph, in plain words. State what the interval rules out, not just the p-value. Point to what success was defined as in advance, if anything was, since a null against a pre-named target is a result while a null against nothing is an anecdote. Keep subgroup patterns, labeled as exploratory, for the next study to test. And separate the two sentences a decision-maker actually needs: “it probably doesn’t work” and “we couldn’t tell,” one of which should appear, alone, in your summary. If you want to see these habits from the reader’s side, they are <a href="../../posts/reading-evaluations/">questions seven and ten on my checklist</a>.</p>
 <p>I’m still in grad school; nobody has yet paid me to deliver bad news to a funder, and I don’t imagine the room feels like a statistics seminar. But a clean null saves someone real money, usually the district about to scale the program. And it compounds: people who watch you report a null clearly will believe your positive finding next year at face value. In a field where the average large trial finds 0.06 standard deviations, the evaluators who can say “nothing happened” gracefully are not the failures. They are the ones telling the truth at the base rate.</p>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>
@@ -211,7 +211,7 @@
 
 
 <p>For a long time, the sentence “participants were matched to similar non-participants on grades, attendance, and demographics” quietly ended my skepticism. It sounds like the problem of comparison has been handled. The groups look alike; surely the difference that remains is the program.</p>
-<p>Then a professor in my program asked, in the margin of something I’d written, the question I now ask about every matched study: <em>if two students look identical in the data, why did only one of them sign up?</em></p>
+<p>What changed my reading was one question, which I now ask about every matched study: <em>if two students look identical in the data, why did only one of them sign up?</em></p>
 <section id="what-matching-actually-does" class="level2">
 <h2 class="anchored" data-anchor-id="what-matching-actually-does">What matching actually does</h2>
 <p>Matching does one thing, and does it honestly: it makes the comparison group resemble the participants <strong>on the variables you matched</strong>. Same prior grades, same attendance band, same school poverty level. That is real progress; an unmatched comparison would be worse. After matching, the observable excuses are gone.</p>
@@ -230,8 +230,8 @@
 </section>
 <section id="the-right-amount-of-trust" class="level2">
 <h2 class="anchored" data-anchor-id="the-right-amount-of-trust">The right amount of trust</h2>
-<p>None of this makes matching a trick, and I say that as someone who matched on observables in a course project and felt very pleased with herself for a week. It is an honest tool for a narrower claim than the one usually attached to it, something like: <em>among students who look alike on what we measured, participants did better.</em> Studies that state the claim at that size, show the balance, and price the assumption are, in my experience, also the ones whose findings hold up. The reassuring sentence at the top was never the evidence. The table under it is.</p>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for exactly that balance table (WWC-aligned, before and after matching), and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p>None of this makes matching a trick. It is an honest tool for a narrower claim than the one usually attached to it, something like: <em>among students who look alike on what we measured, participants did better.</em> Studies that state the claim at that size, show the balance, and price the assumption are the ones I trust most. The reassuring sentence at the top was never the evidence. The table under it is.</p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for exactly that balance table (WWC-aligned, before and after matching), and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>
@@ -250,7 +250,7 @@
 
 
 
-<p>The evaluation reports that fool me are never the sloppy ones. They are the ones whose conclusion I already agree with. I’m a master’s student, so I read a lot of these on assignment, and the routine below is what has survived two years of being wrong in seminar: ten questions in a set order, precisely so that my sympathy for the finding doesn’t get a vote. None of them needs software. Most can be answered from the report itself, and when one can’t, that absence is usually the answer.</p>
+<p>The evaluation reports that fool me are never the sloppy ones. They are the ones whose conclusion I already agree with. I’m a master’s student, so I read a lot of these on assignment, and the routine below is what I have settled on: ten questions in a set order, precisely so that my sympathy for the finding doesn’t get a vote. None of them needs software. Most can be answered from the report itself, and when one can’t, that absence is usually the answer.</p>
 <p><strong>1. Compared to whom?</strong> Before any number, I look for the comparison group. “Participants improved” is not a finding; students improve on their own, programs or not. If there is no comparison group at all, I stop expecting a causal claim and read the rest as description.</p>
 <p><strong>2. Were the groups similar before the program?</strong> The whole causal claim rests here, and it is checkable from one table. I wrote about <a href="../../posts/01-baseline-table/">what that table has to show</a> and why a p-value is the wrong check; a report that never shows baseline equivalence is asking me to take the hardest part on faith.</p>
 <p><strong>3. Who disappeared?</strong> Enrollment counts at the start, outcome counts at the end. If a quarter of the treatment group is missing from the final table, the program’s effect is now entangled with who stuck around, and I want the report to say how the leavers differed, not just how many left.</p>
@@ -263,8 +263,8 @@
 <p><strong>10. What would failure have looked like?</strong> My favorite question, and the one reports answer least often. If every plausible result could be narrated as success, the evaluation was not a test. When a report states in advance what result would have counted against the program, everything else in it gets more believable.</p>
 <section id="what-a-checklist-can-and-cant-do" class="level2">
 <h2 class="anchored" data-anchor-id="what-a-checklist-can-and-cant-do">What a checklist can and can’t do</h2>
-<p>Ten questions can’t convict a report, and passing them doesn’t make a finding true. Most of them are scar tissue; I ask about attrition because I once didn’t, out loud, in front of people. This is triage: it tells me where to spend skepticism, which is always in shorter supply than I’d like, and it protects me a little from my own preferences. The reports I end up trusting most are rarely the ones with the biggest effects. They are the ones that make questions 1 through 10 easy to answer, because the authors asked themselves first.</p>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for the baseline-equivalence table in question 2, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p>Ten questions can’t convict a report, and passing them doesn’t make a finding true. Most of them cover mistakes that are easy to make and easy to miss when reading. This is triage: it tells me where to spend skepticism, which is always in shorter supply than I’d like, and it protects me a little from my own preferences. The reports I end up trusting most are rarely the ones with the biggest effects. They are the ones that make questions 1 through 10 easy to answer, because the authors asked themselves first.</p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for the baseline-equivalence table in question 2, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>
@@ -308,7 +308,7 @@
 <p>I’m working on audits of real rating and flagging systems with public data, and I’ll write them up here as they become shareable.</p>
 <p><em>Update, October 2026: the first of these is out. <a href="../../posts/four-fifths/">If colleges were employers, two-thirds of those we can audit would fail the government’s own fairness test</a>.</em></p>
 <p><em>The data (a <a href="wa_publics_2021.csv">small CSV</a> pulled from the Urban Institute’s public IPEDS API) and the figure script (<a href="make_figure.py"><code>make_figure.py</code></a>) are in this post’s folder; deleting the CSV and rerunning the script re-fetches the numbers.</em></p>
-<p><em>Related: <a href="../../posts/value-added-scores/">What a “teacher effectiveness” score actually measures (and what it doesn’t)</a>. I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>Related: <a href="../../posts/value-added-scores/">What a “teacher effectiveness” score actually measures (and what it doesn’t)</a>. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>
@@ -327,7 +327,7 @@
 
 
 
-<p>Okay so. A reviewer once told me to control for a variable. I added it, the coefficient changed, and I took the change as proof the variable mattered.</p>
+<p>Okay so. Reviewers often ask for one more control. You add the variable, the coefficient changes, and it is tempting to take the change as proof the variable mattered.</p>
 <p>It is not proof the variable mattered. It took me way longer than I’d like to admit to get that.</p>
 <p>Adding a control and watching the number jump feels productive. It feels careful. But a number moving only tells you a number moved. It doesn’t tell you whether you got closer to the truth or further from it. That depends on what the variable actually is, and “just throw in more controls” quietly lumps together three things that behave nothing alike.</p>
 <section id="three-reasons-a-variable-is-in-your-model" class="level2">
@@ -432,7 +432,7 @@ font-style: inherit;"># also adjust for the post treatment mediator</span></span
 </ul>
 <p>I’m not against controls. I’m anti “more controls = more rigor,” because that one’s just false, and it’s the kind of false that looks like care.</p>
 <hr>
-<p><em>I’m building <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for WWC-aligned baseline equivalence, and a cohort course on running education evaluations you can actually trust. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if that’s your thing.</em></p>
+<p><em>I’m building <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for WWC-aligned baseline equivalence, and a cohort course on running education evaluations you can actually trust. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if that’s your thing.</em></p>
 
 
 </section>
@@ -530,7 +530,7 @@ font-style: inherit;"># psych::fa.parallel(items) # how many dimensions are actu
 <p>Same program. Same design. Same sample. Only the ruler gets noisier, and the effect you’d report slides from 0.50 to 0.31 while your power to see <em>anything</em> falls from 70% to 34%. Half your ability to detect a real effect, gone, because the outcome measure was weak.</p>
 <p>Measurement isn’t the boring prelude to the real analysis. On a bad measure, it <em>is</em> the result. Check the ruler before you trust the measurement.</p>
 <hr>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and am developing a cohort course on credible evaluation and measurement in education, where this is basically a whole week. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and am developing a cohort course on credible evaluation and measurement in education, where this is basically a whole week. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>
@@ -601,7 +601,7 @@ font-style: inherit;"># year to year reliability</span></span></code></pre></div
 <p>If you’re going to use these at all: report the uncertainty, and actually look at how wide it is. Shrink the estimates (empirical Bayes pulls noisy small sample numbers toward the average, which is exactly right when most of the spread is noise). Never hang a high stakes decision on a single year. And say out loud what you’re assuming about how kids got sorted to teachers, because the entire causal story rests on it.</p>
 <p>These scores can inform. Used as a one number verdict on someone’s career, they mostly measure which children walked through the door.</p>
 <hr>
-<p><em>This is where methods and policy collide, which is the part of this work I care about most. I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>This is where methods and policy collide, which is the part of this work I care about most. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>
@@ -681,7 +681,7 @@ font-style: inherit;"># year to year reliability</span></span></code></pre></div
 <p>Give the effect size with an interval, not a lonely point estimate; “g = 0.8” with no uncertainty begs to be over trusted. Tie the number to a decision, because “significant” and “meaningful” are different words. And say your choices out loud so the number can be checked.</p>
 <p>A standardized mean difference is a tiny calculation carrying a big claim. Get the denominator and the correction right, attach honest uncertainty, translate it into something a human can act on. Skip those and “significant” becomes a word that hides more than it tells.</p>
 <hr>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package for WWC-aligned baseline equivalence and effect sizes, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for WWC-aligned baseline equivalence and effect sizes, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>
@@ -746,7 +746,7 @@ font-style: inherit;"># year to year reliability</span></span></code></pre></div
 </section>
 <section id="doing-it-without-a-spreadsheet" class="level2">
 <h2 class="anchored" data-anchor-id="doing-it-without-a-spreadsheet">Doing it without a spreadsheet</h2>
-<p>Here it is on a simulated tutoring evaluation, 400 students, data I bundled into <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> just for this. One call, whole table:</p>
+<p>Here it is on a simulated tutoring evaluation, 400 students, data I bundled into <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> just for this. One call, whole table:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(baselinr)</span>
@@ -888,7 +888,7 @@ font-style: inherit;">"ell"</span>)))</span></code></pre></div></div>
 <p>“Satisfied with adjustment” is not a passing grade. It’s a promise. It says: these groups are close enough, <em>as long as</em> I actually control for this covariate in the impact model. And it is genuinely common to see a baseline table that files a covariate under “satisfied with adjustment” and then an impact model that never adjusts for it. The table says one thing, the model does another, and a careful reader catches it instantly. If a covariate lands in the middle band, it has to show up in the model. Every time.</p>
 <p>Treat the baseline table like the load bearing wall it is, not the trim you tack on at the end. Get it right and everything downstream has something solid to stand on. Get it wrong and your fanciest model is just measuring the head start.</p>
 <hr>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a>, a small R package that produces these tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package that produces these tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>
@@ -975,7 +975,7 @@ font-style: inherit;"># observed, dropping the one DIF item</span></span></code>
 <h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
 <p>Test invariance before you compare means, every time you’re comparing a latent thing across groups. If it fails, don’t throw the whole comparison out, go find the items that broke (the DIF ones). And then report partial invariance honestly, anchored on the items that held. It’s less clean than a single triumphant p value. It’s also the difference between a finding about students and a finding about your questionnaire.</p>
 <hr>
-<p><em>Measurement is the thing I get genuinely nerdy about. I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and I’m building a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if you want in.</em></p>
+<p><em>Measurement is the thing I get genuinely nerdy about. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and I’m building a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if you want in.</em></p>
 
 
 </section>
@@ -1085,7 +1085,7 @@ font-style: inherit;"># cluster robust SE</span></span></code></pre></div></div>
 <p>Cluster at the level treatment was actually assigned (rolled out by school? then school, not student). Report the ICC so your reader knows how much this even matters here. Watch out when you’ve only got a few clusters. And if you genuinely care about how schools differ, not just correcting for it, go multilevel.</p>
 <p>Before you celebrate a tiny p value, just ask where the rows came from. In education they’re almost always nested, which means “n” is not the number of students, and significance computed as if it were is significance you didn’t earn.</p>
 <hr>
-<p><em>I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and I’m building a cohort course on running education evaluations you can actually trust. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and I’m building a cohort course on running education evaluations you can actually trust. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>
@@ -1188,7 +1188,7 @@ font-style: inherit;"># 85% accurate overall, but worse for one group</span></sp
 <p>Keep a human labeled gold set, and not just for tuning. You need it to <em>measure</em> the error so you can correct for it later. Report classifier performance broken out by the groups you’ll compare, because “85% overall” is precisely where differential error hides. And then either propagate that uncertainty into the analysis or use an estimator built for predicted labels (there’s a small but real literature on inference with machine predicted variables now). Whatever you do, stop quietly swapping predictions in for observations and calling it done.</p>
 <p>Measure your measurement. Report it by group. Let the error into the model the same way it’s already, invisibly, in your data.</p>
 <hr>
-<p><em>This exact corner, where text models meet measurement error, is what I work on. I build <a href="https://github.com/zl1212-ship-it/baselinr"><code>baselinr</code></a> and I’m putting together a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if you want to follow along.</em></p>
+<p><em>This exact corner, where text models meet measurement error, is what I work on. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and I’m putting together a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if you want to follow along.</em></p>
 
 
 </section>
