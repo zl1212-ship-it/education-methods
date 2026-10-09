@@ -10,7 +10,40 @@
 <atom:link href="https://zl1212-ship-it.github.io/education-methods/index.xml" rel="self" type="application/rss+xml"/>
 <description>Plain, honest notes on credible impact evaluation and measurement in education.</description>
 <generator>quarto-1.10.19</generator>
-<lastBuildDate>Thu, 01 Oct 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 08 Oct 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Difference-in-differences and the leap of faith you can photograph</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/parallel-trends/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>If you read education policy studies, you have met this design more than any other, whether or not the paper said its name. A state adopts a policy and its neighbors don’t. Compare the change in the adopting state to the change in the others, and the difference of those differences is the estimate. Two subtractions: the first removes everything permanently different about the state, the second removes everything that happened to everyone that year.</p>
+<p>It is older than it looks. In the 1850s, <a href="https://en.wikipedia.org/wiki/John_Snow">John Snow</a> noticed that one London water company had moved its intake upstream of the sewage while a competitor serving the same neighborhoods had not, and compared how cholera deaths <em>changed</em> for the two sets of customers. He didn’t need the two customer groups to be identical. He needed something subtler, and that subtler thing is still the entire game.</p>
+<section id="the-assumption-you-cant-test" class="level2">
+<h2 class="anchored" data-anchor-id="the-assumption-you-cant-test">The assumption you can’t test</h2>
+<p>Difference-in-differences works only if, absent the policy, the two groups would have moved in parallel. Not been equal; moved in parallel. That counterfactual is unobservable by definition, which is worth sitting with for a second: the workhorse design of policy research rests on an assumption no dataset can verify. The first time this clicked for me, I thought I had misread it. A design this popular, resting on a leap of faith?</p>
+<p>The redeeming feature is that the leap of faith leaves footprints. If the two groups were moving in parallel for the five years <em>before</em> the policy, believing they would have continued for one more year is a small step. If their gap was already widening, the design is dead on arrival, and no regression rescues it.</p>
+</section>
+<section id="what-i-look-for-in-order" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-look-for-in-order">What I look for, in order</h2>
+<p><strong>The picture.</strong> Outcome over time, both groups, adoption year marked. A flat pre-policy gap is the design showing its work, the same way <a href="../../posts/rdd-credibility/">a discontinuity study owes you the scatter plot</a>. A paper that presents the two-by-two table of averages without the trend lines is asking you to take the photographable part on faith.</p>
+<p><strong>Why the policy happened.</strong> Policies are not raindrops; states adopt them in response to something. If a state passed a tutoring law <em>because</em> its scores were sliding, its trend was already different from its neighbors’, in exactly the way the design can’t absorb. The question “what prompted this policy, and was it moving the outcome already?” does more work than most robustness tables.</p>
+<p><strong>Who is in the comparison.</strong> “All other states” sounds neutral and rarely is. The honest version says why these comparisons and shows the result holds when you swap them, which is the same discipline as <a href="../../posts/matched-on-observables/">asking who got matched to whom</a>.</p>
+<p><strong>Staggered adoption, handled or not.</strong> When many states adopt in different years, the naive version quietly compares late adopters to early ones already treated, and the average can bend or even flip. The fixes exist and are standard now; a recent paper that doesn’t mention the issue is dating itself.</p>
+<p>None of this needs code to check, only <a href="../../posts/reading-evaluations/">the willingness to look for what’s missing</a>. Parallel trends really is a leap of faith. The good studies photograph the runway before they jump, and hand you the photo. The rest describe the feeling of flight.</p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>causal inference</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/parallel-trends/</guid>
+  <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>If colleges were employers, two-thirds of those we can audit would fail the government’s own fairness test</title>
   <dc:creator>Yuxia Liang</dc:creator>

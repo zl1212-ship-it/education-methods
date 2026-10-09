@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/parallel-trends/index.html",
       "/posts/four-fifths/index.html",
       "/posts/attrition/index.html",
       "/posts/preregistration/index.html",
