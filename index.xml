@@ -10,7 +10,39 @@
 <atom:link href="https://zl1212-ship-it.github.io/education-methods/index.xml" rel="self" type="application/rss+xml"/>
 <description>Plain, honest notes on credible impact evaluation and measurement in education.</description>
 <generator>quarto-1.10.19</generator>
-<lastBuildDate>Thu, 08 Oct 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 22 Oct 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>How I read a What Works Clearinghouse report (and what it can’t tell me)</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/reading-wwc/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The first time I used the <a href="https://ies.ed.gov/ncee/wwc/">What Works Clearinghouse</a> to check an intervention, I treated the rating like a verdict: positive means buy, nothing means skip. I read the same pages differently now, because I finally understood what question the WWC is actually answering. It is narrower than the name suggests, and knowing exactly how narrow is what makes the reports useful.</p>
+<p>The WWC reviews studies of an intervention and rates the <em>evidence</em>, not the intervention. Its reviewers ask: were these studies designed so that the measured effect is believably the program’s doing? That is an internal-validity question, the same one this blog keeps circling: <a href="../../posts/attrition/">randomization held together by low attrition</a>, <a href="../../posts/01-baseline-table/">groups equivalent at baseline</a>, outcomes measured properly. A strong rating means “this evidence would survive a skeptic.” It does not mean “this will work in your district.”</p>
+<section id="the-order-i-read-in-now" class="level2">
+<h2 class="anchored" data-anchor-id="the-order-i-read-in-now">The order I read in now</h2>
+<p><strong>Start at the bottom: how many studies?</strong> This is the number people skip, and it reframes everything else. An intervention can carry a positive rating on the strength of one qualifying study, sometimes with a few hundred students. That is not a scandal; a single good study beats ten bad ones. But “positive, based on one study in one city” and “positive, based on twelve studies across three grade bands” are different bets, and the rating alone won’t tell you which you’re holding.</p>
+<p><strong>Then the size, translated.</strong> The WWC reports effects in an “improvement index”: where the average treated student would land in the comparison group’s distribution, expressed in percentile points. Plus four means the median kid moves to the 54th percentile. It is <a href="../../posts/02-effect-sizes-wwc/">an effect size wearing friendlier clothes</a>, and the friendly clothes make it easy to forget that plus four is modest, and that plus four <em>on average</em> contains classrooms where nothing moved.</p>
+<p><strong>Then who was studied.</strong> Grade levels, student populations, settings. The report lists them plainly, and the list is where “works” quietly becomes “worked, for someone.” An intervention validated on ninth-grade English learners in urban districts is a hypothesis, not a finding, about your rural fourth grade.</p>
+<p><strong>Only then the rating.</strong> By this point it mostly confirms what the study count and design details already told you.</p>
+</section>
+<section id="what-the-label-cant-carry" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-label-cant-carry">What the label can’t carry</h2>
+<p>Three things, honestly. Most interventions you look up will have <em>no</em> studies meeting standards, and <a href="../../posts/null-results/">absence of evidence is not evidence of absence</a>; it usually means nobody has funded a rigorous test yet. The reports say little about cost, training burden, or what implementation actually took, which is where programs live or die in practice. And a review can only be as current as the literature; a rating from studies a decade old describes a program as it was then.</p>
+<p>None of this is a complaint. A nutrition label doesn’t cook dinner either. The WWC does one hard thing well, filtering evidence through <a href="../../posts/reading-evaluations/">the same checks I’d want to run myself</a>, and reading it with the grain of that one thing, instead of as a verdict, is what it took me embarrassingly long to learn.</p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for WWC-aligned baseline-equivalence tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>impact evaluation</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/reading-wwc/</guid>
+  <pubDate>Thu, 22 Oct 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Difference-in-differences and the leap of faith you can photograph</title>
   <dc:creator>Yuxia Liang</dc:creator>
