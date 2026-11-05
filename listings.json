@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/power-without-formulas/index.html",
       "/posts/reading-wwc/index.html",
       "/posts/parallel-trends/index.html",
       "/posts/four-fifths/index.html",
@@ -12,14 +13,14 @@
       "/posts/matched-on-observables/index.html",
       "/posts/reading-evaluations/index.html",
       "/posts/composite-verdict/index.html",
-      "/posts/controls-collider/index.html",
       "/posts/03-measurement-before-models/index.html",
-      "/posts/value-added-scores/index.html",
       "/posts/02-effect-sizes-wwc/index.html",
-      "/posts/01-baseline-table/index.html",
-      "/posts/measurement-invariance/index.html",
       "/posts/clustering-independence/index.html",
-      "/posts/text-classifier-error/index.html"
+      "/posts/measurement-invariance/index.html",
+      "/posts/01-baseline-table/index.html",
+      "/posts/text-classifier-error/index.html",
+      "/posts/value-added-scores/index.html",
+      "/posts/controls-collider/index.html"
     ]
   }
 ]

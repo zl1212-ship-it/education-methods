@@ -9,8 +9,47 @@
 <link>https://zl1212-ship-it.github.io/education-methods/</link>
 <atom:link href="https://zl1212-ship-it.github.io/education-methods/index.xml" rel="self" type="application/rss+xml"/>
 <description>Plain, honest notes on credible impact evaluation and measurement in education.</description>
-<generator>quarto-1.10.19</generator>
-<lastBuildDate>Thu, 22 Oct 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.11.9</generator>
+<lastBuildDate>Thu, 05 Nov 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Why a 2,000-student study can be too small</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/power-without-formulas/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Picture a proposed study that sounds huge: two thousand students, ten schools, half the schools getting the program. Then ask how many <em>schools</em> there are. If the program is delivered school-wide, the study has ten units that matter, not two thousand, and an experiment with ten units is small no matter how many students it counts.</p>
+<p>That day rearranged how I read evaluations, so here is the idea without any formulas.</p>
+<section id="what-power-is" class="level2">
+<h2 class="anchored" data-anchor-id="what-power-is">What power is</h2>
+<p>Power is your study’s ability to see an effect that is really there. An underpowered study pointed at a real, working program will still, most of the time, report “no significant effect,” not because the program failed but because the camera’s shutter was too slow for the light. When <a href="../../posts/null-results/">I wrote about null results</a>, the wide-interval null, the kind that can’t tell “small effect” from “nothing,” is exactly what underpowering produces. And it is common: across <a href="https://journals.sagepub.com/doi/10.3102/0013189X19832850">141 large education RCTs</a>, the average confidence interval spanned 0.30 standard deviations, wide enough to hide almost any plausible program effect inside it.</p>
+</section>
+<section id="why-headcounts-mislead" class="level2">
+<h2 class="anchored" data-anchor-id="why-headcounts-mislead">Why headcounts mislead</h2>
+<p>Students arrive in classrooms and schools, and <a href="../../posts/clustering-independence/">students who share a school share far more than a mailing address</a>. When the program is assigned at the school level, the effective size of the study sits much closer to the number of schools than the number of children. This is the single most expensive fact in education research, because schools are what cost money to recruit. It is also why “we studied 2,000 students” and “we studied ten schools” can be the same sentence, and only one of them sounds impressive.</p>
+<p>The second quiet drain is the target. Education effects are mostly small; that same 141-trial review found an average around 0.06 standard deviations. A study powered to detect a 0.5 SD effect is powered for a miracle, and when no miracle occurs, it reports nothing, informatively about miracles and uninformatively about the program.</p>
+</section>
+<section id="the-three-levers-that-actually-help" class="level2">
+<h2 class="anchored" data-anchor-id="the-three-levers-that-actually-help">The three levers that actually help</h2>
+<p><strong>More clusters, not more kids.</strong> Twenty schools with fifty students each beats ten schools with two hundred, nearly always. Painful, because it is the expensive direction.</p>
+<p><strong>A good baseline measure.</strong> A pretest that predicts the outcome soaks up noise and can buy the equivalent of many schools’ worth of power for the cost of one more data collection. This is the least glamorous, best bargain in study design, and it is also why <a href="../../posts/01-baseline-table/">the baseline table</a> exists in the first place.</p>
+<p><strong>An honest target effect.</strong> Pick the smallest effect that would still matter for a real decision, and power for that. If the resulting study is unaffordable, that is not the math being mean; that is the design telling you to change something before, rather than after, spending the money.</p>
+</section>
+<section id="the-thirty-second-readers-version" class="level2">
+<h2 class="anchored" data-anchor-id="the-thirty-second-readers-version">The thirty-second reader’s version</h2>
+<p>When a report says “no significant effect,” find what effect the study was <em>built</em> to detect; the phrase to search for is “minimum detectable effect” or “power.” If it was powered only for large effects, its null mostly means “we can rule out miracles,” which you already believed. And when a proposal lands on your desk with a proud headcount, ask the same question: how many schools?</p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables, and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>impact evaluation</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/power-without-formulas/</guid>
+  <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>How I read a What Works Clearinghouse report (and what it can’t tell me)</title>
   <dc:creator>Yuxia Liang</dc:creator>
@@ -384,130 +423,6 @@
   <pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>More controls ≠ less bias: the variables you should never put in your model</title>
-  <dc:creator>Yuxia Liang</dc:creator>
-  <link>https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Okay so. Reviewers often ask for one more control. You add the variable, the coefficient changes, and it is tempting to take the change as proof the variable mattered.</p>
-<p>It is not proof the variable mattered. It took me way longer than I’d like to admit to get that.</p>
-<p>Adding a control and watching the number jump feels productive. It feels careful. But a number moving only tells you a number moved. It doesn’t tell you whether you got closer to the truth or further from it. That depends on what the variable actually is, and “just throw in more controls” quietly lumps together three things that behave nothing alike.</p>
-<section id="three-reasons-a-variable-is-in-your-model" class="level2">
-<h2 class="anchored" data-anchor-id="three-reasons-a-variable-is-in-your-model">Three reasons a variable is in your model</h2>
-<p>One: it’s a <strong>confounder</strong>. Something that causes both who got treated <em>and</em> the outcome. Pretest scores, if the higher scoring kids were also more likely to get the program. You want these in the model. Leaving them out is the thing everyone’s (rightly) scared of.</p>
-<p>Two: it’s a <strong>mediator</strong>. Something the treatment causes, which then moves the outcome. It’s part of how the program works. Control for it and you’re literally subtracting off a piece of the effect you came to measure.</p>
-<p>Three: it’s a <strong>collider</strong>. The weird one. It’s a shared <em>consequence</em> of two things, and it sits there harmlessly until you condition on it, at which point it invents a correlation that was never real.</p>
-<p>“Control for everything you can” treats all three the same. Two of them make your answer worse.</p>
-</section>
-<section id="just-draw-the-arrows" class="level2">
-<h2 class="anchored" data-anchor-id="just-draw-the-arrows">Just draw the arrows</h2>
-<p>This is less philosophical than it sounds. Sketch what causes what (a DAG, if we’re being formal). Then the rule is basically mechanical: block the paths that sneak in <em>through</em> the treatment, and leave alone anything the treatment causes or anything two variables jointly cause.</p>
-<p>A reviewer saying “control for X” is making a guess about where X lives on that picture. It’s not a command. Go look at where it actually sits.</p>
-</section>
-<section id="the-one-that-got-me" class="level2">
-<h2 class="anchored" data-anchor-id="the-one-that-got-me">The one that got me</h2>
-<p>Say you’re evaluating a tutoring program and your outcome is test scores. Being responsible, you decide to control for student motivation. Reasonable, except you measured motivation <em>after</em> the program ran. Which means the program probably moved it. So now motivation is downstream of the treatment, and controlling for it shaves off exactly the part of the effect that went “kids got more into it, then did better.” You conclude tutoring barely did anything.</p>
-<p>It did something. You just deleted the evidence. And it felt like diligence the whole time, because, again, the coefficient moved.</p>
-</section>
-<section id="watch-it-happen" class="level2">
-<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
-<p>I simulated this so it’s not just me asserting things. True total effect of the program: 8.5. There’s a trait <code>C</code> that drives both treatment and the outcome (a real confounder), and <code>M</code> is motivation measured after the program (a mediator).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Estimand: total effect of `treat` on `Y` (simulated; true value = 8.5)</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> treat))[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"treat"</span>]          <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># naive</span></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> treat <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> C))[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"treat"</span>]      <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># adjust for the confounder</span></span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> treat <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> C <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> M))[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"treat"</span>]  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># also adjust for the post treatment mediator</span></span></code></pre></div></div>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Model</th>
-<th style="text-align: right;">Estimate</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Naive (<code>Y ~ treat</code>)</td>
-<td style="text-align: right;"><strong>11.46</strong></td>
-</tr>
-<tr class="even">
-<td>+ confounder (<code>Y ~ treat + C</code>)</td>
-<td style="text-align: right;"><strong>8.61</strong></td>
-</tr>
-<tr class="odd">
-<td>+ mediator too (<code>Y ~ treat + C + M</code>)</td>
-<td style="text-align: right;"><strong>3.99</strong></td>
-</tr>
-</tbody>
-</table>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/fig-overcontrol.png" class="img-fluid figure-img"></p>
-<figcaption>Three estimates of the program effect; only adjusting for the confounder recovers the truth.</figcaption>
-</figure>
-</div>
-<p>The naive number is too big because treated kids started ahead. Adjust for the confounder and it snaps to 8.61, basically the truth. Then you add the after the fact mediator and it falls to 3.99, because you just controlled away the thing the program works through. The model with the <em>most</em> controls is the most wrong. That’s the whole point.</p>
-</section>
-<section id="what-i-actually-do-now" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-actually-do-now">What I actually do now</h2>
-<ul>
-<li>Sketch the DAG before I touch the model. A bad drawing on a receipt counts.</li>
-<li>Only control for things measured <em>before</em> treatment.</li>
-<li>If a variable was measured after the treatment, I treat it as off limits until the picture tells me otherwise.</li>
-<li>For every control, I make myself say which of the three it is. If I can’t, it doesn’t go in.</li>
-</ul>
-<p>I’m not against controls. I’m anti “more controls = more rigor,” because that one’s just false, and it’s the kind of false that looks like care.</p>
-<hr>
-<p><em>I’m building <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for WWC-aligned baseline equivalence, and a cohort course on running education evaluations you can actually trust. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if that’s your thing.</em></p>
-
-
-</section>
-
- ]]></description>
-  <category>causal inference</category>
-  <guid>https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/</guid>
-  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Measurement before models: the check most evaluations skip</title>
   <dc:creator>Yuxia Liang</dc:creator>
   <link>https://zl1212-ship-it.github.io/education-methods/posts/03-measurement-before-models/</link>
@@ -606,77 +521,6 @@ font-style: inherit;"># psych::fa.parallel(items) # how many dimensions are actu
   <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)</title>
-  <dc:creator>Yuxia Liang</dc:creator>
-  <link>https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Somewhere right now a teacher is being handed a number that says she went from the 40th percentile to the 70th in a single year, and a district is quietly deciding what that number says about her. Maybe a bonus. Maybe a “see, the system works.”</p>
-<p>I want to talk about how little that number might actually be saying, because the people on the other end of it don’t get to see the error bars.</p>
-<section id="what-its-trying-to-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-its-trying-to-do">What it’s trying to do</h2>
-<p>A value added model starts from a fair idea. Predict each kid’s score from where they started and a few covariates, and credit the teacher with the part that beat the prediction. Net out the head start, reward the gain. I don’t think the goal is wrong.</p>
-<p>The problem is that the teacher’s real contribution is <em>small</em> next to everything else shoving those scores around, and the one thing the model can’t fully scrub out is the biggest one: kids are not handed to teachers at random.</p>
-</section>
-<section id="whats-actually-inside-the-score" class="level2">
-<h2 class="anchored" data-anchor-id="whats-actually-inside-the-score">What’s actually inside the score</h2>
-<p>The number says “effectiveness,” but it’s carrying a lot of passengers. Some of it is real teaching. Some of it is sorting, because if the stronger or better supported kids keep landing with certain teachers, adjusting for prior scores shrinks that bias but never kills it, and whatever you didn’t measure rides straight through. Some of it is test measurement error, which goes in one end and comes out the other as “effectiveness.” Some of it is just small samples, a teacher judged on one or two classrooms, where a couple of unusual kids swing the whole thing. And some of it is the test’s scale.</p>
-<p>Stack all of that up and the year to year stability of these scores tends to be modest, well below what a high stakes ranking quietly assumes.</p>
-</section>
-<section id="watch-it-happen" class="level2">
-<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
-<p>I gave 300 simulated teachers a fixed, unchanging true effectiveness. It does not move. The only thing that changes between year one and year two is noise: small classes, test error, the luck of the draw.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">vam1 <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> mu <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> noise   <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># year 1 estimate</span></span>
-<span id="cb1-2">vam2 <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> mu <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> noise   <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># year 2 estimate, same true mu, fresh noise</span></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cor</span>(vam1, vam2)      <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># year to year reliability</span></span></code></pre></div></div>
-<p>The year to year reliability comes out at <strong>0.47</strong>. Of the teachers in the bottom quartile one year, <strong>23% land above the median the next</strong>, same people, same skill. And a representative teacher slides from the <strong>42nd to the 69th percentile</strong> between years without changing a thing.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/fig-vam-churn.png" class="img-fluid figure-img"></p>
-<figcaption>Year 1 vs year 2 percentile ranks scatter widely around the diagonal; true skill is unchanged.</figcaption>
-</figure>
-</div>
-<p>That jump from the low 40s to the high 60s, the one a district would frame as a turnaround? Pure noise. The scatter says it flatly: where a teacher ranks one year barely tells you where they’ll rank the next.</p>
-</section>
-<section id="and-then-it-gets-worse" class="level2">
-<h2 class="anchored" data-anchor-id="and-then-it-gets-worse">And then it gets worse</h2>
-<p>Once a number carries stakes, Campbell’s Law shows up: the moment a metric becomes a target, people optimize the metric instead of the thing it was supposed to stand for. Teaching to the test. Quietly steering which kids end up in your room. Narrowing what gets taught. The score stops being even the noisy proxy it started as.</p>
-</section>
-<section id="what-to-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
-<p>If you’re going to use these at all: report the uncertainty, and actually look at how wide it is. Shrink the estimates (empirical Bayes pulls noisy small sample numbers toward the average, which is exactly right when most of the spread is noise). Never hang a high stakes decision on a single year. And say out loud what you’re assuming about how kids got sorted to teachers, because the entire causal story rests on it.</p>
-<p>These scores can inform. Used as a one number verdict on someone’s career, they mostly measure which children walked through the door.</p>
-<hr>
-<p><em>This is where methods and policy collide, which is the part of this work I care about most. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
-
-
-</section>
-
- ]]></description>
-  <category>education policy</category>
-  <guid>https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/</guid>
-  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Effect sizes for education: what WWC actually wants</title>
   <dc:creator>Yuxia Liang</dc:creator>
   <link>https://zl1212-ship-it.github.io/education-methods/posts/02-effect-sizes-wwc/</link>
@@ -754,6 +598,203 @@ font-style: inherit;"># year to year reliability</span></span></code></pre></div
  ]]></description>
   <category>impact evaluation</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/02-effect-sizes-wwc/</guid>
+  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Students aren’t independent: the clustering mistake that makes everything look significant</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/clustering-independence/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Sixty schools, three thousand students, and a p value with more zeros after the decimal than you have ever earned honestly. It feels amazing. I’ve had that little rush, the one where you think <em>oh, this is going in the abstract.</em></p>
+<p>I’m sorry to tell you it’s frequently a lie, and the lie is baked into the very first thing you assumed: that you have three thousand independent pieces of information.</p>
+<p>You don’t.</p>
+<section id="why-n-3000-is-fiction" class="level2">
+<h2 class="anchored" data-anchor-id="why-n-3000-is-fiction">Why “n = 3,000” is fiction</h2>
+<p>Kids in the same school resemble each other. Same teachers, same building, same neighborhood, same everything. So each extra student from a school you’ve already sampled tells you less than a brand new, unrelated student would. Regression assumes your rows are independent. When they’re clustered and you shrug and run it anyway, your standard errors come out too small, your test statistics too big, and out the other end pours a parade of “significant” effects that are mostly just the model fooling itself.</p>
+<p>How much smaller depends on the intraclass correlation, the ICC, which is the share of the variation that lives <em>between</em> schools rather than within them. A little clustering barely dents you. A lot of it quietly guts your real sample size down toward the number of <em>schools</em> rather than the number of students.</p>
+</section>
+<section id="the-machinery-quickly" class="level2">
+<h2 class="anchored" data-anchor-id="the-machinery-quickly">The machinery, quickly</h2>
+<p>ICC measures how much students within a cluster move together. The design effect turns that into how badly your naive standard errors lie. Cluster robust standard errors and multilevel models are the two standard fixes (robust SEs patch the uncertainty; multilevel models patch it <em>and</em> let you study how schools differ). And if you’ve only got a handful of clusters, even robust SEs get shaky, and you reach for a wild cluster bootstrap.</p>
+</section>
+<section id="watch-it-happen" class="level2">
+<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
+<p>This is my favorite part, because it’s so stark. Sixty schools, fifty kids each, a school level treatment, and a true effect of exactly zero. The within school correlation gives an ICC around 0.26, a design effect of roughly 14, so those 3,000 students carry about as much information as 210.</p>
+<p>One representative null study:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">m <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> treat, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> study)        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># student level, ignores clustering</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sqrt</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">diag</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">vcov</span>(m)))[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>]                          <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># naive SE</span></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sqrt</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">diag</span>(sandwich<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">vcovCL</span>(m, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">cluster =</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span>school)))[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>]  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># cluster robust SE</span></span></code></pre></div></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Standard error</th>
+<th style="text-align: right;">SE</th>
+<th style="text-align: right;">p value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Naive (student level)</td>
+<td style="text-align: right;">0.043</td>
+<td style="text-align: right;"><strong>&lt; 0.0001</strong></td>
+</tr>
+<tr class="even">
+<td>Cluster robust (school)</td>
+<td style="text-align: right;">0.157</td>
+<td style="text-align: right;"><strong>0.167</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Same estimate, same data. The naive version is screaming significance. The honest version shrugs, correctly, because there is nothing there.</p>
+<p>And it’s not one unlucky draw. Across 600 simulated null studies:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/clustering-independence/fig-falsepos.png" class="img-fluid figure-img"></p>
+<figcaption>Naive analysis calls 57% of null studies significant; cluster robust ~6%.</figcaption>
+</figure>
+</div>
+<p>The naive analysis declares a significant effect in <strong>57%</strong> of studies where the truth is <em>nothing</em>. 57 percent. The cluster robust version sits at 6%, right about the 5% you signed up for. If you ignore clustering, “p &lt; .05” doesn’t mean what you think it means. It barely means anything.</p>
+</section>
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
+<p>Cluster at the level treatment was actually assigned (rolled out by school? then school, not student). Report the ICC so your reader knows how much this even matters here. Watch out when you’ve only got a few clusters. And if you genuinely care about how schools differ, not just correcting for it, go multilevel.</p>
+<p>Before you celebrate a tiny p value, just ask where the rows came from. In education they’re almost always nested, which means “n” is not the number of students, and significance computed as if it were is significance you didn’t earn.</p>
+<hr>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and I’m building a cohort course on running education evaluations you can actually trust. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>impact evaluation</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/clustering-independence/</guid>
+  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Before you compare two groups’ survey scores, check this</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/measurement-invariance/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Here’s a sentence that should make you flinch: “Group A scored higher on the belonging scale, so Group A feels more like they belong.”</p>
+<p>I have a soft spot for this trap, mostly because I’ve walked into it myself. It sounds airtight. Five items, two groups, one mean is higher, write it up. But there’s a premise buried in there that nobody says out loud, and the whole conclusion is sitting on top of it.</p>
+<p>The premise is that the scale <em>means the same thing</em> to both groups.</p>
+<section id="the-lens-thing" class="level2">
+<h2 class="anchored" data-anchor-id="the-lens-thing">The lens thing</h2>
+<p>I think of a scale as a lens you look at a construct through. Comparing two groups’ scores assumes they’re looking through the <em>same</em> lens. If the lenses are ground differently, then comparing what each group “sees” tells you about the lenses, not the thing you were trying to look at. The technical name for “same lens” is measurement invariance, and it is not a given. It’s a thing you check.</p>
+</section>
+<section id="how-much-youre-allowed-to-say" class="level2">
+<h2 class="anchored" data-anchor-id="how-much-youre-allowed-to-say">How much you’re allowed to say</h2>
+<p>Invariance comes in levels, and each one buys you a different comparison. Roughly: if the same items load on the same factor in both groups (configural), you’ve got the basic shape. If the loadings are equal too (metric), you can start comparing <em>relationships</em> across groups. And only if the intercepts are also equal (scalar) are you actually allowed to compare means.</p>
+<p>That last one is the level your group comparison quietly assumed it had. You test for it with a multigroup CFA. And when a single item behaves differently across groups, that’s DIF, differential item functioning, which is a fancy way of saying the lens has a chip in it right there.</p>
+</section>
+<section id="watch-it-happen" class="level2">
+<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
+<p>Two groups, a 5-item engagement scale, and here’s the thing: I built them to have <em>identical</em> true engagement. Same distribution, no real difference. Then I made one item (item 5) read systematically lower for group B at the same level of engagement. Textbook DIF. Then I just… compared the groups, the way anyone would, with a standardized mean difference:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(baselinr)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">hedges_g</span>(theta, group)        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># the true latent difference</span></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">hedges_g</span>(scale_full, group)   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># observed, all 5 items</span></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">hedges_g</span>(scale_inv, group)    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># observed, dropping the one DIF item</span></span></code></pre></div></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>What’s compared</th>
+<th style="text-align: right;">Hedges’ g</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>True latent engagement</td>
+<td style="text-align: right;"><strong>−0.03</strong> (there is no real difference)</td>
+</tr>
+<tr class="even">
+<td>Observed 5-item scale</td>
+<td style="text-align: right;"><strong>−0.25</strong></td>
+</tr>
+<tr class="odd">
+<td>Scale without the DIF item</td>
+<td style="text-align: right;"><strong>−0.02</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/measurement-invariance/fig-dif.png" class="img-fluid figure-img"></p>
+<figcaption>Per item group difference: items 1–4 are flat, item 5 carries the whole gap.</figcaption>
+</figure>
+</div>
+<p>The groups are equal. I promise, I made them that way. And the full scale still reports g = −0.25, which most people would write up as “Group B is less engaged.” The figure shows the crime scene: items 1 through 4 are flat, and item 5 is doing <em>all</em> of the work, off by −1.22 on its own. Pull that one item and the difference evaporates to −0.02.</p>
+<p>Nothing about engagement happened here. The ruler happened.</p>
+</section>
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
+<p>Test invariance before you compare means, every time you’re comparing a latent thing across groups. If it fails, don’t throw the whole comparison out, go find the items that broke (the DIF ones). And then report partial invariance honestly, anchored on the items that held. It’s less clean than a single triumphant p value. It’s also the difference between a finding about students and a finding about your questionnaire.</p>
+<hr>
+<p><em>Measurement is the thing I get genuinely nerdy about. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and I’m building a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if you want in.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>measurement</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/measurement-invariance/</guid>
   <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
@@ -964,203 +1005,6 @@ font-style: inherit;">"ell"</span>)))</span></code></pre></div></div>
   <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Before you compare two groups’ survey scores, check this</title>
-  <dc:creator>Yuxia Liang</dc:creator>
-  <link>https://zl1212-ship-it.github.io/education-methods/posts/measurement-invariance/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Here’s a sentence that should make you flinch: “Group A scored higher on the belonging scale, so Group A feels more like they belong.”</p>
-<p>I have a soft spot for this trap, mostly because I’ve walked into it myself. It sounds airtight. Five items, two groups, one mean is higher, write it up. But there’s a premise buried in there that nobody says out loud, and the whole conclusion is sitting on top of it.</p>
-<p>The premise is that the scale <em>means the same thing</em> to both groups.</p>
-<section id="the-lens-thing" class="level2">
-<h2 class="anchored" data-anchor-id="the-lens-thing">The lens thing</h2>
-<p>I think of a scale as a lens you look at a construct through. Comparing two groups’ scores assumes they’re looking through the <em>same</em> lens. If the lenses are ground differently, then comparing what each group “sees” tells you about the lenses, not the thing you were trying to look at. The technical name for “same lens” is measurement invariance, and it is not a given. It’s a thing you check.</p>
-</section>
-<section id="how-much-youre-allowed-to-say" class="level2">
-<h2 class="anchored" data-anchor-id="how-much-youre-allowed-to-say">How much you’re allowed to say</h2>
-<p>Invariance comes in levels, and each one buys you a different comparison. Roughly: if the same items load on the same factor in both groups (configural), you’ve got the basic shape. If the loadings are equal too (metric), you can start comparing <em>relationships</em> across groups. And only if the intercepts are also equal (scalar) are you actually allowed to compare means.</p>
-<p>That last one is the level your group comparison quietly assumed it had. You test for it with a multigroup CFA. And when a single item behaves differently across groups, that’s DIF, differential item functioning, which is a fancy way of saying the lens has a chip in it right there.</p>
-</section>
-<section id="watch-it-happen" class="level2">
-<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
-<p>Two groups, a 5-item engagement scale, and here’s the thing: I built them to have <em>identical</em> true engagement. Same distribution, no real difference. Then I made one item (item 5) read systematically lower for group B at the same level of engagement. Textbook DIF. Then I just… compared the groups, the way anyone would, with a standardized mean difference:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(baselinr)</span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">hedges_g</span>(theta, group)        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># the true latent difference</span></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">hedges_g</span>(scale_full, group)   <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># observed, all 5 items</span></span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">hedges_g</span>(scale_inv, group)    <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># observed, dropping the one DIF item</span></span></code></pre></div></div>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>What’s compared</th>
-<th style="text-align: right;">Hedges’ g</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>True latent engagement</td>
-<td style="text-align: right;"><strong>−0.03</strong> (there is no real difference)</td>
-</tr>
-<tr class="even">
-<td>Observed 5-item scale</td>
-<td style="text-align: right;"><strong>−0.25</strong></td>
-</tr>
-<tr class="odd">
-<td>Scale without the DIF item</td>
-<td style="text-align: right;"><strong>−0.02</strong></td>
-</tr>
-</tbody>
-</table>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/measurement-invariance/fig-dif.png" class="img-fluid figure-img"></p>
-<figcaption>Per item group difference: items 1–4 are flat, item 5 carries the whole gap.</figcaption>
-</figure>
-</div>
-<p>The groups are equal. I promise, I made them that way. And the full scale still reports g = −0.25, which most people would write up as “Group B is less engaged.” The figure shows the crime scene: items 1 through 4 are flat, and item 5 is doing <em>all</em> of the work, off by −1.22 on its own. Pull that one item and the difference evaporates to −0.02.</p>
-<p>Nothing about engagement happened here. The ruler happened.</p>
-</section>
-<section id="what-to-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
-<p>Test invariance before you compare means, every time you’re comparing a latent thing across groups. If it fails, don’t throw the whole comparison out, go find the items that broke (the DIF ones). And then report partial invariance honestly, anchored on the items that held. It’s less clean than a single triumphant p value. It’s also the difference between a finding about students and a finding about your questionnaire.</p>
-<hr>
-<p><em>Measurement is the thing I get genuinely nerdy about. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and I’m building a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if you want in.</em></p>
-
-
-</section>
-
- ]]></description>
-  <category>measurement</category>
-  <guid>https://zl1212-ship-it.github.io/education-methods/posts/measurement-invariance/</guid>
-  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Students aren’t independent: the clustering mistake that makes everything look significant</title>
-  <dc:creator>Yuxia Liang</dc:creator>
-  <link>https://zl1212-ship-it.github.io/education-methods/posts/clustering-independence/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Sixty schools, three thousand students, and a p value with more zeros after the decimal than you have ever earned honestly. It feels amazing. I’ve had that little rush, the one where you think <em>oh, this is going in the abstract.</em></p>
-<p>I’m sorry to tell you it’s frequently a lie, and the lie is baked into the very first thing you assumed: that you have three thousand independent pieces of information.</p>
-<p>You don’t.</p>
-<section id="why-n-3000-is-fiction" class="level2">
-<h2 class="anchored" data-anchor-id="why-n-3000-is-fiction">Why “n = 3,000” is fiction</h2>
-<p>Kids in the same school resemble each other. Same teachers, same building, same neighborhood, same everything. So each extra student from a school you’ve already sampled tells you less than a brand new, unrelated student would. Regression assumes your rows are independent. When they’re clustered and you shrug and run it anyway, your standard errors come out too small, your test statistics too big, and out the other end pours a parade of “significant” effects that are mostly just the model fooling itself.</p>
-<p>How much smaller depends on the intraclass correlation, the ICC, which is the share of the variation that lives <em>between</em> schools rather than within them. A little clustering barely dents you. A lot of it quietly guts your real sample size down toward the number of <em>schools</em> rather than the number of students.</p>
-</section>
-<section id="the-machinery-quickly" class="level2">
-<h2 class="anchored" data-anchor-id="the-machinery-quickly">The machinery, quickly</h2>
-<p>ICC measures how much students within a cluster move together. The design effect turns that into how badly your naive standard errors lie. Cluster robust standard errors and multilevel models are the two standard fixes (robust SEs patch the uncertainty; multilevel models patch it <em>and</em> let you study how schools differ). And if you’ve only got a handful of clusters, even robust SEs get shaky, and you reach for a wild cluster bootstrap.</p>
-</section>
-<section id="watch-it-happen" class="level2">
-<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
-<p>This is my favorite part, because it’s so stark. Sixty schools, fifty kids each, a school level treatment, and a true effect of exactly zero. The within school correlation gives an ICC around 0.26, a design effect of roughly 14, so those 3,000 students carry about as much information as 210.</p>
-<p>One representative null study:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">m <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">lm</span>(y <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> treat, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> study)        <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># student level, ignores clustering</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sqrt</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">diag</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">vcov</span>(m)))[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"treat"</span>]                          <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># naive SE</span></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">sqrt</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">diag</span>(sandwich<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">vcovCL</span>(m, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">cluster =</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span>school)))[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"treat"</span>]  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># cluster robust SE</span></span></code></pre></div></div>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Standard error</th>
-<th style="text-align: right;">SE</th>
-<th style="text-align: right;">p value</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Naive (student level)</td>
-<td style="text-align: right;">0.043</td>
-<td style="text-align: right;"><strong>&lt; 0.0001</strong></td>
-</tr>
-<tr class="even">
-<td>Cluster robust (school)</td>
-<td style="text-align: right;">0.157</td>
-<td style="text-align: right;"><strong>0.167</strong></td>
-</tr>
-</tbody>
-</table>
-<p>Same estimate, same data. The naive version is screaming significance. The honest version shrugs, correctly, because there is nothing there.</p>
-<p>And it’s not one unlucky draw. Across 600 simulated null studies:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/clustering-independence/fig-falsepos.png" class="img-fluid figure-img"></p>
-<figcaption>Naive analysis calls 57% of null studies significant; cluster robust ~6%.</figcaption>
-</figure>
-</div>
-<p>The naive analysis declares a significant effect in <strong>57%</strong> of studies where the truth is <em>nothing</em>. 57 percent. The cluster robust version sits at 6%, right about the 5% you signed up for. If you ignore clustering, “p &lt; .05” doesn’t mean what you think it means. It barely means anything.</p>
-</section>
-<section id="what-to-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
-<p>Cluster at the level treatment was actually assigned (rolled out by school? then school, not student). Report the ICC so your reader knows how much this even matters here. Watch out when you’ve only got a few clusters. And if you genuinely care about how schools differ, not just correcting for it, go multilevel.</p>
-<p>Before you celebrate a tiny p value, just ask where the rows came from. In education they’re almost always nested, which means “n” is not the number of students, and significance computed as if it were is significance you didn’t earn.</p>
-<hr>
-<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and I’m building a cohort course on running education evaluations you can actually trust. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
-
-
-</section>
-
- ]]></description>
-  <category>impact evaluation</category>
-  <guid>https://zl1212-ship-it.github.io/education-methods/posts/clustering-independence/</guid>
-  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
   <title>Your text classifier is 85% accurate. That error doesn’t vanish when you run the regression.</title>
   <dc:creator>Yuxia Liang</dc:creator>
   <link>https://zl1212-ship-it.github.io/education-methods/posts/text-classifier-error/</link>
@@ -1261,6 +1105,201 @@ font-style: inherit;"># 85% accurate overall, but worse for one group</span></sp
  ]]></description>
   <category>measurement</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/text-classifier-error/</guid>
+  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>What a ‘teacher effectiveness’ score actually measures (and what it doesn’t)</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Somewhere right now a teacher is being handed a number that says she went from the 40th percentile to the 70th in a single year, and a district is quietly deciding what that number says about her. Maybe a bonus. Maybe a “see, the system works.”</p>
+<p>I want to talk about how little that number might actually be saying, because the people on the other end of it don’t get to see the error bars.</p>
+<section id="what-its-trying-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-its-trying-to-do">What it’s trying to do</h2>
+<p>A value added model starts from a fair idea. Predict each kid’s score from where they started and a few covariates, and credit the teacher with the part that beat the prediction. Net out the head start, reward the gain. I don’t think the goal is wrong.</p>
+<p>The problem is that the teacher’s real contribution is <em>small</em> next to everything else shoving those scores around, and the one thing the model can’t fully scrub out is the biggest one: kids are not handed to teachers at random.</p>
+</section>
+<section id="whats-actually-inside-the-score" class="level2">
+<h2 class="anchored" data-anchor-id="whats-actually-inside-the-score">What’s actually inside the score</h2>
+<p>The number says “effectiveness,” but it’s carrying a lot of passengers. Some of it is real teaching. Some of it is sorting, because if the stronger or better supported kids keep landing with certain teachers, adjusting for prior scores shrinks that bias but never kills it, and whatever you didn’t measure rides straight through. Some of it is test measurement error, which goes in one end and comes out the other as “effectiveness.” Some of it is just small samples, a teacher judged on one or two classrooms, where a couple of unusual kids swing the whole thing. And some of it is the test’s scale.</p>
+<p>Stack all of that up and the year to year stability of these scores tends to be modest, well below what a high stakes ranking quietly assumes.</p>
+</section>
+<section id="watch-it-happen" class="level2">
+<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
+<p>I gave 300 simulated teachers a fixed, unchanging true effectiveness. It does not move. The only thing that changes between year one and year two is noise: small classes, test error, the luck of the draw.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">vam1 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> mu <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> noise   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># year 1 estimate</span></span>
+<span id="cb1-2">vam2 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> mu <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> noise   <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># year 2 estimate, same true mu, fresh noise</span></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">cor</span>(vam1, vam2)      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># year to year reliability</span></span></code></pre></div></div>
+<p>The year to year reliability comes out at <strong>0.47</strong>. Of the teachers in the bottom quartile one year, <strong>23% land above the median the next</strong>, same people, same skill. And a representative teacher slides from the <strong>42nd to the 69th percentile</strong> between years without changing a thing.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/fig-vam-churn.png" class="img-fluid figure-img"></p>
+<figcaption>Year 1 vs year 2 percentile ranks scatter widely around the diagonal; true skill is unchanged.</figcaption>
+</figure>
+</div>
+<p>That jump from the low 40s to the high 60s, the one a district would frame as a turnaround? Pure noise. The scatter says it flatly: where a teacher ranks one year barely tells you where they’ll rank the next.</p>
+</section>
+<section id="and-then-it-gets-worse" class="level2">
+<h2 class="anchored" data-anchor-id="and-then-it-gets-worse">And then it gets worse</h2>
+<p>Once a number carries stakes, Campbell’s Law shows up: the moment a metric becomes a target, people optimize the metric instead of the thing it was supposed to stand for. Teaching to the test. Quietly steering which kids end up in your room. Narrowing what gets taught. The score stops being even the noisy proxy it started as.</p>
+</section>
+<section id="what-to-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-do">What to do</h2>
+<p>If you’re going to use these at all: report the uncertainty, and actually look at how wide it is. Shrink the estimates (empirical Bayes pulls noisy small sample numbers toward the average, which is exactly right when most of the spread is noise). Never hang a high stakes decision on a single year. And say out loud what you’re assuming about how kids got sorted to teachers, because the entire causal story rests on it.</p>
+<p>These scores can inform. Used as a one number verdict on someone’s career, they mostly measure which children walked through the door.</p>
+<hr>
+<p><em>This is where methods and policy collide, which is the part of this work I care about most. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>education policy</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/value-added-scores/</guid>
+  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>More controls ≠ less bias: the variables you should never put in your model</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Okay so. Reviewers often ask for one more control. You add the variable, the coefficient changes, and it is tempting to take the change as proof the variable mattered.</p>
+<p>It is not proof the variable mattered. It took me way longer than I’d like to admit to get that.</p>
+<p>Adding a control and watching the number jump feels productive. It feels careful. But a number moving only tells you a number moved. It doesn’t tell you whether you got closer to the truth or further from it. That depends on what the variable actually is, and “just throw in more controls” quietly lumps together three things that behave nothing alike.</p>
+<section id="three-reasons-a-variable-is-in-your-model" class="level2">
+<h2 class="anchored" data-anchor-id="three-reasons-a-variable-is-in-your-model">Three reasons a variable is in your model</h2>
+<p>One: it’s a <strong>confounder</strong>. Something that causes both who got treated <em>and</em> the outcome. Pretest scores, if the higher scoring kids were also more likely to get the program. You want these in the model. Leaving them out is the thing everyone’s (rightly) scared of.</p>
+<p>Two: it’s a <strong>mediator</strong>. Something the treatment causes, which then moves the outcome. It’s part of how the program works. Control for it and you’re literally subtracting off a piece of the effect you came to measure.</p>
+<p>Three: it’s a <strong>collider</strong>. The weird one. It’s a shared <em>consequence</em> of two things, and it sits there harmlessly until you condition on it, at which point it invents a correlation that was never real.</p>
+<p>“Control for everything you can” treats all three the same. Two of them make your answer worse.</p>
+</section>
+<section id="just-draw-the-arrows" class="level2">
+<h2 class="anchored" data-anchor-id="just-draw-the-arrows">Just draw the arrows</h2>
+<p>This is less philosophical than it sounds. Sketch what causes what (a DAG, if we’re being formal). Then the rule is basically mechanical: block the paths that sneak in <em>through</em> the treatment, and leave alone anything the treatment causes or anything two variables jointly cause.</p>
+<p>A reviewer saying “control for X” is making a guess about where X lives on that picture. It’s not a command. Go look at where it actually sits.</p>
+</section>
+<section id="the-one-that-got-me" class="level2">
+<h2 class="anchored" data-anchor-id="the-one-that-got-me">The one that got me</h2>
+<p>Say you’re evaluating a tutoring program and your outcome is test scores. Being responsible, you decide to control for student motivation. Reasonable, except you measured motivation <em>after</em> the program ran. Which means the program probably moved it. So now motivation is downstream of the treatment, and controlling for it shaves off exactly the part of the effect that went “kids got more into it, then did better.” You conclude tutoring barely did anything.</p>
+<p>It did something. You just deleted the evidence. And it felt like diligence the whole time, because, again, the coefficient moved.</p>
+</section>
+<section id="watch-it-happen" class="level2">
+<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
+<p>I simulated this so it’s not just me asserting things. True total effect of the program: 8.5. There’s a trait <code>C</code> that drives both treatment and the outcome (a real confounder), and <code>M</code> is motivation measured after the program (a mediator).</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Estimand: total effect of `treat` on `Y` (simulated; true value = 8.5)</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> treat))[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>]          <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># naive</span></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> treat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> C))[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>]      <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># adjust for the confounder</span></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> treat <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> C <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> M))[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"treat"</span>]  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># also adjust for the post treatment mediator</span></span></code></pre></div></div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Model</th>
+<th style="text-align: right;">Estimate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Naive (<code>Y ~ treat</code>)</td>
+<td style="text-align: right;"><strong>11.46</strong></td>
+</tr>
+<tr class="even">
+<td>+ confounder (<code>Y ~ treat + C</code>)</td>
+<td style="text-align: right;"><strong>8.61</strong></td>
+</tr>
+<tr class="odd">
+<td>+ mediator too (<code>Y ~ treat + C + M</code>)</td>
+<td style="text-align: right;"><strong>3.99</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/fig-overcontrol.png" class="img-fluid figure-img"></p>
+<figcaption>Three estimates of the program effect; only adjusting for the confounder recovers the truth.</figcaption>
+</figure>
+</div>
+<p>The naive number is too big because treated kids started ahead. Adjust for the confounder and it snaps to 8.61, basically the truth. Then you add the after the fact mediator and it falls to 3.99, because you just controlled away the thing the program works through. The model with the <em>most</em> controls is the most wrong. That’s the whole point.</p>
+</section>
+<section id="what-i-actually-do-now" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-actually-do-now">What I actually do now</h2>
+<ul>
+<li>Sketch the DAG before I touch the model. A bad drawing on a receipt counts.</li>
+<li>Only control for things measured <em>before</em> treatment.</li>
+<li>If a variable was measured after the treatment, I treat it as off limits until the picture tells me otherwise.</li>
+<li>For every control, I make myself say which of the three it is. If I can’t, it doesn’t go in.</li>
+</ul>
+<p>I’m not against controls. I’m anti “more controls = more rigor,” because that one’s just false, and it’s the kind of false that looks like care.</p>
+<hr>
+<p><em>I’m building <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for WWC-aligned baseline equivalence, and a cohort course on running education evaluations you can actually trust. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if that’s your thing.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>causal inference</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/</guid>
   <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
