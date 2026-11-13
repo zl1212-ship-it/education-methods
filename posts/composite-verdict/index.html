@@ -49,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-9c98f21c26e62cbdfc45883b480c3e02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-86d01a451078f71662fa36760f71fc18.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -176,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>I keep telling people that a school rating depends on the weights inside the formula, and I realized recently that I had never actually watched it happen with numbers I could check. So I built the smallest real ranking I could.</p>
-<p>I took the eight public four-year universities in Washington, where I studied, and two numbers per school from the 2021 federal IPEDS collection. The first is the six-year graduation rate for bachelor’s students: of those who start, how many finish. The second is Pell share: what fraction of undergraduates receive a federal Pell grant, a rough marker of how many lower-income students a campus serves. Neither number is obscure and neither is controversial to care about. A public university is supposed to graduate its students, and it is supposed to be open to students without money.</p>
+<p>I took the eight public four-year universities in Washington and two numbers per school from the 2021 federal IPEDS collection. The first is the six-year graduation rate for bachelor’s students: of those who start, how many finish. The second is Pell share: what fraction of undergraduates receive a federal Pell grant, a rough marker of how many lower-income students a campus serves. Neither number is obscure and neither is controversial to care about. A public university is supposed to graduate its students, and it is supposed to be open to students without money.</p>
 <p>Then I did what every rating system does. I put the two on a common scale, blended them with a weight, and ranked. The only thing I varied was the weight, in five steps from all-graduation to all-Pell.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -186,8 +186,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="what-surprised-me" class="level2">
 <h2 class="anchored" data-anchor-id="what-surprised-me">What surprised me</h2>
-<p>I expected some reshuffling in the middle. I did not expect the list to nearly turn over. UW Seattle is first when the weight is on graduation (84% of its students finish, the highest here) and last when the weight is on Pell share (17% of its undergraduates receive Pell, the lowest here). Evergreen State is the exact mirror: last on one end, first on the other. These aren’t two rankings of quality and its absence. They are two different questions, and each school answers one of them well.</p>
-<p>The reason the reversal is so clean is worth stating: in this group of eight, the two measures are strongly negatively related. The campuses that graduate the largest share of students enroll the smallest share of Pell students. I don’t get to conclude much from eight schools about why that is, but it has an uncomfortable implication for anyone building a rating: there is no weight between these two numbers that is neutral. Every blend takes a side, quietly.</p>
+<p>I expected some reshuffling in the middle. I did not expect the list to nearly turn over. UW Seattle is first when the weight is on graduation (84% of its students finish, the highest here) and last when the weight is on Pell share (17% of its undergraduates receive Pell, the lowest here). Evergreen State is the exact mirror: last on one end, first on the other. The two lists answer two different questions.</p>
+<p>The reason the reversal is so clean is worth stating: in this group of eight, the two measures are strongly negatively related. The campuses that graduate the largest share of students enroll the smallest share of Pell students. I don’t get to conclude much from eight schools about why that is, but it has an uncomfortable implication for anyone building a rating: there is no weight between these two numbers that is neutral, so any blend of them leans toward one of the two goals.</p>
 </section>
 <section id="what-this-little-exercise-cant-say" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-little-exercise-cant-say">What this little exercise can’t say</h2>
@@ -200,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 <p>I’m working on audits of real rating and flagging systems with public data, and I’ll write them up here as they become shareable.</p>
 <p><em>Update, October 2026: the first of these is out. <a href="../../posts/four-fifths/">If colleges were employers, two-thirds of those we can audit would fail the government’s own fairness test</a>.</em></p>
 <p><em>The data (a <a href="wa_publics_2021.csv">small CSV</a> pulled from the Urban Institute’s public IPEDS API) and the figure script (<a href="make_figure.py"><code>make_figure.py</code></a>) are in this post’s folder; deleting the CSV and rerunning the script re-fetches the numbers.</em></p>
-<p><em>Related: <a href="../../posts/value-added-scores/">What a “teacher effectiveness” score actually measures (and what it doesn’t)</a>. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and am developing a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> to follow along.</em></p>
+<p><em>Related: <a href="../../posts/value-added-scores/">What a “teacher effectiveness” score actually measures (and what it doesn’t)</a>. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">Subscribe via RSS</a> to follow along.</em></p>
 
 
 </section>

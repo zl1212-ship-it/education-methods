@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yuxia Liang">
 <meta name="dcterms.date" content="2026-06-24">
-<meta name="description" content="Treating predicted labels as ground truth quietly biases everything downstream. With differential error it gets worse, and the accuracy number hides all of it.">
+<meta name="description" content="Treating predicted labels as ground truth biases the estimates built on them. When the errors differ across groups, the bias changes too, and an overall accuracy number can hide both.">
 
 <title>Your text classifier is 85% accurate. That error doesn’t vanish when you run the regression. – Education Methods</title>
 <style>
@@ -84,7 +84,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-9c98f21c26e62cbdfc45883b480c3e02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-86d01a451078f71662fa36760f71fc18.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -182,7 +182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div>
   <div class="description">
-    Treating predicted labels as ground truth quietly biases everything downstream. With differential error it gets worse, and the accuracy number hides all of it.
+    Treating predicted labels as ground truth biases the estimates built on them. When the errors differ across groups, the bias changes too, and an overall accuracy number can hide both.
   </div>
 </div>
 
@@ -222,8 +222,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="what-the-error-does-depends-on-what-kind-it-is" class="level2">
 <h2 class="anchored" data-anchor-id="what-the-error-does-depends-on-what-kind-it-is">What the error does depends on what kind it is</h2>
 <p>If the mistakes are just random (the classifier is equally clumsy everywhere), and the noisy variable is a predictor, the effect gets <strong>attenuated</strong>. Pulled toward zero. This is the part people get wrong in conversation, by the way. “It’s just noise, it averages out.” A regression coefficient on a mismeasured predictor does not average out. It shrinks.</p>
-<p>Differential error is the one that actually scares me. If the classifier is worse for some cases than others, in a way that’s tied to your outcome or your groups, the bias picks up a <em>direction</em>. You’re not just underestimating anymore. You can end up pointing the wrong way.</p>
-<p>Your setup is the textbook case: you predict “feedback specificity” from teacher comments, then relate it to student progress. Now suppose the model reads feedback from teachers of multilingual learners a little worse. That error is now braided into exactly the comparison you care about, and it doesn’t wash out. It bends the conclusion.</p>
+<p>Differential error is the one that actually scares me. If the classifier is worse for some cases than others, in a way that’s tied to your outcome or your groups, the bias picks up a <em>direction</em>. The estimate is no longer simply pulled toward zero; depending on how the errors line up, it can be pushed either way.</p>
+<p>Here is a setup where this matters: a model predicts “feedback specificity” from teacher comments, and the predictions are then related to student progress. Now suppose the model reads feedback from teachers of multilingual learners a little worse. That error then sits inside the very comparison the study cares about, and it doesn’t average out.</p>
 </section>
 <section id="watch-it-happen" class="level2">
 <h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
@@ -245,11 +245,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: right;"><strong>1.00</strong></td>
 </tr>
 <tr class="even">
-<td>Predicted — nondifferential error</td>
+<td>Predicted (nondifferential error)</td>
 <td style="text-align: right;"><strong>0.68</strong></td>
 </tr>
 <tr class="odd">
-<td>Predicted — differential error</td>
+<td>Predicted (differential error)</td>
 <td style="text-align: right;"><strong>0.72</strong></td>
 </tr>
 </tbody>
@@ -267,7 +267,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Keep a human labeled gold set, and not just for tuning. You need it to <em>measure</em> the error so you can correct for it later. Report classifier performance broken out by the groups you’ll compare, because “85% overall” is precisely where differential error hides. And then either propagate that uncertainty into the analysis or use an estimator built for predicted labels (there’s a small but real literature on inference with machine predicted variables now). Whatever you do, stop quietly swapping predictions in for observations and calling it done.</p>
 <p>Measure your measurement. Report it by group. Let the error into the model the same way it’s already, invisibly, in your data.</p>
 <hr>
-<p><em>This exact corner, where text models meet measurement error, is what I work on. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a> and I’m putting together a cohort course on credible evaluation and measurement in education. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">subscribe via RSS</a> if you want to follow along.</em></p>
+<p><em>This exact corner, where text models meet measurement error, is what I work on. I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">Subscribe via RSS</a> if you want to follow along.</em></p>
 
 
 </section>
