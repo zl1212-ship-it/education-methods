@@ -10,7 +10,64 @@
 <atom:link href="https://zl1212-ship-it.github.io/education-methods/index.xml" rel="self" type="application/rss+xml"/>
 <description>Notes on credible impact evaluation and measurement in education.</description>
 <generator>quarto-1.11.9</generator>
-<lastBuildDate>Thu, 19 Nov 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 25 Nov 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>What universities wrote into their AI rules after ChatGPT</title>
+  <dc:creator>Yuxia Liang</dc:creator>
+  <link>https://zl1212-ship-it.github.io/education-methods/posts/ai-rules-after-chatgpt/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>When ChatGPT became publicly available on November 30, 2022, universities had to say how much of a student’s written work could come from a machine. I wanted to see what they actually wrote down. Using dated snapshots from the Internet Archive, I reconstructed how the academic integrity and AI guidance pages of 92 universities in the United States, the United Kingdom, Australia, and Canada read in each quarter from 2021 to early 2026. I removed menus and other navigation text, then scored every version with a word list of provisions defined in advance.</p>
+<p>I’ll start with two limits. This is a reading of written rules, and it can’t show how any rule is applied. The word list also catches more than it should: in 40 random draws of flagged passages, 25 were genuine, and the rest were generic advice to cite sources, general talk about responsible use, or discussion of detection tools. Every provision count below is therefore an upper bound, most of all for permitted use, disclosure, and detector language.</p>
+<section id="what-the-new-rules-said" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-new-rules-said">What the new rules said</h2>
+<p>About half of the universities added AI language to the pages I followed, most within about a year. A provision counted only when it appeared within 400 characters of an explicit AI term such as generative AI or ChatGPT. The bare abbreviation AI did not count in the numbers below, because some integrity offices use it for academic integrity. The restrictive provisions are an outright prohibition, a detector’s output accepted as evidence, AI use framed as misconduct, and an attached sanction. The procedural ones, on the remedy side, are explicit permission, a route to disclose or cite AI use, an appeal pathway, and a protection that names multilingual writers.</p>
+<p>On the pages I followed, the new rules said far more about the offense than about the remedy. Misconduct framing reached 38% of American institutions, 24% of British ones, 47% of Australian ones, and 32% of Canadian ones. Outright prohibition appeared at 6% to 26% of institutions and detector language at 6% to 21%. Permitted use reached 12% to 37% and a disclosure route 12% to 24%, and counted together, the four restrictive provisions outnumbered the four procedural ones in every country. The word list found an appeal pathway near an AI term at two institutions, one American and one Canadian, but on reading, neither was an appeal route written into the AI rule. Multilingual writers were named at one institution, on an American teaching page warning that some responses to AI may disadvantage English-language learners.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/ai-rules-after-chatgpt/fig-offense-remedy.png" class="img-fluid figure-img" alt="Bar chart in four panels, one each for the United States (34 institutions), the United Kingdom (17), Australia (19), and Canada (22). Each panel lists eight provisions: four restrictive ones in orange (prohibition, detector as evidence, misconduct framing, sanction) and four procedural ones in blue (permitted use, disclosure route, appeal pathway, multilingual protection). A provision at 0% has no bar. Misconduct framing is the longest bar in every country: 38% in the United States, 24% in the United Kingdom, 47% in Australia, and 32% in Canada. Permitted use ranges from 12% to 37%, and appeal pathway and multilingual protection range from 0% to 5% everywhere."></p>
+<figcaption>Share of institutions in each country whose pages carry each provision within 400 characters of an explicit AI term, as of each institution’s latest observed page version. Values match Table 2 of the article.</figcaption>
+</figure>
+</div>
+<p>What surprised me was how little the appeal and protection counts changed when I added the linked policy documents the archive holds, up to three PDFs per university. The documents raised the restrictive and disclosure counts, but they added no appeal pathway that survived a reading and only one more mention of non-native English speakers.</p>
+<p>I want to be fair to the universities here. Where an institution-wide appeal route already applies to any misconduct finding, as the regulator’s standards require in Australia, the counting rule deliberately leaves that standing language out, so the count isolates what the new AI rule added. Appeal language did appear somewhere on the same page at half of the British universities and a quarter of the Australian ones whose pages addressed AI, but never within 400 characters of an AI term. The finding concerns what the AI rule itself says. It doesn’t tell us whether due process exists elsewhere in the institution.</p>
+</section>
+<section id="how-far-the-wording-traveled" class="level2">
+<h2 class="anchored" data-anchor-id="how-far-the-wording-traveled">How far the wording traveled</h2>
+<p>I also wanted to know whether universities mostly borrowed from national neighbors or whether the wording spread across all four countries. Comparing the AI text of every pair of universities quarter by quarter, I found that the language grew more alike within countries and across them at about the same pace. I treat this part of the study as exploratory.</p>
+<p>Pairs in the same country did end up somewhat more alike. Outside the United States, though, that edge was already there in the integrity pages before ChatGPT, so the AI rules seem to carry over whatever national character the host pages had. In the United States, about three-fifths of the edge comes from the kind of page the text sits on: 21 of the 22 American institutions with AI text keep it on a dedicated AI guidance page, against eight of the 27 in the other three countries.</p>
+<p>I’m unsure what to make of the British pattern. The six British universities with AI text looked closer to American text than to Australian or Canadian text, but six is too few to call that a national pattern, and the closeness comes from the four longest British texts. With every text cut to the same length, British text is no closer to American text than to Australian text. Overall, the pattern looks to me like a shared vocabulary added to the pages universities already had, and I found no single template behind it, international or national.</p>
+</section>
+<section id="restriction-and-international-enrollment" class="level2">
+<h2 class="anchored" data-anchor-id="restriction-and-international-enrollment">Restriction and international enrollment</h2>
+<p>A <a href="https://doi.org/10.1016/j.patter.2023.100779">2023 study by Weixin Liang and colleagues</a> found that AI detectors wrongly flagged essays by non-native English writers far more often than essays by native speakers. If universities were fitting their rules to local risk, restriction should rise with their share of international students, which ranges from about 5% to 53% where it is published. In the United States, where the sample is large enough to test this, universities enrolling more international students did not write detectably more restrictive rules. In the United Kingdom and Australia I could only check a simple correlation, which pointed in opposite directions and was indistinguishable from zero in both. No institution-level series of these figures is published for Canada, so it sits out this part.</p>
+<p>The permissive side looked a little different. More exposed American universities may have written somewhat more about permitted and disclosed use, and the Australian data, from a single point in time, are at most consistent with that. I read this cautiously. Most of the American estimate rests on the codes for permitted use and disclosure, which the study’s own checks found among the least reliable, and about a third comes from one page at the most exposed institution. The estimate is fragile: it is borderline in the full sample and sensitive to which universities are included.</p>
+</section>
+<section id="what-this-cant-tell-us" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-cant-tell-us">What this can’t tell us</h2>
+<p>The sample is mostly research-intensive universities, seen only through the pages the Internet Archive preserved, and that preservation is uneven and thin for the United States. ChatGPT reached every university on the same date, so the broad spread of AI rules can’t be pinned on it alone. International enrollment is only a stand-in for the writers a detector misreads, since some international students are native English speakers and some domestic students write English as an additional language. The text also can’t show which intermediary carried the shared vocabulary, such as a regulator or a detection vendor.</p>
+</section>
+<section id="why-this-might-matter-for-a-student" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-might-matter-for-a-student">Why this might matter for a student</h2>
+<p>I keep thinking about the student on the other end of an allegation. The AI rules in this sample named the offense, and some named a way to detect it, but next to the rule they did not say how to contest a finding, and they rarely mentioned the detector’s known error with multilingual writers. Where a route to appeal exists elsewhere, in an institution-wide code or in regulatory standards, the new rule did not carry it over. For a student facing an allegation of AI misuse, that means the way to contest a finding may be written down somewhere other than the AI rule.</p>
+<p>For the people who write these pages, the article’s suggestion is modest: a page that names the offense could also restate, in the same place, the routes to disclosed use and to appeal, along with any protection for writers a detector misreads. I can’t say whether that would change outcomes for students.</p>
+<p>The full paper: Liang, Y. (2026). Naming the offense, not the remedy: Convergent AI rules and thin protections in four university systems after the ChatGPT shock. <em>Higher Education Policy</em>. Advance online publication. <a href="https://doi.org/10.1057/s41307-026-00505-8">https://doi.org/10.1057/s41307-026-00505-8</a></p>
+<p>Free to read (view-only): <a href="https://link.springer.com/epdf/10.1057/s41307-026-00505-8?sharing_token=VDULuaEUXTnLUD8RyVyiFFxOt48VBPO10Uv7D6sAgHtuoAkZORUAzOgAmEqHAworKQeUaSdpjEnLZpctNi17bR6a-ZYe3vynZklbUdgF4e4s3mETmRodhXkOArAFCbAazFCQU1-B7aM8Z5ZHlUbgOOldGAGgVnYN3U23C2m304E%3D">Springer Nature link</a></p>
+<p>Free accepted manuscript (PDF): <a href="liang-2026-naming-the-offense-accepted-manuscript.pdf">liang-2026-naming-the-offense-accepted-manuscript.pdf</a></p>
+<p><em>Data: dated Internet Archive snapshots of the public academic integrity and AI guidance pages of 92 universities in four countries, 2021 to early 2026, with navigation text removed; international enrollment shares from IPEDS (2022), HESA (2021/22), and the Australian Department of Education (2022). The article’s data availability statement points to the public code and coded data.</em></p>
+<p><em>I build <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for baseline-equivalence tables. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">Subscribe via RSS</a> to follow along.</em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>audit findings</category>
+  <guid>https://zl1212-ship-it.github.io/education-methods/posts/ai-rules-after-chatgpt/</guid>
+  <pubDate>Wed, 25 Nov 2026 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>How long is a ‘month of learning’? It depends who’s learning.</title>
   <dc:creator>Yuxia Liang</dc:creator>
@@ -1210,130 +1267,6 @@ font-style: inherit;"># psych::fa.parallel(items) # how many dimensions are actu
  ]]></description>
   <category>measurement</category>
   <guid>https://zl1212-ship-it.github.io/education-methods/posts/03-measurement-before-models/</guid>
-  <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>More controls ≠ less bias: the variables you should never put in your model</title>
-  <dc:creator>Yuxia Liang</dc:creator>
-  <link>https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Okay so. Reviewers often ask for one more control. You add the variable, the coefficient changes, and it is tempting to take the change as proof the variable mattered.</p>
-<p>It is not proof the variable mattered. It took me way longer than I’d like to admit to get that.</p>
-<p>Adding a control and watching the number jump feels productive. It feels careful. But a number moving only tells you a number moved. It doesn’t tell you whether you got closer to the truth or further from it. That depends on what the variable actually is, and “just throw in more controls” quietly lumps together three things that behave nothing alike.</p>
-<section id="three-reasons-a-variable-is-in-your-model" class="level2">
-<h2 class="anchored" data-anchor-id="three-reasons-a-variable-is-in-your-model">Three reasons a variable is in your model</h2>
-<p>One: it’s a <strong>confounder</strong>. Something that causes both who got treated <em>and</em> the outcome. Pretest scores, if the higher scoring kids were also more likely to get the program. You want these in the model. Leaving them out is the thing everyone’s (rightly) scared of.</p>
-<p>Two: it’s a <strong>mediator</strong>. Something the treatment causes, which then moves the outcome. It’s part of how the program works. Control for it and you’re literally subtracting off a piece of the effect you came to measure.</p>
-<p>Three: it’s a <strong>collider</strong>. The weird one. It’s a shared <em>consequence</em> of two things, and it sits there harmlessly until you condition on it, at which point it invents a correlation that was never real.</p>
-<p>“Control for everything you can” treats all three the same. Two of them make your answer worse.</p>
-</section>
-<section id="just-draw-the-arrows" class="level2">
-<h2 class="anchored" data-anchor-id="just-draw-the-arrows">Just draw the arrows</h2>
-<p>This is less philosophical than it sounds. Sketch what causes what (a DAG, if we’re being formal). Then the rule is basically mechanical: block the paths that sneak in <em>through</em> the treatment, and leave alone anything the treatment causes or anything two variables jointly cause.</p>
-<p>A reviewer saying “control for X” is making a guess about where X lives on that picture. It’s not a command. Go look at where it actually sits.</p>
-</section>
-<section id="the-one-that-got-me" class="level2">
-<h2 class="anchored" data-anchor-id="the-one-that-got-me">The one that got me</h2>
-<p>Say you’re evaluating a tutoring program and your outcome is test scores. Being responsible, you decide to control for student motivation. Reasonable, except you measured motivation <em>after</em> the program ran. Which means the program probably moved it. So now motivation is downstream of the treatment, and controlling for it shaves off exactly the part of the effect that went “kids got more into it, then did better.” You conclude tutoring barely did anything.</p>
-<p>It did something. You just deleted the evidence. And it felt like diligence the whole time, because, again, the coefficient moved.</p>
-</section>
-<section id="watch-it-happen" class="level2">
-<h2 class="anchored" data-anchor-id="watch-it-happen">Watch it happen</h2>
-<p>I simulated this so it’s not just me asserting things. True total effect of the program: 8.5. There’s a trait <code>C</code> that drives both treatment and the outcome (a real confounder), and <code>M</code> is motivation measured after the program (a mediator).</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Estimand: total effect of `treat` on `Y` (simulated; true value = 8.5)</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> treat))[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"treat"</span>]          <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># naive</span></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> treat <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> C))[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"treat"</span>]      <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># adjust for the confounder</span></span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">lm</span>(Y <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> treat <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> C <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> M))[<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"treat"</span>]  <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># also adjust for the post treatment mediator</span></span></code></pre></div></div>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Model</th>
-<th style="text-align: right;">Estimate</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Naive (<code>Y ~ treat</code>)</td>
-<td style="text-align: right;"><strong>11.46</strong></td>
-</tr>
-<tr class="even">
-<td>+ confounder (<code>Y ~ treat + C</code>)</td>
-<td style="text-align: right;"><strong>8.61</strong></td>
-</tr>
-<tr class="odd">
-<td>+ mediator too (<code>Y ~ treat + C + M</code>)</td>
-<td style="text-align: right;"><strong>3.99</strong></td>
-</tr>
-</tbody>
-</table>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/fig-overcontrol.png" class="img-fluid figure-img"></p>
-<figcaption>Three estimates of the program effect; only adjusting for the confounder recovers the truth.</figcaption>
-</figure>
-</div>
-<p>The naive number is too big because treated kids started ahead. Adjust for the confounder and it snaps to 8.61, basically the truth. Then you add the after the fact mediator and it falls to 3.99, because you just controlled away the thing the program works through. The model with the <em>most</em> controls is the most wrong. That’s the whole point.</p>
-</section>
-<section id="what-i-actually-do-now" class="level2">
-<h2 class="anchored" data-anchor-id="what-i-actually-do-now">What I actually do now</h2>
-<ul>
-<li>Sketch the DAG before I touch the model. A bad drawing on a receipt counts.</li>
-<li>Only control for things measured <em>before</em> treatment.</li>
-<li>If a variable was measured after the treatment, I treat it as off limits until the picture tells me otherwise.</li>
-<li>For every control, I make myself say which of the three it is. If I can’t, it doesn’t go in.</li>
-</ul>
-<p>I’m not against controls. I’m anti “more controls = more rigor,” because that one’s just false, and it’s the kind of false that looks like care.</p>
-<hr>
-<p><em>I’m building <a href="https://CRAN.R-project.org/package=baselinr"><code>baselinr</code></a>, a small R package for WWC-aligned baseline equivalence. <a href="https://zl1212-ship-it.github.io/education-methods/index.xml">Subscribe via RSS</a> if that’s your thing.</em></p>
-
-
-</section>
-
- ]]></description>
-  <category>causal inference</category>
-  <guid>https://zl1212-ship-it.github.io/education-methods/posts/controls-collider/</guid>
   <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
